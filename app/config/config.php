@@ -4,9 +4,9 @@ return new \Phalcon\Config(array(
     'database' => array(
         'adapter'     => 'Mysql',
         'host'        => 'localhost',
-        'username'    => 'root',
-        'password'    => '',
-        'dbname'      => 'shop',
+        'username'    => 'quizup',
+        'password'    => 'f0GVMn30KNsfnHz0hLlc',
+        'dbname'      => 'quizup',
         'charset'     => 'utf8'
     ),
     'application' => array(
@@ -27,6 +27,6 @@ return new \Phalcon\Config(array(
             'type' => 'fa',
             'dir'  => 'rtl'
         ),
-        'webpageURL' => 'http://localhost/quizup/' // in a production site , it probably should change to /
+        'webpageURL' => 'http://ccweb.ir//' // in a production site , it probably should change to /
     )
 ));
