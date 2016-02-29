@@ -10,7 +10,7 @@ return new \Phalcon\Config(array(
         'charset'     => 'utf8'
     ),
     'application' => array(
-        'production' => true,
+        'production' => false,
         'controllersDir' => __DIR__ . '/../../app/controllers/',
         'modelsDir'      => __DIR__ . '/../../app/models/',
         'viewsDir'       => __DIR__ . '/../../app/views/',
@@ -27,6 +27,6 @@ return new \Phalcon\Config(array(
             'type' => 'fa',
             'dir'  => 'rtl'
         ),
-        'webpageURL' => 'http://ccweb.ir//' // in a production site , it probably should change to /
+        'webpageURL' => 'http://ccweb.ir/' // in a production site , it probably should change to /
     )
 ));
