@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BTabassom';
+    src: url('../fonts/BTabassom.eot');
+    src: url('../fonts/BTabassom.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BTabassom.woff') format('woff'),
+    url('../fonts/BTabassom.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

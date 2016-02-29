@@ -1,0 +1,21 @@
+{
+  "name": "QuizUp",
+  "homepage": "https://github.com/pzey2011/QuizUp",
+  "authors": [
+    "HatsOn <mohammad.nazari92@gmail.com>"
+  ],
+  "description": "Web based Q&A game , 2player basically",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#~2.1.8"
+  }
+}

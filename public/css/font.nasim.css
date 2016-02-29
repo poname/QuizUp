@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BNasim';
+    src: url('../fonts/BNasim.eot');
+    src: url('../fonts/BNasim.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BNasim.woff') format('woff'),
+    url('../fonts/BNasim.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

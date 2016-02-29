@@ -1,0 +1,13 @@
+html, body {
+    font-family: 'BYekan', sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    direction: rtl;
+}
+.en{
+    font-family: sans-serif,tahoma , Tahoma;
+    direction:ltr;
+    text-align: left;
+}

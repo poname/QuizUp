@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'BTitr';
+    src: url('../fonts/BTitr.eot');
+    src: url('../fonts/BTitr.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BTitr.woff') format('woff'),
+    url('../fonts/BTitr.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BTitrTGE';
+    src: url('../fonts/BTitrTGE.eot');
+    src: url('../fonts/BTitrTGE.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BTitrTGE.woff') format('woff'),
+    url('../fonts/BTitrTGE.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
