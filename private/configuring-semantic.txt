@@ -1,0 +1,15 @@
+1- installation
+bower install --save semantic-ui
+This cocmmand will install semantic-ui stuff on bower_components folder
+
+2- enable rtl support
+To enable rtl support for semantic-ui , we should build it's source again using gulp.
+So , i go to bower_components/semantic/ , i've found semantic.json.example there,
+i rename it to semantic.josn and then changed the rtl:false to rtl:true,
+
+3- npm install
+install all the node package manager dependencies first!
+
+
+
+
