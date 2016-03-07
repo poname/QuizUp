@@ -4,8 +4,8 @@ return new \Phalcon\Config(array(
     'database' => array(
         'adapter'     => 'Mysql',
         'host'        => 'localhost',
-        'username'    => 'root',
-        'password'    => '',
+        'username'    => 'quizup',
+        'password'    => 'f0GVMn30KNsfnHz0hLlc',
         'dbname'      => 'quizup',
         'charset'     => 'utf8'
     ),
@@ -21,12 +21,12 @@ return new \Phalcon\Config(array(
         'logDir'    =>  __DIR__ . '/../../app/log/',
         'librariesDir'   => __DIR__ . '/../../app/libraries/',
         'pluginsDir'   => __DIR__ . '/../../app/plugins/',
-        'baseUri'        => '/quizup/',  // in a production site , it probably should change to /
+        'baseUri'        => '/',  // in a production site , it probably should change to /
         'projectTitle' => 'QUIZUP',
         'lang'           => array(
             'type' => 'en',
             'dir'  => 'ltr'
         ),
-        'webpageURL' => 'http://localhost/quizup/' // in a production site , it probably should change to /
+        'webpageURL' => 'http://ccweb.ir/' // in a production site , it probably should change to /
     )
 ));
