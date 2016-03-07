@@ -144,6 +144,33 @@ $di->set('dispatcher', function () {
     return $dispatcher;
 });
 
+// Register the flash service with custom CSS classes
+$di->set('flash', function () {
+    $flash = new Phalcon\Flash\Direct(
+        array(
+            'error'   => 'ui negative message',
+            'success' => 'ui positive message',
+            'notice'  => 'ui info message',
+            'warning' => 'ui warning message'
+        )
+    );
+
+    return $flash;
+});
+
+$di->set('flashSession', function () {
+    $flash = new Phalcon\Flash\Session(
+        array(
+            'error'   => 'ui negative message',
+            'success' => 'ui positive message',
+            'notice'  => 'ui info message',
+            'warning' => 'ui warning message'
+        )
+    );
+
+    return $flash;
+});
+
 /**
  * Custom authentication component
  */
