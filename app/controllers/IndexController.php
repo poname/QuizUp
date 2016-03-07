@@ -13,5 +13,6 @@ class IndexController extends ControllerBase {
         parent::initialize();
     }
     public function indexAction(){
+        return $this->response->redirect('login/');
     }
 }

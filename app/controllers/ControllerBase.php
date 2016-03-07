@@ -2,7 +2,7 @@
 
 namespace QUIZUP\Controllers;
 
-use QUIZUP\Libraries\Auth;
+use Phalcon\Tag;
 use QUIZUP\Libraries\JsonPost;
 use QUIZUP\Models\AppLog;
 use Phalcon\Mvc\Controller;
@@ -12,6 +12,8 @@ class ControllerBase extends Controller
     protected $_jsonPost = null;
 
     public function initialize(){
+        Tag::setTitle($this->translator->_('SITE_MAIN_TITLE'));
+        Tag::setTitleSeparator('|');
         $this->view->setVar('base_uri', $this->url->getBaseUri());
         $this->view->setVar('t', $this->translator);
     }
