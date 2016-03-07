@@ -20,7 +20,7 @@ $commands = array(
 $output = '';
 foreach($commands AS $command){
     // Run it
-    $tmp = shell_exec($command);
+    $tmp = shell_exec("cd ..;$command");
     // Output
     $output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
     $output .= htmlentities(trim($tmp)) . "\n";
