@@ -20,6 +20,11 @@ try {
     include __DIR__ . "/../app/config/services.php";
 
     /**
+     * Composer auto load
+     */
+    include __DIR__ . "/../app/libraries/vendor/autoload.php";
+
+    /**
      * Handle the request
      */
     $application = new \Phalcon\Mvc\Application($di);

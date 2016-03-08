@@ -12,6 +12,18 @@
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
+                        <input type="text" name="name" placeholder="Name">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="family" placeholder="Family Name">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
                         <input type="text" name="email" placeholder="E-mail address">
                     </div>
                 </div>
@@ -25,6 +37,25 @@
                     <div class="ui left icon input">
                         <i class="lock icon"></i>
                         <input type="password" name="password_repeat" placeholder="Repeat Password">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <select name="cid" class="ui fluid dropdown">
+                            {% for country in countries %}
+                                <option value="{{ country.cid }}">{{ country.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <select name="gender" class="ui fluid dropdown">
+                            <option value="MALE">Male</option>
+                            <option value="FEMALE">Female</option>
+                        </select>
                     </div>
                 </div>
                 <div class="ui fluid large teal submit button">{{ t('SIGNUP') }}</div>

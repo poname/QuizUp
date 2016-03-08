@@ -297,8 +297,6 @@ class User extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->hasMany('user_id', 'QUIZUP\Models\QuestionCategory', 'user_id', array('alias' => 'QuestionCategory'));
-        $this->belongsTo('cid', 'QUIZUP\Models\Country', 'cid', array('alias' => 'Country'));
-        $this->hasMany('user_id', 'QUIZUP\Models\QuestionCategory', 'user_id', NULL);
         $this->belongsTo('cid', 'QUIZUP\Models\Country', 'cid', array('foreignKey' => true,'alias' => 'Country'));
     }
 

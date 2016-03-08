@@ -9,7 +9,9 @@
 namespace QUIZUP\Controllers;
 
 
+use Phalcon\Db;
 use Phalcon\Tag;
+use QUIZUP\Models\Country;
 use QUIZUP\Models\User;
 
 class SignupController extends ControllerBase
@@ -21,17 +23,22 @@ class SignupController extends ControllerBase
     }
 
     public function indexAction(){
+        $countries = Country::find() or array();
+        $this->view->setVar('countries', $countries);
         Tag::appendTitle($this->translator->_("SIGNUP_AN_ACCOUNT"));
     }
 
+    public function successAction(){
+    }
+
     public function doAction(){
+        $name = $this->request->getPost('name');
+        $family = $this->request->getPost('family');
         $email = $this->request->getPost('email','email'); //phalcon email sanitizing
         $password = $this->request->getPost('password');
         $password_repeat = $this->request->getPost('password_repeat');
-
-        $user = new User();
-        $user->setEmail($email);
-        $user->setPassword($this->security->hash($password));
+        $gender = $this->request->getPost('gender');
+        $cid = $this->request->getPost('cid');
 
         if($password !== $password_repeat){
             $this->flashSession->error($this->translator->_('PASSWORD_AND_REPEAT_SHOULD_MATCH'));
@@ -42,7 +49,21 @@ class SignupController extends ControllerBase
                 )
             );
         }
+
+        $verification_code = md5("QU1zUP" . time());
+
+        $user = new User();
+        $user->setEmail($email);
+        $user->setPassword($this->security->hash($password));
+        $user->setName($name);
+        $user->setFamily($family);
+        $user->setCid($cid);
+        $user->setGender($gender);
+        $user->setIsActive(new Db\RawValue('default'));
+        $user->setVerificationCode($verification_code);
+
         if(!$user->save()){
+            $this->logger->error(var_export($user->getMessages(),true));
             $this->flashSession->error($this->translator->_('INTERNAL_ERROR'));
             return $this->dispatcher->forward(
                 array(
@@ -51,7 +72,32 @@ class SignupController extends ControllerBase
                 )
             );
         }
-        return $this->response->redirect('user/');
+
+        $verfication_link = $this->config->application->webpageURL . "signup/confirm?uid={$user->getId()}&code={$user->getVerificationCode()}";
+        $mail = new \PHPMailer();
+        // Set PHPMailer to use the sendmail transport
+        $mail->isSendmail();
+        $mail->setFrom('noreplay@ccweb.ir', 'QuizUP');
+        $mail->addAddress($email, "$name $family");
+        $mail->Subject = 'Confirmation link';
+        $mail->msgHTML($this->view->getRender('emails','signup-success',array(
+            'full_name'=>"$name",
+            'link'=> $verfication_link
+        )));
+        $mail->AltBody = $verfication_link;
+
+        if (!$mail->send()) {
+            $user->delete();
+            $this->flashSession->error($this->translator->_('WE_COULDNT_SEND_YOU_EMAIL'));
+            return $this->dispatcher->forward(
+                array(
+                    'controller' => 'signup',
+                    'action' => 'index'
+                )
+            );
+        }
+
+        return $this->response->redirect('signup/success');
     }
 
 }
