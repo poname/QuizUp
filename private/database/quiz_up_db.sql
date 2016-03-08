@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost_3306
-Source Server Version : 50628
+Source Server Version : 50624
 Source Host           : localhost:3306
-Source Database       : quiz_up
+Source Database       : quizup
 
 Target Server Type    : MYSQL
-Target Server Version : 50628
+Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2016-03-05 23:10:40
+Date: 2016-03-08 17:26:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,6 +28,8 @@ CREATE TABLE `country` (
 -- ----------------------------
 -- Records of country
 -- ----------------------------
+INSERT INTO `country` VALUES ('1', 'Iran');
+INSERT INTO `country` VALUES ('2', 'United States');
 
 -- ----------------------------
 -- Table structure for question
@@ -79,7 +81,7 @@ CREATE TABLE `user` (
   `gender` enum('MALE','FEMALE') NOT NULL DEFAULT 'MALE',
   `password` varchar(255) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
-  `verification_code` char(64) NOT NULL,
+  `verification_code` char(64) DEFAULT NULL,
   `cid` int(11) NOT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `unique_emails` (`email`) USING HASH,
