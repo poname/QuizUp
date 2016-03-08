@@ -3,10 +3,10 @@
         <h2 class="ui teal image header">
             <img src="{{ url('img/logo.png') }}" class="image">
             <div class="content">
-                Log-in to your account
+                {{ t('LOGIN_TO_ACCOUNT') }}
             </div>
         </h2>
-        <form class="ui large form">
+        <form class="ui large form" action="{{ url('login/do') }}" method="post">
             {{ flashSession.output() }}
             <div class="ui stacked segment">
                 <div class="field">
@@ -21,7 +21,7 @@
                         <input type="password" name="password" placeholder="Password">
                     </div>
                 </div>
-                <div class="ui fluid large teal submit button">Login</div>
+                <div class="ui fluid large teal submit button">{{ t('LOGIN') }}</div>
             </div>
 
             <div class="ui error message"></div>
@@ -29,7 +29,7 @@
         </form>
 
         <div class="ui message">
-            New to us? <a href="{{ url('signup/') }}">Sign Up</a>
+            {{ t('NEW_TO_US') }}<a href="{{ url('signup/') }}">Sign Up</a>
         </div>
     </div>
 </div>

@@ -15,5 +15,13 @@ $messages = array(
     'SIGNUP_SUCCESS_MESSAGE'=>'Signup was successful. We\'ve sent you an confirmation email containing a link; Open that and We are done!',
     'WE_COULDNT_SEND_YOU_EMAIL' => 'We could\'nt send you a verification email right now. Please try joining us a few minutes later',
     'INVALID_REQUEST' => 'Invalid request!',
-    'SUCCESSFULLY_ACTIVATED' => 'Your account has been activated successfully! Login and enjoy!'
+    'SUCCESSFULLY_ACTIVATED' => 'Your account has been activated successfully! Login and enjoy!',
+    'USER_OR_PASSWORD_INVALID' => 'username or password is invalid !',
+    'EMAIL_NOT_CONFIRMED' => 'Your email has not been confirmed yet, please check your mail box !',
+    'LOGIN_SUCCESS_MESSAGE' => 'You have successfully logged in ..',
+    'LOGIN_TO_ACCOUNT' => 'Log-in to your account',
+    'LOGIN' => 'Login',
+    'NEW_TO_US' => 'New to us? ',
+    'LOGOUT_COMPLETED' => 'You have successfully logged out .',
+    'LOGOUT' => 'logout',
 );

@@ -23,6 +23,10 @@ class SignupController extends ControllerBase
     }
 
     public function indexAction(){
+        if ($this->session->has("login")) {
+            return $this->response->redirect('login/success');
+        }
+        
         $countries = Country::find() or array();
         $this->view->setVar('countries', $countries);
         Tag::appendTitle($this->translator->_("SIGNUP_AN_ACCOUNT"));
