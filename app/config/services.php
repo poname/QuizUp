@@ -192,3 +192,7 @@ $di->set('jdf', function () {
     return new \QUIZUP\Libraries\Jdf();
 });
 
+$di->set('logger', function () use ($config) {
+    return new Phalcon\Logger\Adapter\File($config->application->logDir . "error.log");
+});
+
