@@ -43,7 +43,7 @@ class SignupController extends ControllerBase
             $this->logger->error(var_export($user->getMessages(), true));
             die($this->translator->_('INTERNAL_ERROR'));
         }
-        $this->flashSession->error($this->translator->_('SUCCESSFULLY_ACTIVATED'));
+        $this->flashSession->success($this->translator->_('SUCCESSFULLY_ACTIVATED'));
         return $this->dispatcher->forward(
             array(
                 'controller' => 'login',
