@@ -73,7 +73,7 @@ class SignupController extends ControllerBase
             );
         }
 
-        $verfication_link = $this->config->application->webpageURL . "signup/confirm?uid={$user->getId()}&code={$user->getVerificationCode()}";
+        $verfication_link = $this->config->application->webpageURL . "signup/confirm?uid={$user->getUserId()}&code={$user->getVerificationCode()}";
         $mail = new \PHPMailer();
         // Set PHPMailer to use the sendmail transport
         $mail->isSendmail();
