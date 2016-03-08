@@ -31,6 +31,27 @@ class SignupController extends ControllerBase
     public function successAction(){
     }
 
+    public function confirmAction(){
+        $user_id = $this->request->getQuery('uid','int');
+        $code = $this->request->getQuery('code', 'alphanum');
+        $user = User::findFirst("user_id = $user_id") or die($this->translator->_('INVALID_REQUEST'));
+        if ($user->getVerificationCode() != $code) {
+            die($this->translator->_('INVALID_REQUEST'));
+        }
+        $user->setIsActive(1);
+        if(!$user->save()){
+            $this->logger->error(var_export($user->getMessages(), true));
+            die($this->translator->_('INTERNAL_ERROR'));
+        }
+        $this->flashSession->error($this->translator->_('SUCCESSFULLY_ACTIVATED'));
+        return $this->dispatcher->forward(
+            array(
+                'controller' => 'login',
+                'action' => 'index'
+            )
+        );
+    }
+
     public function doAction(){
         $name = $this->request->getPost('name');
         $family = $this->request->getPost('family');

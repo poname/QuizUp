@@ -13,5 +13,7 @@ $messages = array(
     'PASSWORD_AND_REPEAT_SHOULD_MATCH' => 'Password and Password-Repeat doesn\'t match!',
     'INTERNAL_ERROR' => 'Internal error has been occurred. Please try again a few minutes later.',
     'SIGNUP_SUCCESS_MESSAGE'=>'Signup was successful. We\'ve sent you an confirmation email containing a link; Open that and We are done!',
-    'WE_COULDNT_SEND_YOU_EMAIL' => 'We could\'nt send you a verification email right now. Please try joining us a few minutes later'
+    'WE_COULDNT_SEND_YOU_EMAIL' => 'We could\'nt send you a verification email right now. Please try joining us a few minutes later',
+    'INVALID_REQUEST' => 'Invalid request!',
+    'SUCCESSFULLY_ACTIVATED' => 'Your account has been activated successfully! Login and enjoy!'
 );
