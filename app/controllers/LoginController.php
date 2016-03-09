@@ -44,7 +44,7 @@ class LoginController extends ControllerBase
 
     public function doAction(){
     	$email = $this->request->getPost('email'); //phalcon email sanitizing
-        $password = $this->request->getPost('password');
+        $password = $this->security->hash($this->request->getPost('password'));
 
     	$user = User::find("email = '$email' AND password = '$password'");
     	//$user = User::findFirst("email = '$email' AND password = '$password'") or die($this->translator->_('INVALID_REQUEST'));
