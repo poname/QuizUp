@@ -79,7 +79,7 @@ class LoginController extends ControllerBase
     public function logoutAction(){
         $this->session->remove("login");
 
-        $this->flashSession->warning($this->translator->_('LOGOUT_COMPLETED'));
+        $this->flashSession->success($this->translator->_('LOGOUT_COMPLETED'));
             return $this->dispatcher->forward(
                 array(
                     'controller' => 'login',
