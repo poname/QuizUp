@@ -79,7 +79,8 @@ class SignupController extends ControllerBase
 
         $user = new User();
         $user->setEmail($email);
-        $user->setPassword($this->security->hash($password));
+        //$user->setPassword($this->security->hash($password));
+        $user->setPassword($password);
         $user->setName($name);
         $user->setFamily($family);
         $user->setCid($cid);
