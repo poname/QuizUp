@@ -12,13 +12,13 @@
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input type="text" name="email" placeholder="E-mail address">
+                        <input type="text" name="email" placeholder="{{ t('EMAIL') }}">
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="lock icon"></i>
-                        <input type="password" name="password" placeholder="Password">
+                        <input type="password" name="password" placeholder="{{ t('PASSWORD') }}">
                     </div>
                 </div>
                 <div class="ui fluid large teal submit button">{{ t('LOGIN') }}</div>
@@ -29,7 +29,7 @@
         </form>
 
         <div class="ui message">
-            {{ t('NEW_TO_US') }}<a href="{{ url('signup/') }}">Sign Up</a>
+            {{ t('NEW_TO_US') }}<a href="{{ url('signup/') }}"> {{ t('SIGNUP') }}</a>
         </div>
     </div>
 </div>

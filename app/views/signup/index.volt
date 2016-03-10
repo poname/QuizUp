@@ -12,31 +12,31 @@
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input type="text" name="name" placeholder="Name">
+                        <input type="text" name="name" placeholder="{{ t('NAME') }}">
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input type="text" name="family" placeholder="Family Name">
+                        <input type="text" name="family" placeholder="{{ t('FAMILY_NAME') }}">
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input type="text" name="email" placeholder="E-mail address">
+                        <input type="text" name="email" placeholder="{{ t('EMAIL') }}">
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="lock icon"></i>
-                        <input type="password" name="password" placeholder="Password">
+                        <input type="password" name="password" placeholder="{{ t('PASSWORD') }}">
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="lock icon"></i>
-                        <input type="password" name="password_repeat" placeholder="Repeat Password">
+                        <input type="password" name="password_repeat" placeholder="{{ t('REPEAT_PASSWORD') }}">
                     </div>
                 </div>
                 <div class="field">
@@ -75,7 +75,7 @@
                                     rules: [
                                         {
                                             type: 'empty',
-                                            prompt: 'Please enter your e-mail'
+                                            prompt: "{{ t('ENTER_VALID_EMAIL') }}"
                                         },
                                         {
                                             type: 'email',

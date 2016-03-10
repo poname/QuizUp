@@ -9,10 +9,14 @@
   <!-- Site Properties -->
   {{ get_title() }}
   <link rel="stylesheet" type="text/css" href="{{ url('lib/semantic/semantic.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url('css/font.yekan.css') }}">
   <script src="{{ url('lib/jquery/jquery.min.js') }}"></script>
   <script src="{{ url('lib/semantic/semantic.min.js') }}"></script>
 
   <style type="text/css">
+    * {
+      font-family: BYekan ;
+    }
     body {
       background-color: #DADADA;
     }

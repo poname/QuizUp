@@ -24,8 +24,8 @@ return new \Phalcon\Config(array(
         'baseUri'        => '/',  // in a production site , it probably should change to /
         'projectTitle' => 'QUIZUP',
         'lang'           => array(
-            'type' => 'en',
-            'dir'  => 'ltr'
+            'type' => 'fa',
+            'dir'  => 'rtl'
         ),
         'webpageURL' => 'http://ccweb.ir/' // in a production site , it probably should change to /
     )
