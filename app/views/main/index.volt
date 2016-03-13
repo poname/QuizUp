@@ -8,7 +8,7 @@
             	</h2>
             	<p>{{ t('ABOUT_QUIZUP') }}</p>
             	<p>:))))</p>
-            	<a class="ui teal large basic button button" href="{{ url('login') }}"><p>{{ t('ENTER_GAME') }}</p></a>
+            	<a class="ui red large basic button button" href="{{ url('login') }}"><p>{{ t('ENTER_GAME') }}</p></a>
             </div>
          </div>
          <div class="column">
