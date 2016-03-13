@@ -1,6 +1,6 @@
 <div class="ui middle aligned center aligned grid">
     <div class="column">
-        <h2 class="ui teal image header">
+        <h2 class="ui red image header">
             <img src="{{ url('img/logo.png') }}" class="image">
             <div class="content">
                 {{ t('LOGIN_TO_ACCOUNT') }}
@@ -21,7 +21,7 @@
                         <input type="password" name="password" placeholder="{{ t('PASSWORD') }}">
                     </div>
                 </div>
-                <div class="ui fluid large teal submit button">{{ t('LOGIN') }}</div>
+                <div class="ui fluid large red submit button">{{ t('LOGIN') }}</div>
             </div>
 
             <div class="ui error message"></div>
