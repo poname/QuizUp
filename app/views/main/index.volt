@@ -14,7 +14,7 @@
          <div class="column">
             <div class="ui middle aligned center aligned grid">
                <div class="column">
-                  <h2 class="ui teal image header">
+                  <h2 class="ui red image header">
                      <img src="{{ url('img/logo.png') }}" class="image">
                      <div class="content">
                         {{ t('SIGNUP_AN_ACCOUNT') }}
