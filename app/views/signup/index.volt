@@ -58,7 +58,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="ui fluid large teal submit button">{{ t('SIGNUP') }}</div>
+                <div class="ui fluid large red submit button">{{ t('SIGNUP') }}</div>
             </div>
             <div class="ui error message"></div>
         </form>
