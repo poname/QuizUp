@@ -10,6 +10,7 @@ $loader->registerNamespaces(array(
     'QUIZUP\Controllers\User' => $config->application->controllersDir.'user/',
     'QUIZUP\Controllers\Login' => $config->application->controllersDir.'login/',
     'QUIZUP\Controllers\Signup' => $config->application->controllersDir.'signup/',
+    'QUIZUP\Controllers\Main' => $config->application->controllersDir.'main/',
 
 
     'QUIZUP\Models' =>$config->application->modelsDir,

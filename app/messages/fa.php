@@ -42,6 +42,15 @@ $messages = array(
     'FAMILY_NAME' => 'نام خانوادگی',
     'REPEAT_PASSWORD' => 'تکرار رمز عبور',
     'ENTER_VALID_EMAIL' => 'ایمیل را به درستی وارد نمایید',
+    'iran' => 'ایران',
+    'SITE_MAP' => 'نقشه سایت',
+    'PRIVACY_POLICY' => 'سیاست حفظ اطلاعات',
+    'CONDITIONS' => 'قوانین استفاده',
+    'CONTACT_US' => 'ارتباط با ما',
+    'ABOUT_US' => 'درباره ما',
+    'WHAT_IS_QUIZUP' => 'کوییز آپ چیست ؟',
+    'ABOUT_QUIZUP' => 'یک بازی لاکچری است برای بیکاران',
+    'ENTER_GAME' => 'ورود به بازی',
     
 
 );
