@@ -72,6 +72,7 @@ class LoginController extends ControllerBase
 
     	// Set a session variable
         $this->session->set("login", "true");
+        $this->session->set("user_id", $user[0]->getUserId());
 
     	return $this->response->redirect('login/success');
     }

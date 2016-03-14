@@ -51,6 +51,15 @@ $messages = array(
     'WHAT_IS_QUIZUP' => 'کوییز آپ چیست ؟',
     'ABOUT_QUIZUP' => 'یک بازی لاکچری است برای بیکاران',
     'ENTER_GAME' => 'ورود به بازی',
-    
+    'CREATE_CATEGORY' => 'ایجاد دسته بندی جدید',
+    'CATEGORY_NAME' => 'نام دسته',
+    'CREATE' => 'ایجاد',
+    'ADD' => 'اضافه کن',
+    'CATEGORY_CREATED' => 'دسته بندی با موفقیت اضافه شد',
+    'CATEGORY' => 'دسته بندی',
+    'ADDED_SUCCESSFULLY' => 'با موفقیت اضافه شد',
+    'REPEATED_CATEGORY' => 'دسته بندی با این نام در سیستم موجود می باشد',
+    'LOGIN_FIRST' => 'ابتدا وارد سیستم شوید',
+    'MANAGE_CATEGORY' => 'مدیریت دسته بندی ها',
 
 );

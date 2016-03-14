@@ -10,6 +10,13 @@
             	<p>:))))</p>
             	<a class="ui red large basic button button" href="{{ url('login') }}"><p>{{ t('ENTER_GAME') }}</p></a>
             </div>
+             <div class="ui piled segment">
+                 <h2 class="ui icon header">
+                     <p>{{ t('MANAGE_CATEGORY') }}</p>
+                 </h2>
+                 <p></p>
+                 <a class="ui violet large basic button button" href="{{ url('category/add') }}"><p>{{ t('CREATE_CATEGORY') }}</p></a>
+             </div>
          </div>
          <div class="column">
             <div class="ui middle aligned center aligned grid">

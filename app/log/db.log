@@ -1,0 +1,222 @@
+[Mon, 14 Mar 16 19:08:20 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:08:20 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:08:20 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 19:12:53 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:12:53 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:12:53 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 19:12:55 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:12:55 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:12:55 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 19:13:02 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:13:02 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:13:02 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 19:18:25 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:18:25 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:18:25 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 19:44:08 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:44:09 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:44:09 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 19:44:30 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:44:30 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 19:44:30 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:44:30 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:44:31 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `country` WHERE `country`.`cid` = :0
+[Mon, 14 Mar 16 19:44:44 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:44:44 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:44:44 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 19:44:48 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:44:48 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:44:48 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 19:44:50 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:44:50 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:44:50 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 19:54:54 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:54:54 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 19:54:54 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 19:55:11 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:55:11 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 19:55:11 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 19:55:11 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:55:11 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 19:55:11 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 19:55:11 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 19:55:38 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:55:38 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 19:55:38 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 19:55:38 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 19:55:38 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 19:55:38 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 19:55:38 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:16:31 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:16:31 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:16:31 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:16:31 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:16:31 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:16:31 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:16:31 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:19:28 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:19:28 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:19:28 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:19:28 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:19:28 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:19:28 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:19:28 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:19:39 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:19:39 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:19:39 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:19:39 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:19:39 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:19:39 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:19:39 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:20:50 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:20:50 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:20:50 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:20:50 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:20:50 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:20:50 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:20:50 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:21:08 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:21:08 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:21:08 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:21:08 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:21:08 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:21:08 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:21:08 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:21:36 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:21:36 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:21:36 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:21:36 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:21:36 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:21:36 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:21:36 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:22:10 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:22:10 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:22:10 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:22:10 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:22:10 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:22:10 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:22:10 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:22:10 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:22:10 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:22:10 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:22:30 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:22:30 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:22:30 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:22:30 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:22:30 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:22:30 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:22:30 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:23:05 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:23:05 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:23:05 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:23:05 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:23:05 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:23:05 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:23:05 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:24:32 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:24:32 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:24:32 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:24:32 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:24:32 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:24:32 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:24:47 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:24:47 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:24:47 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:24:47 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:24:47 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:24:47 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:24:47 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:30:39 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:30:39 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:30:39 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`name` = ''
+[Mon, 14 Mar 16 20:30:57 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:30:57 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:30:57 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`name` = 'a'
+[Mon, 14 Mar 16 20:30:57 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:30:57 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:30:57 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:30:57 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:30:57 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:31:29 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:31:29 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:31:29 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`name` = ''
+[Mon, 14 Mar 16 20:31:29 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:31:29 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:31:29 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:31:29 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:31:39 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:31:39 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:31:39 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`name` = 'dani'
+[Mon, 14 Mar 16 20:31:39 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:31:39 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:31:39 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:31:39 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:31:39 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:31:43 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:31:43 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:31:43 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`name` = 'dani'
+[Mon, 14 Mar 16 20:32:18 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:32:18 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:32:18 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`name` = 'dani'
+[Mon, 14 Mar 16 20:33:23 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:33:23 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:33:23 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`name` = 'زبان'
+[Mon, 14 Mar 16 20:38:52 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:38:52 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:38:52 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Mon, 14 Mar 16 20:40:08 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:40:08 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:40:08 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Mon, 14 Mar 16 20:42:18 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:42:18 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:42:18 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:43:01 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:43:01 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:43:01 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:46:22 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:46:22 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:46:22 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Mon, 14 Mar 16 20:48:26 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:48:26 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:48:26 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Mon, 14 Mar 16 20:48:33 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:48:33 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:48:33 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`name` = 'گلابی'
+[Mon, 14 Mar 16 20:48:33 +0100][INFO] SELECT COUNT(*) "rowcount" FROM `question_category` WHERE `cid` = ?
+[Mon, 14 Mar 16 20:48:33 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:48:33 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:48:33 +0100][INFO] SELECT COUNT(*) AS `rowcount` FROM `user` WHERE `user`.`user_id` = :0
+[Mon, 14 Mar 16 20:48:33 +0100][INFO] INSERT INTO `question_category` (`name`, `user_id`, `cid`) VALUES (?, ?, ?)
+[Mon, 14 Mar 16 20:48:43 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:48:43 +0100][INFO] DESCRIBE `question_category`
+[Mon, 14 Mar 16 20:48:43 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`name` = 'گلابی'
+[Mon, 14 Mar 16 20:51:11 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:51:11 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:51:11 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:52:17 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:52:17 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:52:17 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:52:37 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:52:37 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:52:37 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:52:50 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:52:50 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:52:50 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:53:18 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:53:18 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:53:18 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:53:26 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:53:26 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:53:26 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:53:34 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:53:34 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:53:34 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:54:43 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:54:43 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:54:43 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 20:54:55 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:54:55 +0100][INFO] DESCRIBE `user`
+[Mon, 14 Mar 16 20:54:55 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Mon, 14 Mar 16 20:55:12 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 20:55:12 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 20:55:12 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
