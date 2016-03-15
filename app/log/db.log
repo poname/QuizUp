@@ -220,3 +220,6 @@
 [Mon, 14 Mar 16 20:55:12 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
 [Mon, 14 Mar 16 20:55:12 +0100][INFO] DESCRIBE `country`
 [Mon, 14 Mar 16 20:55:12 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 14 Mar 16 21:12:58 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 14 Mar 16 21:12:58 +0100][INFO] DESCRIBE `country`
+[Mon, 14 Mar 16 21:12:58 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`

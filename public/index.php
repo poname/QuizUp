@@ -22,7 +22,7 @@ try {
     /**
      * Composer auto load
      */
-    //include __DIR__ . "/../app/libraries/vendor/autoload.php";
+    include __DIR__ . "/../app/libraries/vendor/autoload.php";
 
     /**
      * Handle the request
