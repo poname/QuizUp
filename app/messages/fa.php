@@ -61,5 +61,13 @@ $messages = array(
     'REPEATED_CATEGORY' => 'دسته بندی با این نام در سیستم موجود می باشد',
     'LOGIN_FIRST' => 'ابتدا وارد سیستم شوید',
     'MANAGE_CATEGORY' => 'مدیریت دسته بندی ها',
+    'EDIT' => 'ویرایش',
+    'DELETE' => 'حذف',
+    'DELETED_SUCCESSFULLY' => 'با موفقیت حذف شد',
+    'CATEGORIES' => 'دسته بندی ها',
+    'NEW_NAME' => 'نام جدید',
+    'EDIT_CATEGORY' => 'ویرایش دسته بندی',
+    'SUBMIT' => 'ثبت',
+    'EDITED_SUCCESSFULLY' => 'با موفقیت تغییر یافت',
 
 );

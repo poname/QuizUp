@@ -11,6 +11,7 @@ namespace QUIZUP\Controllers;
 
 use Phalcon\Db;
 use Phalcon\Tag;
+use QUIZUP\Models\Question;
 use QUIZUP\Models\QuestionCategory;
 use QUIZUP\Models\User;
 
@@ -24,7 +25,7 @@ class CategoryController extends ControllerBase
     }
 
     public function indexAction(){
-        echo 'hi';
+
         if (!$this->session->has("login")){
             $this->flashSession->error($this->translator->_('LOGIN_FIRST'));
             return $this->dispatcher->forward(
@@ -103,6 +104,86 @@ class CategoryController extends ControllerBase
             )
         );
         // $this->session->destroy();
+    }
+
+    public function listAction(){
+        Tag::appendTitle($this->translator->_('CATEGORIES'));
+        $categories = QuestionCategory::find() or array();
+        $this->view->setVar('categories', $categories);
+    }
+
+    public function deleteAction(){
+        //$this->indexAction();
+
+        $id = $this->request->getQuery("id");
+        $cat = QuestionCategory::find("cid='" . $id . "'");
+        $name = $cat[0]->getName();
+
+        if(!$cat[0]->delete()){
+
+        }
+
+        $this->flashSession->success($name .  '<br>' . $this->translator->_('DELETED_SUCCESSFULLY'));
+        return $this->dispatcher->forward(
+            array(
+                'controller' => 'category',
+                'action' => 'list'
+            )
+        );
+    }
+
+    public function editAction(){
+        //$this->indexAction();
+        $operation = $this->request->getQuery("op");
+        $id = $this->request->getQuery("id");
+        $cat = QuestionCategory::find("cid='" . $id . "'");
+
+        if($operation == 'change'){
+            $newName = $this->request->getQuery('newName');
+            $cat[0]->setName($newName);
+
+            if(!$cat[0]->save()){
+                echo 'ride';
+            }
+
+            $this->flashSession->success($newName .  '<br>' . $this->translator->_('EDITED_SUCCESSFULLY'));
+            return $this->dispatcher->forward(
+                array(
+                    'controller' => 'category',
+                    'action' => 'list'
+                )
+            );
+        }
+        else{
+            $name = $cat[0]->getName();
+
+            $this->view->setVar('catName', $name);
+            $this->view->setVar('catId', $id);
+        }
+
+    }
+
+    protected function changeAction(){
+        echo 'hi';
+        $newName = $this->request->getPost('newName');
+
+        $id = $this->request->getPost("id");
+
+        $cat = QuestionCategory::find("cid='" . $id . "'");
+        $cat[0]->setName($newName);
+
+        if(!$cat[0]->save()){
+            echo 'ride';
+        }
+
+        $this->flashSession->success($newName .  '<br>' . $this->translator->_('EDITED_SUCCESSFULLY'));
+        return $this->dispatcher->forward(
+            array(
+                'controller' => 'category',
+                'action' => 'list'
+            )
+        );
+
     }
 
 }

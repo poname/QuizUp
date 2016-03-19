@@ -3,26 +3,32 @@
         <h2 class="ui red image header">
             <img src="{{ url('img/logo.png') }}" class="image">
             <div class="content">
-                {{ t('CREATE_CATEGORY') }}
+                {{ t('EDIT_CATEGORY') }}
             </div>
         </h2>
-        <form class="ui large form" action="{{ url('category/create') }}" method="post">
+        <form class="ui large form" action="{{ url('category/edit') }}" method="get">
             {{ flashSession.output() }}
             <div class="ui stacked segment">
                 <div class="field">
-                    <div class="ui left icon input">
-                        <i class="user icon"></i>
-                        <input type="text" name="name" placeholder="{{ t('CATEGORY_NAME') }}">
+                    <div class="ui large label">
+                        {{ t('CATEGORY_NAME') }} : {{ catName }}
                     </div>
                 </div>
-                <div class="buttons ">
-                    <div class="ui fluid large red submit button"><p>{{ t('ADD') }}</p></div>
-                    <a class="ui fluid large green button" href="{{ url('category/list') }}"><p>{{ t('CATEGORIES') }}</p></a>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="newName" placeholder="{{ t('NEW_NAME') }}">
+                    </div>
                 </div>
+                <div class="ui fluid large red submit button"><p>{{ t('SUBMIT') }}</p></div>
+                <a class="ui fluid large green button" href="{{ url('category/list') }}"><p>{{ t('CATEGORIES') }}</p></a>
             </div>
 
             <div class="ui error message"></div>
-
+            <div class="hidden">
+                <input type="text" name="op" value="change">
+                <input type="text" name="id" value="{{ catId }}">
+            </div>
         </form>
 
     </div>
@@ -34,11 +40,11 @@
                         .form({
                             fields: {
                                 email: {
-                                    identifier: 'name',
+                                    identifier: 'newName',
                                     rules: [
                                         {
                                             type: 'empty',
-                                            prompt: 'Please enter name'
+                                            prompt: 'Please enter new name'
                                         }
                                     ]
                                 }
