@@ -69,5 +69,6 @@ $messages = array(
     'EDIT_CATEGORY' => 'ویرایش دسته بندی',
     'SUBMIT' => 'ثبت',
     'EDITED_SUCCESSFULLY' => 'با موفقیت تغییر یافت',
+    '404' => 'صفحه درخواستی موجود نیست',
 
 );

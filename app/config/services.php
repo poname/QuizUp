@@ -134,7 +134,13 @@ $di->set('dispatcher', function () {
     $eventsManager = new Phalcon\Events\Manager();
 
     // Listen for events produced in the dispatcher using the Security plugin
-    $eventsManager->attach('dispatch:beforeDispatch', new \QUIZUP\Plugins\ACL());
+    //$eventsManager->attach('dispatch:beforeDispatch', new \QUIZUP\Plugins\ACL());
+
+    // Listen for events produced in the dispatcher using the Security plugin
+    $eventsManager->attach('dispatch:beforeExecuteRoute', new \QUIZUP\Plugins\SecurityPlugin());
+
+    // Handle exceptions and not-found exceptions using NotFoundPlugin
+    $eventsManager->attach('dispatch:beforeException', new \QUIZUP\Plugins\NotFoundPlugin());
 
     $dispatcher = new \Phalcon\Mvc\Dispatcher();
 
