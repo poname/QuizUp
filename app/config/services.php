@@ -140,7 +140,7 @@ $di->set('dispatcher', function () {
     $eventsManager->attach('dispatch:beforeExecuteRoute', new \QUIZUP\Plugins\SecurityPlugin());
 
     // Handle exceptions and not-found exceptions using NotFoundPlugin
-   // $eventsManager->attach('dispatch:beforeException', new NotFoundPlugin);
+    $eventsManager->attach('dispatch:beforeException', new \QUIZUP\Plugins\NotFoundPlugin());
 
     $dispatcher = new \Phalcon\Mvc\Dispatcher();
 

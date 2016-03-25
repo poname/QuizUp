@@ -40,7 +40,8 @@ class SecurityPlugin extends Plugin
             'companies'    => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
             'products'     => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
             'producttypes' => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
-            'invoices'     => array('index', 'profile')
+            'invoices'     => array('index', 'profile'),
+            'category' => array('index', 'list', 'add', 'delete', 'edit', 'create')
         );
         foreach ($privateResources as $resource => $actions) {
             $acl->addResource(new Resource($resource), $actions);
@@ -53,7 +54,10 @@ class SecurityPlugin extends Plugin
             'register' => array('index'),
             'errors'   => array('show404', 'show500'),
             'session'  => array('index', 'register', 'start', 'end'),
-            'contact'  => array('index', 'send')
+            'contact'  => array('index', 'send'),
+            'login' => array('index'),
+            'main' => array('index'),
+            'signup' => array('index', 'do', 'confirm')
         );
         foreach ($publicResources as $resource => $actions) {
             $acl->addResource(new Resource($resource), $actions);
@@ -97,10 +101,11 @@ class SecurityPlugin extends Plugin
         if ($allowed != Acl::ALLOW) {
 
             // If he doesn't have access forward him to the index controller
-            $this->flash->error("You don't have access to this module");
+            //$this->flash->error("You don't have access to this module 2");
+            $this->flashSession->error($this->translator->_('LOGIN_FIRST'));
             $dispatcher->forward(
                 array(
-                    'controller' => 'index',
+                    'controller' => 'login',
                     'action'     => 'index'
                 )
             );

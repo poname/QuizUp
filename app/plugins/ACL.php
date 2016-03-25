@@ -31,7 +31,7 @@ class MyACL extends Plugin
         if(!$auth && class_exists($controller) && $controller::isPrivate() == true){
             $dispatcher->forward(array(
                 'namespace' => 'QUIZUP\Controllers\Login',
-                'controller' => 'index',
+                'controller' => 'login',
                 'action'     => 'index'
             ));
             $this->session->destroy();
@@ -64,7 +64,7 @@ class MyACL extends Plugin
             $this->flash->error("You don't have access to this module");
             $dispatcher->forward(
                 array(
-                    'controller' => 'index',
+                    'controller' => 'login',
                     'action'     => 'index'
                 )
             );

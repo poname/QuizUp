@@ -22,6 +22,17 @@ class LoginController extends ControllerBase
         parent::initialize();
     }
 
+    private function _registerSession($user)
+    {
+        $this->session->set(
+            'auth',
+            array(
+                'id'   => $user->getUserId(),
+                'name' => $user->getName()
+            )
+        );
+    }
+
     public function indexAction(){
     	echo 'hi';
     	if ($this->session->has("login")) {
@@ -70,6 +81,8 @@ class LoginController extends ControllerBase
             );
     	}
 
+        $this->_registerSession($user[0]);
+
     	// Set a session variable
         $this->session->set("login", "true");
         $this->session->set("user_id", $user[0]->getUserId());
@@ -79,6 +92,7 @@ class LoginController extends ControllerBase
 
     public function logoutAction(){
         $this->session->remove("login");
+        $this->session->destroy();
 
         $this->flashSession->success($this->translator->_('LOGOUT_COMPLETED'));
             return $this->dispatcher->forward(
