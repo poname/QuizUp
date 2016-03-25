@@ -184,3 +184,117 @@
 [Fri, 25 Mar 16 15:36:13 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
 [Fri, 25 Mar 16 15:36:13 +0100][INFO] DESCRIBE `question_category`
 [Fri, 25 Mar 16 15:36:13 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`cid` = '7979'
+[Fri, 25 Mar 16 15:43:42 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:43:42 +0100][INFO] DESCRIBE `question_category`
+[Fri, 25 Mar 16 15:43:42 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`cid` = '7979'
+[Fri, 25 Mar 16 15:47:33 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:47:33 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 15:47:33 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 15:47:35 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:47:35 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 15:47:35 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 15:47:37 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:47:37 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 15:47:37 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 15:51:59 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:51:59 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 15:51:59 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 15:52:11 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:52:11 +0100][INFO] DESCRIBE `user`
+[Fri, 25 Mar 16 15:52:11 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Fri, 25 Mar 16 15:52:30 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:52:30 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 15:52:30 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 15:53:15 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:53:15 +0100][INFO] DESCRIBE `user`
+[Fri, 25 Mar 16 15:53:15 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Fri, 25 Mar 16 15:55:23 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:55:23 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 15:55:23 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 15:55:25 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:55:25 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 15:55:25 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 15:55:30 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:55:30 +0100][INFO] DESCRIBE `user`
+[Fri, 25 Mar 16 15:55:30 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Fri, 25 Mar 16 15:56:55 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:56:55 +0100][INFO] DESCRIBE `user`
+[Fri, 25 Mar 16 15:56:55 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Fri, 25 Mar 16 15:58:50 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:58:50 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 15:58:50 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 15:58:56 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:58:56 +0100][INFO] DESCRIBE `user`
+[Fri, 25 Mar 16 15:58:56 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Fri, 25 Mar 16 15:58:58 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:58:58 +0100][INFO] DESCRIBE `question_category`
+[Fri, 25 Mar 16 15:58:58 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category`
+[Fri, 25 Mar 16 15:59:00 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:59:00 +0100][INFO] DESCRIBE `question_category`
+[Fri, 25 Mar 16 15:59:00 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category` WHERE `question_category`.`cid` = '7979'
+[Fri, 25 Mar 16 15:59:02 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:59:02 +0100][INFO] DESCRIBE `question_category`
+[Fri, 25 Mar 16 15:59:02 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category`
+[Fri, 25 Mar 16 15:59:08 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:59:08 +0100][INFO] DESCRIBE `question_category`
+[Fri, 25 Mar 16 15:59:08 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category`
+[Fri, 25 Mar 16 15:59:12 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 15:59:12 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 15:59:12 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:22:07 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:22:07 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:22:07 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:22:21 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:22:21 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:22:21 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:22:33 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:22:33 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:22:33 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:25:48 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:25:48 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:25:48 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:26:51 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:26:51 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:26:51 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:26:54 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:26:54 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:26:54 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:28:03 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:28:03 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:28:03 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:28:07 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:28:07 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:28:07 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:28:09 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:28:09 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:28:09 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:28:15 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:28:15 +0100][INFO] DESCRIBE `user`
+[Fri, 25 Mar 16 17:28:15 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Fri, 25 Mar 16 17:28:20 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:28:20 +0100][INFO] DESCRIBE `question_category`
+[Fri, 25 Mar 16 17:28:20 +0100][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category`
+[Fri, 25 Mar 16 17:31:00 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:31:00 +0100][INFO] DESCRIBE `user`
+[Fri, 25 Mar 16 17:31:00 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Fri, 25 Mar 16 17:31:40 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:31:40 +0100][INFO] DESCRIBE `user`
+[Fri, 25 Mar 16 17:31:40 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Fri, 25 Mar 16 17:32:07 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:32:07 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:32:07 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:32:14 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:32:14 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:32:14 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:32:16 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:32:16 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:32:16 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Fri, 25 Mar 16 17:32:29 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:32:29 +0100][INFO] DESCRIBE `user`
+[Fri, 25 Mar 16 17:32:29 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'adsl0912@gmail.com' AND `user`.`password` = '123456'
+[Fri, 25 Mar 16 17:32:36 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:32:36 +0100][INFO] DESCRIBE `user`
+[Fri, 25 Mar 16 17:32:36 +0100][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'pponame@yahoo.com' AND `user`.`password` = '123456'
+[Fri, 25 Mar 16 17:32:40 +0100][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Fri, 25 Mar 16 17:32:40 +0100][INFO] DESCRIBE `country`
+[Fri, 25 Mar 16 17:32:40 +0100][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`

@@ -15,4 +15,12 @@ class IndexController extends ControllerBase {
     public function indexAction(){
         return $this->response->redirect('main/');
     }
+
+    public function show404(){
+        echo '404';
+    }
+
+    public function show503(){
+    echo '503';
+    }
 }

@@ -34,16 +34,15 @@ class LoginController extends ControllerBase
     }
 
     public function indexAction(){
-    	echo 'hi';
-    	if ($this->session->has("login")) {
+    	if ($this->session->has('auth')) {
     		return $this->response->redirect('login/success');
     	}
     }
 
     public function successAction(){
-    	echo 'by';
-    	if(!$this->session->has("login")){
-    		$this->flashSession->error($this->translator->_('INVALID_REQUEST') . $this->session->get("login"));
+    	//echo 'by';
+    	if(!$this->session->has('auth')){
+    		$this->flashSession->error($this->translator->_('INVALID_REQUEST') . $this->session->get('auth'));
             return $this->dispatcher->forward(
                 array(
                     'controller' => 'login',
@@ -84,14 +83,15 @@ class LoginController extends ControllerBase
         $this->_registerSession($user[0]);
 
     	// Set a session variable
-        $this->session->set("login", "true");
-        $this->session->set("user_id", $user[0]->getUserId());
+        //$this->session->set("login", "true");
+        //$this->session->set("user_id", $user[0]->getUserId());
 
     	return $this->response->redirect('login/success');
     }
 
     public function logoutAction(){
-        $this->session->remove("login");
+        //$this->session->remove("login");
+        $this->session->remove('auth');
         $this->session->destroy();
 
         $this->flashSession->success($this->translator->_('LOGOUT_COMPLETED'));

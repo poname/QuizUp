@@ -25,7 +25,7 @@ class CategoryController extends ControllerBase
     }
 
     public function indexAction(){
-
+    /*
         if (!$this->session->has("login")){
             $this->flashSession->error($this->translator->_('LOGIN_FIRST'));
             return $this->dispatcher->forward(
@@ -35,6 +35,7 @@ class CategoryController extends ControllerBase
                 )
             );
         }
+    */
     }
 
     public function addAction(){
