@@ -1,16 +1,82 @@
 <?php
 
+namespace QUIZUP\Plugins;
+
+//use Phalcon\Acl;
 use Phalcon\Acl;
+use Phalcon\Acl\Role;
+use Phalcon\Acl\Adapter\Memory as AclList;
+use Phalcon\Acl\Resource;
+
 use Phalcon\Events\Event;
 use Phalcon\Mvc\User\Plugin;
 use Phalcon\Mvc\Dispatcher;
 
 class SecurityPlugin extends Plugin
 {
-    // ...
-
     public function beforeExecuteRoute(Event $event, Dispatcher $dispatcher)
     {
+    //public $acl = null;
+    //public function __construct() {
+        // Create the ACL
+        $acl = new AclList();
+
+        // The default action is DENY access
+        $acl->setDefaultAction(Acl::DENY);
+
+        // Register two roles, Users is registered users
+        // and guests are users without a defined identity
+        $roles = array(
+            'users'  => new Role('Users'),
+            'guests' => new Role('Guests')
+        );
+
+        foreach ($roles as $role) {
+            $acl->addRole($role);
+        }
+
+        // Private area resources (backend)
+        $privateResources = array(
+            'companies'    => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
+            'products'     => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
+            'producttypes' => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
+            'invoices'     => array('index', 'profile')
+        );
+        foreach ($privateResources as $resource => $actions) {
+            $acl->addResource(new Resource($resource), $actions);
+        }
+
+        // Public area resources (frontend)
+        $publicResources = array(
+            'index'    => array('index'),
+            'about'    => array('index'),
+            'register' => array('index'),
+            'errors'   => array('show404', 'show500'),
+            'session'  => array('index', 'register', 'start', 'end'),
+            'contact'  => array('index', 'send')
+        );
+        foreach ($publicResources as $resource => $actions) {
+            $acl->addResource(new Resource($resource), $actions);
+        }
+
+        // Grant access to public areas to both users and guests
+        foreach ($roles as $role) {
+            foreach ($publicResources as $resource => $actions) {
+                $acl->allow($role->getName(), $resource, '*');
+            }
+        }
+
+        // Grant access to private area only to role Users
+        foreach ($privateResources as $resource => $actions) {
+            foreach ($actions as $action) {
+                $acl->allow('Users', $resource, $action);
+            }
+        }
+
+      //  return $acl;
+    //}
+
+
         // Check whether the "auth" variable exists in session to define the active role
         $auth = $this->session->get('auth');
         if (!$auth) {
@@ -24,7 +90,7 @@ class SecurityPlugin extends Plugin
         $action = $dispatcher->getActionName();
 
         // Obtain the ACL list
-        $acl = $this->getAcl();
+        //$acl = $this->getAcl();
 
         // Check if the Role have access to the controller (resource)
         $allowed = $acl->isAllowed($role, $controller, $action);
@@ -42,5 +108,6 @@ class SecurityPlugin extends Plugin
             // Returning "false" we tell to the dispatcher to stop the current operation
             return false;
         }
+
     }
 }
