@@ -62,21 +62,27 @@
                            </div>
                         </div>
                         <div class="field">
+                            <label>
+                                {{ t('COUNTRY') }}
+                            </label>
                            <div class="ui left icon input">
                               <i class="lock icon"></i>
-                              <select name="cid" class="ui fluid dropdown">
+                              <select style="padding-top: 2px" name="cid" class="ui fluid dropdown">
                                  {% for country in countries %}
-                                 <option value="{{ country.cid }}">{{ country.name }}</option>
+                                 <option value="{{ country.cid }}">{{ t(country.name) }}</option>
                                  {% endfor %}
                               </select>
                            </div>
                         </div>
                         <div class="field">
+                            <label>
+                                {{ t('GENDER') }}
+                            </label>
                            <div class="ui left icon input">
                               <i class="lock icon"></i>
-                              <select name="gender" class="ui fluid dropdown">
-                                 <option value="MALE">Male</option>
-                                 <option value="FEMALE">Female</option>
+                              <select style="padding-top: 2px" name="gender" class="ui fluid dropdown">
+                                 <option value="MALE">{{ t('MALE') }}</option>
+                                 <option value="FEMALE">{{ t('FEMALE') }}</option>
                               </select>
                            </div>
                         </div>

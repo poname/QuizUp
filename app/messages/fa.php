@@ -70,5 +70,9 @@ $messages = array(
     'SUBMIT' => 'ثبت',
     'EDITED_SUCCESSFULLY' => 'با موفقیت تغییر یافت',
     '404' => 'صفحه درخواستی موجود نیست',
+    'MALE' => 'مرد',
+    'FEMALE' => 'زن',
+    'GENDER' => 'جنسیت',
+    'COUNTRY' => 'کشور',
 
 );
