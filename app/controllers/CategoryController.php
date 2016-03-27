@@ -57,8 +57,8 @@ class CategoryController extends ControllerBase
 
    public function createAction(){
        $name = $this->request->getPost('name');
-       $cid = md5("QU1zUP" . time(). rand());
-       $user_id = $this->session->get(user_id) ;
+       //$cid = md5("QU1zUP" . time(). rand());
+       $user_id = $this->session->get('auth')['id'] ;
 
        if(count(QuestionCategory::find("name='" . $name . "'"))){
            //$this->logger->error(var_export($category->getMessages(),true));
@@ -73,7 +73,7 @@ class CategoryController extends ControllerBase
 
        $category = new QuestionCategory();
        $category->setName($name);
-       $category->setCid($cid);
+       //$category->setCid($cid);
        $category->setUserId($user_id);
 
        if(!$category->save()){
