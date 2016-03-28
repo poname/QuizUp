@@ -18,6 +18,14 @@
                  <a class="ui violet large basic button button" href="{{ url('category/add') }}"><p>{{ t('CREATE_CATEGORY') }}</p></a>
                  <a class="ui green large basic button button" href="{{ url('category/list') }}"><p>{{ t('CATEGORIES') }}</p></a>
              </div>
+             <div class="ui piled segment">
+                 <h2 class="ui icon header">
+                     <p>{{ t('MANAGE_QUESTIONS') }}</p>
+                 </h2>
+                 <p></p>
+                 <a class="ui pink large basic button button" href="{{ url('question/create') }}"><p>{{ t('CREATE_QUESTION') }}</p></a>
+                 <a class="ui brown large basic button button" href="{{ url('question/list') }}"><p>{{ t('QUESTIONS') }}</p></a>
+             </div>
          </div>
          <div class="column">
             <div class="ui middle aligned center aligned grid">

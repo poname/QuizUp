@@ -88,5 +88,7 @@ $messages = array(
     'DELETE_CONFIRM' => 'آیا می خواهید حذف شود ؟',
     'YES' => 'بله',
     'NO' => 'خیر',
+    'QUESTIONS' => 'سوالات',
+    'MANAGE_QUESTIONS' => 'مدیریت سوالات',
 
 );
