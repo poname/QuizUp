@@ -5561,3 +5561,558 @@
 [Mon, 28 Mar 16 02:03:15 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
 [Mon, 28 Mar 16 02:03:15 +0200][INFO] DESCRIBE `question`
 [Mon, 28 Mar 16 02:03:15 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:03:54 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'user' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:03:54 +0200][INFO] DESCRIBE `user`
+[Mon, 28 Mar 16 15:03:54 +0200][INFO] SELECT `user`.`user_id`, `user`.`email`, `user`.`name`, `user`.`family`, `user`.`gender`, `user`.`password`, `user`.`is_active`, `user`.`verification_code`, `user`.`cid` FROM `user` WHERE `user`.`email` = 'joojoo@gov.ir' AND `user`.`password` = '123456'
+[Mon, 28 Mar 16 15:03:57 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:03:57 +0200][INFO] DESCRIBE `country`
+[Mon, 28 Mar 16 15:03:57 +0200][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 28 Mar 16 15:03:58 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:03:58 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:03:58 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:04:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:04:09 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:04:09 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:05:12 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:05:12 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:05:12 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:08:14 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:08:14 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:08:14 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:08:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:08:25 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:08:25 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:09:37 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:09:37 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:09:37 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:10:21 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:10:21 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:10:21 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:10:45 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:10:45 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:10:45 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:11:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:11:05 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:11:05 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:11:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:11:25 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:11:25 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:12:40 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:12:40 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:12:40 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:12:51 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:12:51 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:12:51 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:13:55 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:13:55 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:13:55 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:14:19 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:14:19 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:14:19 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:15:15 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:15:15 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:15:15 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:16:07 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:16:07 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:16:07 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:19:45 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:19:45 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:19:45 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:21:17 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:21:17 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:21:17 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:21:37 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:21:37 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:21:37 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:21:49 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:21:49 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:21:49 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:22:20 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:22:20 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:22:20 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:22:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:22:44 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:22:44 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:23:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:23:25 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:23:26 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:24:00 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:24:00 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:24:00 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:24:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:24:28 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:24:28 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:28:07 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:28:07 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:28:07 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:31:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:31:34 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:31:34 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:31:43 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:31:43 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:31:43 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:32:47 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:32:47 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:32:47 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:32:56 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:32:56 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:32:56 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:33:08 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:33:08 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:33:08 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:33:59 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:33:59 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:33:59 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:34:31 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:34:31 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:34:31 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:34:48 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:34:48 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:34:48 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:36:27 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:36:27 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:36:27 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:40:42 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:40:42 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:40:42 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:43:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:43:09 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:43:09 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:43:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:43:09 +0200][INFO] DESCRIBE `country`
+[Mon, 28 Mar 16 15:43:09 +0200][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 28 Mar 16 15:43:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:43:25 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:43:25 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:43:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:43:25 +0200][INFO] DESCRIBE `country`
+[Mon, 28 Mar 16 15:43:25 +0200][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 28 Mar 16 15:43:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:43:28 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:43:28 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:43:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:43:28 +0200][INFO] DESCRIBE `country`
+[Mon, 28 Mar 16 15:43:28 +0200][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 28 Mar 16 15:43:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:43:30 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:43:30 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:43:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:43:30 +0200][INFO] DESCRIBE `country`
+[Mon, 28 Mar 16 15:43:30 +0200][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 28 Mar 16 15:43:41 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:43:41 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:43:41 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:43:41 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:43:41 +0200][INFO] DESCRIBE `country`
+[Mon, 28 Mar 16 15:43:41 +0200][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 28 Mar 16 15:44:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:44:03 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:44:03 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:44:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:44:03 +0200][INFO] DESCRIBE `country`
+[Mon, 28 Mar 16 15:44:03 +0200][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 28 Mar 16 15:44:08 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:44:08 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:44:08 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:44:08 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:44:08 +0200][INFO] DESCRIBE `country`
+[Mon, 28 Mar 16 15:44:08 +0200][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 28 Mar 16 15:45:12 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:45:12 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:45:12 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:47:11 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:47:11 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:47:11 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:47:43 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:47:43 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:47:43 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:48:32 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:48:32 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:48:32 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:49:11 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:49:11 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:49:11 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:49:49 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:49:49 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:49:49 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:50:07 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:50:07 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:50:07 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:51:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:51:03 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:51:03 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:51:21 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:51:21 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:51:21 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:58:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:58:44 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:58:44 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 15:59:04 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 15:59:04 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 15:59:04 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:00:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:00:50 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:00:50 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:00:51 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:00:51 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:00:51 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:02:18 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:02:18 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:02:18 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:03:59 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:03:59 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:03:59 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:05:22 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:05:22 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:05:22 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:05:57 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:05:57 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:05:57 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:06:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:06:05 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:06:05 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:10:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:10:05 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:10:05 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:12:01 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:12:01 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:12:01 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:12:07 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:12:07 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:12:07 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:12:41 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:12:41 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:12:41 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:13:12 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:13:12 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:13:13 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:14:26 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:14:26 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:14:26 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:15:13 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:15:13 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:15:13 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:21:45 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:21:45 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:21:45 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:22:35 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:22:35 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:22:35 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:22:47 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:22:47 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:22:47 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:25:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:25:09 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:25:09 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:25:37 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:25:37 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:25:37 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:26:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:26:02 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:26:02 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:27:06 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:27:06 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:27:06 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:27:38 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:27:38 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:27:38 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:28:11 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:28:11 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:28:11 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:28:39 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:28:39 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:28:39 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:29:54 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:29:54 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:29:54 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:30:08 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:30:08 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:30:08 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:31:13 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:31:13 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:31:13 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:31:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:31:50 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:31:50 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:32:27 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:32:27 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:32:27 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:44:35 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:44:35 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:44:35 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:44:43 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:44:43 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:44:43 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:45:22 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:45:22 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:45:22 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:45:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:45:28 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:45:28 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:46:47 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:46:47 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:46:47 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:48:39 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:48:39 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:48:39 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:48:41 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:48:41 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:48:41 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:48:46 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:48:46 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:48:46 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:49:20 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:49:20 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:49:20 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:49:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:49:25 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:49:26 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:49:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:49:29 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:49:29 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:49:31 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:49:31 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:49:31 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:49:46 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:49:46 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:49:46 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:49:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:49:50 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:49:50 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:49:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:49:50 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:49:50 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:50:19 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:50:19 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:50:19 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:50:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:50:25 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:50:25 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:56:51 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:56:51 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:56:51 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:57:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:05 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:05 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 16:57:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:05 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:05 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:57:13 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:13 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:13 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:57:14 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:14 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:14 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:57:23 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:23 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:23 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '2'
+[Mon, 28 Mar 16 16:57:23 +0200][INFO] DELETE FROM `question` WHERE `qid` = ?
+[Mon, 28 Mar 16 16:57:23 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:23 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:23 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:57:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:25 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:25 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:57:35 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:35 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:35 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 16:57:35 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:35 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:35 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:57:38 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:38 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:38 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:57:59 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:57:59 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:57:59 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:58:13 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:58:13 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:58:13 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 16:58:13 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:58:13 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 16:58:13 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 16:58:13 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:58:13 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:58:13 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 16:58:16 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 16:58:16 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 16:58:16 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:00:18 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:00:18 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:00:18 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:00:26 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:00:26 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:00:26 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 17:00:26 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:00:26 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:00:26 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:00:26 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:00:26 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:00:26 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:00:40 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:00:40 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:00:40 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:00:46 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:00:46 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:00:46 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 17:00:46 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:00:46 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:00:46 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:00:46 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:00:46 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:00:46 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:01:33 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:01:33 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:01:33 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:01:40 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:01:40 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:01:40 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 17:01:40 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:01:40 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:01:40 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:01:40 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:01:40 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:01:40 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:01:59 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:01:59 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:01:59 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:02:06 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:06 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:02:06 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 17:02:06 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:06 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:02:06 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:02:06 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:06 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:02:06 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:02:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:28 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:02:28 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:02:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:34 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:02:34 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 17:02:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:34 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:02:34 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:02:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:34 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:02:34 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:02:42 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:42 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:02:42 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:02:53 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:03:04 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:03:04 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:03:04 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 17:03:04 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:03:04 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:03:04 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:03:04 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:03:04 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:03:04 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:05:18 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:05:18 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:05:18 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:05:24 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:05:24 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:05:24 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 17:05:24 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:05:24 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:05:24 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:05:24 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:05:24 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:05:24 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:05:46 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:05:46 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:05:46 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:06:00 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:06:00 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:06:00 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '1'
+[Mon, 28 Mar 16 17:06:00 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:06:00 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:06:00 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:06:00 +0200][INFO] UPDATE `question` SET `cid` = ?, `description` = ?, `ans1` = ?, `ans2` = ?, `ans3` = ?, `ans4` = ?, `correct` = ? WHERE `qid` = ?
+[Mon, 28 Mar 16 17:06:00 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:06:00 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:06:00 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:06:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:06:05 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:06:05 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:06:37 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:06:37 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:06:37 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:07:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:07:02 +0200][INFO] DESCRIBE `country`
+[Mon, 28 Mar 16 17:07:02 +0200][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 28 Mar 16 17:07:04 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:07:04 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:07:04 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:07:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'country' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:07:05 +0200][INFO] DESCRIBE `country`
+[Mon, 28 Mar 16 17:07:05 +0200][INFO] SELECT `country`.`cid`, `country`.`name` FROM `country`
+[Mon, 28 Mar 16 17:07:06 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:07:06 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:07:06 +0200][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category`
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category`
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] INSERT INTO `question` (`cid`, `description`, `ans1`, `ans2`, `ans3`, `ans4`, `correct`) VALUES (?, ?, ?, ?, ?, ?, ?)
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:07:30 +0200][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category`
+[Mon, 28 Mar 16 17:07:35 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:07:35 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:07:35 +0200][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category`
+[Mon, 28 Mar 16 17:07:36 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:07:36 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:07:36 +0200][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category`
+[Mon, 28 Mar 16 17:08:01 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:08:01 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:08:01 +0200][INFO] SELECT `question_category`.`cid`, `question_category`.`name`, `question_category`.`user_id` FROM `question_category`
+[Mon, 28 Mar 16 17:08:04 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:08:04 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:08:04 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:08:20 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:08:20 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:08:20 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '3'
+[Mon, 28 Mar 16 17:08:20 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:08:20 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:08:20 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:08:20 +0200][INFO] UPDATE `question` SET `cid` = ?, `description` = ?, `ans1` = ?, `ans2` = ?, `ans3` = ?, `ans4` = ?, `correct` = ? WHERE `qid` = ?
+[Mon, 28 Mar 16 17:08:20 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:08:20 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:08:20 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:08:21 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:08:21 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:08:21 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:08:45 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:08:45 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:08:45 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:09:01 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:09:01 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:09:01 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question` WHERE `question`.`qid` = '3'
+[Mon, 28 Mar 16 17:09:01 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question_category' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:09:01 +0200][INFO] DESCRIBE `question_category`
+[Mon, 28 Mar 16 17:09:01 +0200][INFO] SELECT COUNT(*) AS `rowcount` FROM `question_category` WHERE `question_category`.`cid` = :0
+[Mon, 28 Mar 16 17:09:01 +0200][INFO] UPDATE `question` SET `cid` = ?, `description` = ?, `ans1` = ?, `ans2` = ?, `ans3` = ?, `ans4` = ?, `correct` = ? WHERE `qid` = ?
+[Mon, 28 Mar 16 17:09:01 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:09:01 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:09:01 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`
+[Mon, 28 Mar 16 17:09:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'question' AND `TABLE_SCHEMA` = DATABASE()
+[Mon, 28 Mar 16 17:09:03 +0200][INFO] DESCRIBE `question`
+[Mon, 28 Mar 16 17:09:03 +0200][INFO] SELECT `question`.`qid`, `question`.`cid`, `question`.`description`, `question`.`ans1`, `question`.`ans2`, `question`.`ans3`, `question`.`ans4`, `question`.`correct` FROM `question`

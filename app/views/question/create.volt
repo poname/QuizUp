@@ -66,7 +66,7 @@
                 </div>
                 <div class="buttons ">
                     <div class="ui fluid large red submit button"><p>{{ t('ADD') }}</p></div>
-                    <a class="ui fluid large green button" href="{{ url('category/list') }}"><p>{{ t('CATEGORIES') }}</p></a>
+                    <a class="ui fluid large green button" href="{{ url('question/list') }}"><p>{{ t('QUESTIONS') }}</p></a>
                 </div>
             </div>
 

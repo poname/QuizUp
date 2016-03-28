@@ -82,11 +82,47 @@ class QuestionController extends ControllerBase
         $this->view->setVar('questions', $questions);
     }
 
-    public function deleteAction(){
+    public function deleteAction()
+    {
+        $qid = $this->request->getPost("qid");
+        $question = Question::find("qid='" . $qid . "'");
 
+        if(!$question[0]->delete()){
+
+        }
+
+        $this->flashSession->success($this->translator->_('DELETED_SUCCESSFULLY'));
     }
 
-    public function editAction(){
+    public function editAction()
+    {
+        if($this->request->isPost()){
+            $qid = $this->request->getPost("qid");
+            $question = Question::find("qid='" . $qid . "'");
+            //$name = $cat[0]->getName();
+            $description = $this->request->getPost('description');
+            $ans1 = $this->request->getPost('ans1');
+            $ans2 = $this->request->getPost('ans2');
+            $ans3 = $this->request->getPost('ans3');
+            $ans4 = $this->request->getPost('ans4');
+            $correct = $this->request->getPost('correct');
 
+            $question[0]
+                ->setDescription($description)
+                ->setAns1($ans1)
+                ->setAns2($ans2)
+                ->setAns3($ans3)
+                ->setAns4($ans4)
+                ->setCorrect($correct);
+            //echo 'post';
+            //$this->response->setContent('post');
+
+            if(!$question[0]->save()){
+
+            }
+
+
+            $this->flashSession->success($this->translator->_('EDITED_SUCCESSFULLY'));
+        }
     }
 }

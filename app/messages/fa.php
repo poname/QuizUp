@@ -90,5 +90,8 @@ $messages = array(
     'NO' => 'خیر',
     'QUESTIONS' => 'سوالات',
     'MANAGE_QUESTIONS' => 'مدیریت سوالات',
+    'EDIT_QUESTION' => 'ویرایش سوال',
+    'CANCEL' => 'لغو',
+    'SAVE' => 'ذخیره',
 
 );
