@@ -6,5 +6,11 @@
         <div class="ui message">
             <a href="{{ url('login/logout') }}">{{ t('LOGOUT') }}</a>
         </div>
+        <div class="ui message negative">
+            <a href="{{ url('category/add') }}">{{ t('CREATE_CATEGORY') }}</a>
+        </div>
+        <div class="ui message negative">
+            <a href="{{ url('category/list') }}">{{ t('CATEGORIES') }}</a>
+        </div>
     </div>
 </div>

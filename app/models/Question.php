@@ -47,6 +47,8 @@ class Question extends \Phalcon\Mvc\Model
      */
     protected $ans4;
 
+    protected $correct;
+
     /**
      * Method to set the value of field qid
      *
@@ -138,6 +140,13 @@ class Question extends \Phalcon\Mvc\Model
         return $this;
     }
 
+    public function setCorrect($correct)
+    {
+        $this->correct = $correct;
+
+        return $this;
+    }
+
     /**
      * Returns the value of field qid
      *
@@ -206,6 +215,11 @@ class Question extends \Phalcon\Mvc\Model
     public function getAns4()
     {
         return $this->ans4;
+    }
+
+    public function getCorrect()
+    {
+        return $this->correct;
     }
 
     /**

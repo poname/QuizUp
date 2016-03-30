@@ -43,6 +43,7 @@ CREATE TABLE `question` (
   `ans2` text NOT NULL,
   `ans3` text NOT NULL,
   `ans4` text NOT NULL,
+  'correct' tinyint(1) NOT NULL,
   PRIMARY KEY (`qid`),
   KEY `question_to_category` (`cid`),
   CONSTRAINT `question_to_category` FOREIGN KEY (`cid`) REFERENCES `question_category` (`cid`) ON DELETE CASCADE ON UPDATE CASCADE
