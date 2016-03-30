@@ -10,6 +10,22 @@
             	<p>:))))</p>
             	<a class="ui red large basic button button" href="{{ url('login') }}"><p>{{ t('ENTER_GAME') }}</p></a>
             </div>
+             <div class="ui piled segment">
+                 <h2 class="ui icon header">
+                     <p>{{ t('MANAGE_CATEGORY') }}</p>
+                 </h2>
+                 <p></p>
+                 <a class="ui violet large basic button button" href="{{ url('category/add') }}"><p>{{ t('CREATE_CATEGORY') }}</p></a>
+                 <a class="ui green large basic button button" href="{{ url('category/list') }}"><p>{{ t('CATEGORIES') }}</p></a>
+             </div>
+             <div class="ui piled segment">
+                 <h2 class="ui icon header">
+                     <p>{{ t('MANAGE_QUESTIONS') }}</p>
+                 </h2>
+                 <p></p>
+                 <a class="ui pink large basic button button" href="{{ url('question/create') }}"><p>{{ t('CREATE_QUESTION') }}</p></a>
+                 <a class="ui brown large basic button button" href="{{ url('question/list') }}"><p>{{ t('QUESTIONS') }}</p></a>
+             </div>
          </div>
          <div class="column">
             <div class="ui middle aligned center aligned grid">
@@ -54,21 +70,27 @@
                            </div>
                         </div>
                         <div class="field">
+                            <label>
+                                {{ t('COUNTRY') }}
+                            </label>
                            <div class="ui left icon input">
                               <i class="lock icon"></i>
-                              <select name="cid" class="ui fluid dropdown">
+                              <select style="padding-top: 2px" name="cid" class="ui fluid dropdown">
                                  {% for country in countries %}
-                                 <option value="{{ country.cid }}">{{ country.name }}</option>
+                                 <option value="{{ country.cid }}">{{ t(country.name) }}</option>
                                  {% endfor %}
                               </select>
                            </div>
                         </div>
                         <div class="field">
+                            <label>
+                                {{ t('GENDER') }}
+                            </label>
                            <div class="ui left icon input">
                               <i class="lock icon"></i>
-                              <select name="gender" class="ui fluid dropdown">
-                                 <option value="MALE">Male</option>
-                                 <option value="FEMALE">Female</option>
+                              <select style="padding-top: 2px" name="gender" class="ui fluid dropdown">
+                                 <option value="MALE">{{ t('MALE') }}</option>
+                                 <option value="FEMALE">{{ t('FEMALE') }}</option>
                               </select>
                            </div>
                         </div>
