@@ -27,6 +27,8 @@ class NotFoundPlugin extends Plugin{
         }
 
         // Handle other exceptions
+        $this->logger->error(var_export($exception->__toString(), true));
+        
         $dispatcher->forward(array(
             'controller' => 'index',
             'action'     => 'show503'
