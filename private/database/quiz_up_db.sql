@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost_3306
-Source Server Version : 50624
-Source Host           : localhost:3306
+Source Server         : nzri.ir_3306
+Source Server Version : 50544
+Source Host           : nzri.ir:3306
 Source Database       : quizup
 
 Target Server Type    : MYSQL
-Target Server Version : 50624
+Target Server Version : 50544
 File Encoding         : 65001
 
-Date: 2016-03-08 17:26:53
+Date: 2016-03-31 05:24:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -43,7 +43,7 @@ CREATE TABLE `question` (
   `ans2` text NOT NULL,
   `ans3` text NOT NULL,
   `ans4` text NOT NULL,
-  'correct' tinyint(1) NOT NULL,
+  `correct` tinyint(1) NOT NULL,
   PRIMARY KEY (`qid`),
   KEY `question_to_category` (`cid`),
   CONSTRAINT `question_to_category` FOREIGN KEY (`cid`) REFERENCES `question_category` (`cid`) ON DELETE CASCADE ON UPDATE CASCADE
