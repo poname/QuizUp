@@ -1,5 +1,6 @@
 /bower_components
 /.idea
+/app/log
 /app/config/config.php
 /.htaccess
 /public/.htaccess
