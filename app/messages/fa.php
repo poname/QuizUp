@@ -93,5 +93,6 @@ $messages = array(
     'EDIT_QUESTION' => 'ویرایش سوال',
     'CANCEL' => 'لغو',
     'SAVE' => 'ذخیره',
+    'LIST' => 'لیست',
 
 );

@@ -15,7 +15,7 @@
                      <p>{{ t('MANAGE_CATEGORY') }}</p>
                  </h2>
                  <p></p>
-                 <a class="ui violet large basic button button" href="{{ url('category/add') }}"><p>{{ t('CREATE_CATEGORY') }}</p></a>
+                 <a class="ui violet large basic button button" href="{{ url('category/create') }}"><p>{{ t('CREATE_CATEGORY') }}</p></a>
                  <a class="ui green large basic button button" href="{{ url('category/list') }}"><p>{{ t('CATEGORIES') }}</p></a>
              </div>
              <div class="ui piled segment">
