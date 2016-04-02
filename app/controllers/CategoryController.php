@@ -61,9 +61,6 @@ class CategoryController extends ControllerBase
        }
    }
 
-       }
-   }
-
     public function listAction(){
         Tag::appendTitle($this->translator->_('CATEGORIES'));
         $categories = QuestionCategory::find() or array();
