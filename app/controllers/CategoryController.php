@@ -40,7 +40,7 @@ class CategoryController extends ControllerBase
                return $this->dispatcher->forward(
                    array(
                        'controller' => 'category',
-                       'action' => 'add'
+                       'action' => 'create'
                    )
                );
            }
@@ -56,7 +56,7 @@ class CategoryController extends ControllerBase
                return $this->dispatcher->forward(
                    array(
                        'controller' => 'category',
-                       'action' => 'add'
+                       'action' => 'create'
                    )
                );
            }
@@ -64,7 +64,7 @@ class CategoryController extends ControllerBase
            return $this->dispatcher->forward(
                array(
                    'controller' => 'category',
-                   'action' => 'add'
+                   'action' => 'create'
                )
            );
        }
