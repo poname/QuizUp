@@ -33,17 +33,15 @@ class CategoryController extends ControllerBase
            $name = $this->request->getPost('name');
            //$cid = md5("QU1zUP" . time(). rand());
            $user_id = $this->session->get('auth')['id'] ;
-
+           //$this->request->
+            
            if(count(QuestionCategory::find("name='" . $name . "'"))){
                //$this->logger->error(var_export($category->getMessages(),true));
                $this->flashSession->error($name . '<br>' . $this->translator->_('REPEATED_CATEGORY'));
-               return $this->dispatcher->forward(
-                   array(
-                       'controller' => 'category',
-                       'action' => 'create'
-                   )
-               );
+               $this->response->redirect('/category/create');
+               return;
            }
+
 
            $category = new QuestionCategory();
            $category->setName($name);
@@ -53,20 +51,13 @@ class CategoryController extends ControllerBase
            if(!$category->save()){
                $this->logger->error(var_export($category->getMessages(),true));
                $this->flashSession->error($this->translator->_('INTERNAL_ERROR'));
-               return $this->dispatcher->forward(
-                   array(
-                       'controller' => 'category',
-                       'action' => 'create'
-                   )
-               );
+               //$this->flashSession->error($name . '<br>' . $this->translator->_('REPEATED_CATEGORY'));
+               $this->response->redirect('/category/create');
+               return;
            }
            $this->flashSession->success($name . "<br>" . $this->translator->_('CATEGORY_CREATED'));
-           return $this->dispatcher->forward(
-               array(
-                   'controller' => 'category',
-                   'action' => 'create'
-               )
-           );
+           $this->response->redirect('/category/create');
+           return;
        }
    }
 
