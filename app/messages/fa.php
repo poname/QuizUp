@@ -94,5 +94,7 @@ $messages = array(
     'CANCEL' => 'لغو',
     'SAVE' => 'ذخیره',
     'LIST' => 'لیست',
+    'Iran' => 'ایران',
+    'United States' => 'امریکا',
 
 );
