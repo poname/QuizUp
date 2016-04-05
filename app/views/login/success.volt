@@ -6,7 +6,7 @@
 	
   <div class="item">
 		
-		<a class="ui icon button" href="/main/index"><i class="home icon"></i>Home</a>
+		<a class="ui icon button" href="/main/index"><i class="home icon"></i>خانه</a>
 	</div>
     
     <div class="right item">
