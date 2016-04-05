@@ -1,24 +1,24 @@
 <div class="ui red inverted menu">
 <div class="item">
-    <img src="img/logo.png">
+    <img src="/img/logo.png">
   کوییز آپ
   </div>
 	
   <div class="item">
 		
-		<div class="ui icon button"><i class="home icon"></i>Home</div>
+		<div class="ui icon button" href="main/index"><i class="home icon"></i>Home</div>
 	</div>
     
     <div class="right item">
-        <div class="ui simple dropdown item">
+        <div class="right ui simple dropdown item">
           <i class="user icon"></i>
           <span class="text">{{ full_name }}</span>
            <i class="dropdown icon"></i>
           <div class="menu">
-      <div class="item" href="/category/list">دسته بندی های من</div>
-      <div class="item" href="/question/list>سوالات من</div>
-      <div class="item" href="/category/create">ایجاد دسته بندی جدید</div>
-  		<div class="item" href="/question/create>ایجاد سوال جدید</div>
+      <div class="item" href="category/list">دسته بندی های من</div>
+      <div class="item" href="question/list">سوالات من</div>
+      <div class="item" href="category/create">ایجاد دسته بندی جدید</div>
+  		<div class="item" href="question/create">ایجاد سوال جدید</div>
   		
   <div class="item" href="login/logout"><i class="sign out icon"></i>خروج</div>
     </div>
