@@ -15,12 +15,12 @@
           <span class="text">{{ full_name }}</span>
            <i class="dropdown icon"></i>
           <div class="menu">
-      <a class="item" href="/category/list">دسته بندی های من</a>
-      <a class="item" href="/question/list">سوالات من</a>
-      <a class="item" href="/category/create">ایجاد دسته بندی جدید</a>
-  		<a class="item" href="/question/create">ایجاد سوال جدید</a>
+      <a class="item" href="/category/list">{{ t('CATEGORIES') }}</a>
+      <a class="item" href="/question/list">{{ t('QUESTIONS') }}</a>
+      <a class="item" href="/category/create">{{ t('CREATE_CATEGORY') }}</a>
+  		<a class="item" href="/question/create">{{ t('CREATE_QUESTION') }}</a>
   		
-  <a class="item" href="/logout"><i class="sign out icon"></i>خروج</a>
+  <a class="item" href="{{ url('login/logout') }}"><i class="sign out icon"></i>{{ t('LOGOUT') }}</a>
     </div>
     </div>
   </div></div>
