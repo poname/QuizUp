@@ -4,22 +4,26 @@
         <thead>
         <tr>
             <th>{{ t('CATEGORY_NAME') }}</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>{{ t('OPERATION') }}</th>
         </tr>
         </thead>
         <tbody>
         {% for item in categories %}
             <tr>
                 <td id="{{ 'C' ~ item.cid }}">{{ item.name }}</td>
-                <td class="selectable positive"  onclick="editAction({{ item.cid }})">
-                    <!-- <a href="./edit?id={{ item.cid }}">{{ t('EDIT') }}</a> -->
-                    <a>{{ t('EDIT') }}</a>
-                </td>
-                <td class="selectable negative" onclick="deleteAction({{ item.cid }})">
-                   <!-- <a href="./delete?id={{ item.cid }}">{{ t('DELETE') }}</a> -->
-                    <a>{{ t('DELETE') }}</a>
-                </td>
+                <td class="collapsing">
+                                <div class="ui vertical labeled icon buttons">
+                                    <a id="deleteButton" class="ui red button" onclick="deleteAction({{ question.qid }})"> <!--href="question/delete?id={{ question.cid }}"-->
+                                        <i class="delete icon"></i>
+                                        <p>{{ t('DELETE') }}</p>
+
+                                    </a>
+                                    <a class="ui blue button" onclick="editAction({{ question.qid }})" ><!--href="question/edit?id={{ question.cid }}">-->
+                                        <i class="edit icon"></i>
+                                        <p>{{ t('EDIT') }}</p>
+                                    </a>
+                                </div>
+                   </td>
             </tr>
         {% endfor %}
         </tbody>
