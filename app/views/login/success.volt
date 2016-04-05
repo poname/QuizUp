@@ -20,7 +20,7 @@
       <a class="item" href="/category/create">ایجاد دسته بندی جدید</a>
   		<a class="item" href="/question/create">ایجاد سوال جدید</a>
   		
-  <a class="item" href="login/logout"><i class="sign out icon"></i>خروج</a>
+  <a class="item" href="/logout"><i class="sign out icon"></i>خروج</a>
     </div>
     </div>
   </div></div>
