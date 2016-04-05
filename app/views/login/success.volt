@@ -6,7 +6,7 @@
 	
   <div class="item">
 		
-		<div class="ui icon button" href="/main/index"><i class="home icon"></i>Home</div>
+		<a class="ui icon button" href="/main/index"><i class="home icon"></i>Home</a>
 	</div>
     
     <div class="right item">
@@ -15,12 +15,12 @@
           <span class="text">{{ full_name }}</span>
            <i class="dropdown icon"></i>
           <div class="menu">
-      <div class="item" href="/category/list">دسته بندی های من</div>
-      <div class="item" href="/question/list">سوالات من</div>
-      <div class="item" href="/category/create">ایجاد دسته بندی جدید</div>
-  		<div class="item" href="/question/create">ایجاد سوال جدید</div>
+      <a class="item" href="/category/list">دسته بندی های من</a>
+      <a class="item" href="/question/list">سوالات من</a>
+      <a class="item" href="/category/create">ایجاد دسته بندی جدید</a>
+  		<a class="item" href="/question/create">ایجاد سوال جدید</a>
   		
-  <div class="item" href="login/logout"><i class="sign out icon"></i>خروج</div>
+  <a class="item" href="login/logout"><i class="sign out icon"></i>خروج</a>
     </div>
     </div>
   </div></div>
