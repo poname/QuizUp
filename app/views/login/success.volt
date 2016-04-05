@@ -15,10 +15,10 @@
           <span class="text">{{ full_name }}</span>
            <i class="dropdown icon"></i>
           <div class="menu">
-      <div class="item" href="category/list">دسته بندی های من</div>
-      <div class="item" href="question/list">سوالات من</div>
-      <div class="item" href="category/create">ایجاد دسته بندی جدید</div>
-  		<div class="item" href="question/create">ایجاد سوال جدید</div>
+      <div class="item" href="/category/list">دسته بندی های من</div>
+      <div class="item" href="/question/list">سوالات من</div>
+      <div class="item" href="/category/create">ایجاد دسته بندی جدید</div>
+  		<div class="item" href="/question/create">ایجاد سوال جدید</div>
   		
   <div class="item" href="login/logout"><i class="sign out icon"></i>خروج</div>
     </div>
