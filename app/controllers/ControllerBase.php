@@ -16,6 +16,7 @@ class ControllerBase extends Controller
         Tag::setTitleSeparator('|');
         $this->view->setVar('base_uri', $this->url->getBaseUri());
         $this->view->setVar('t', $this->translator);
+        $this->view->setVar('_direction', $this->config->application->lang->dir);
     }
 
     protected function jsonResponse($success,array $data = array()){
