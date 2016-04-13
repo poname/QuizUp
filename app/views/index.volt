@@ -10,6 +10,7 @@
   {{ get_title() }}
   <link rel="stylesheet" type="text/css" href="{{ url('lib/semantic/semantic.' ~ _direction ~'.min.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url('css/font.yekan.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url('css/app.css') }}">
   <link rel="shortcut icon" sizes="16x16" href="{{ url('img/icon-16.png') }}">
   <link rel="shortcut icon" sizes="32x32" href="{{ url('img/icon-32.png') }}">
   <script src="{{ url('lib/jquery/jquery.min.js') }}"></script>
