@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="{{ _direction }}">
 <head>
   <!-- Standard Meta -->
   <meta charset="utf-8" />
