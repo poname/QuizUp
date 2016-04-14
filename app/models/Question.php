@@ -47,6 +47,10 @@ class Question extends \Phalcon\Mvc\Model
      */
     protected $ans4;
 
+    /**
+     *
+     * @var integer
+     */
     protected $correct;
 
     /**
@@ -140,6 +144,12 @@ class Question extends \Phalcon\Mvc\Model
         return $this;
     }
 
+    /**
+     * Method to set the value of field correct
+     *
+     * @param integer $correct
+     * @return $this
+     */
     public function setCorrect($correct)
     {
         $this->correct = $correct;
@@ -217,6 +227,11 @@ class Question extends \Phalcon\Mvc\Model
         return $this->ans4;
     }
 
+    /**
+     * Returns the value of field correct
+     *
+     * @return integer
+     */
     public function getCorrect()
     {
         return $this->correct;
@@ -227,7 +242,11 @@ class Question extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->belongsTo('cid', 'QUIZUP\Models\QuestionCategory', 'cid', array('alias' => 'QuestionCategory'));
+        $this->hasMany('qid', 'QUIZUP\Models\Quiz', 'question5', array('alias' => 'Quiz5'));
+        $this->hasMany('qid', 'QUIZUP\Models\Quiz', 'question4', array('alias' => 'Quiz4'));
+        $this->hasMany('qid', 'QUIZUP\Models\Quiz', 'question1', array('alias' => 'Quiz1'));
+        $this->hasMany('qid', 'QUIZUP\Models\Quiz', 'question2', array('alias' => 'Quiz2'));
+        $this->hasMany('qid', 'QUIZUP\Models\Quiz', 'question3', array('alias' => 'Quiz3'));
         $this->belongsTo('cid', 'QUIZUP\Models\QuestionCategory', 'cid', array('foreignKey' => true,'alias' => 'QuestionCategory'));
     }
 

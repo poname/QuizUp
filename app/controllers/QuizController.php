@@ -35,6 +35,10 @@ class QuizController extends ControllerBase
             $this->view->setVar('categories', $categories);
         }
     }
-    public function startAction($cid){
+    public function startAction(){
+        $category_id = $this->request->getPost('category', 'int') or die('invalid request');
+
+        
+
     }
 }

@@ -62,6 +62,12 @@ class User extends \Phalcon\Mvc\Model
     protected $cid;
 
     /**
+     *
+     * @var integer
+     */
+    protected $points;
+
+    /**
      * Method to set the value of field user_id
      *
      * @param integer $user_id
@@ -179,6 +185,19 @@ class User extends \Phalcon\Mvc\Model
     }
 
     /**
+     * Method to set the value of field points
+     *
+     * @param integer $points
+     * @return $this
+     */
+    public function setPoints($points)
+    {
+        $this->points = $points;
+
+        return $this;
+    }
+
+    /**
      * Returns the value of field user_id
      *
      * @return integer
@@ -269,6 +288,16 @@ class User extends \Phalcon\Mvc\Model
     }
 
     /**
+     * Returns the value of field points
+     *
+     * @return integer
+     */
+    public function getPoints()
+    {
+        return $this->points;
+    }
+
+    /**
      * Validations and business logic
      *
      * @return boolean
@@ -297,7 +326,9 @@ class User extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->hasMany('user_id', 'QUIZUP\Models\QuestionCategory', 'user_id', array('alias' => 'QuestionCategory'));
-        $this->belongsTo('cid', 'QUIZUP\Models\Country', 'cid', array('foreignKey' => true,'alias' => 'Country'));
+        $this->hasMany('user_id', 'QUIZUP\Models\Quiz', 'user_id1', array('alias' => 'Quiz1'));
+        $this->hasMany('user_id', 'QUIZUP\Models\Quiz', 'user_id2', array('alias' => 'Quiz2'));
+        $this->belongsTo('cid', 'QUIZUP\Models\Country', 'cid', array('alias' => 'Country'));
     }
 
     /**

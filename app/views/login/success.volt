@@ -15,11 +15,10 @@
             {#<span class="text">{{ full_name }}</span>#}
             <i class="dropdown icon"></i>
             <div class="menu">
-                <a class="item" href="/category/list">{{ t('CATEGORIES') }}</a>
-                <a class="item" href="/question/list">{{ t('QUESTIONS') }}</a>
-                <a class="item" href="/category/create">{{ t('CREATE_CATEGORY') }}</a>
-                <a class="item" href="/question/create">{{ t('CREATE_QUESTION') }}</a>
-
+                <a class="item" href="{{ url('category/list') }}">{{ t('CATEGORIES') }}</a>
+                <a class="item" href="{{ url('question/list') }}">{{ t('QUESTIONS') }}</a>
+                <a class="item" href="{{ url('category/create') }}">{{ t('CREATE_CATEGORY') }}</a>
+                <a class="item" href="{{ url('question/create  ') }}">{{ t('CREATE_QUESTION') }}</a>
                 <a class="item" href="{{ url('login/logout') }}"><i class="sign out icon"></i>{{ t('LOGOUT') }}</a>
             </div>
         </div>

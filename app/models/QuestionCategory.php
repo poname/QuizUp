@@ -98,9 +98,8 @@ class QuestionCategory extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->hasMany('cid', 'QUIZUP\Models\Question', 'cid', array('alias' => 'Question'));
+        $this->hasMany('cid', 'QUIZUP\Models\Quiz', 'cid', array('alias' => 'Quiz'));
         $this->belongsTo('user_id', 'QUIZUP\Models\User', 'user_id', array('alias' => 'User'));
-        $this->hasMany('cid', 'QUIZUP\Models\Question', 'cid', NULL);
-        $this->belongsTo('user_id', 'QUIZUP\Models\User', 'user_id', array('foreignKey' => true,'alias' => 'User'));
     }
 
     /**
