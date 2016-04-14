@@ -18,7 +18,7 @@
                  </td>
                  <td class="selectable negative" onclick="deleteAction({{ item.cid }})">
                     <!-- <a href="./delete?id={{ item.cid }}">{{ t('DELETE') }}</a> -->
-                     <a>{{ t('DELETE') }}</a>
+                     <a href="javascript:void(0)">{{ t('DELETE') }}</a>
                  </td>
             </tr>
         {% endfor %}
