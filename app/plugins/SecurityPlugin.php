@@ -38,7 +38,8 @@ class SecurityPlugin extends Plugin
         // Private area resources (backend)
         $privateResources = array(
             'category' => array('index', 'list', 'delete', 'edit', 'create'),
-            'question'     => array('index', 'create', 'list', 'edit', 'delete')
+            'question'     => array('index', 'create', 'list', 'edit', 'delete'),
+            'quiz' => array('selectCategory','do')
         );
         foreach ($privateResources as $resource => $actions) {
             $acl->addResource(new Resource($resource), $actions);
@@ -99,6 +100,7 @@ class SecurityPlugin extends Plugin
 
             // If he doesn't have access forward him to the index controller
             //$this->flash->error("You don't have access to this module 2");
+            $this->session->set("nextPage", $dispatcher->getControllerName() . '/' . $dispatcher->getActionName());
             $this->flashSession->error($this->translator->_('LOGIN_FIRST'));
             $dispatcher->forward(
                 array(

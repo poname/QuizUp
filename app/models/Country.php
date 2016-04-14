@@ -69,7 +69,6 @@ class Country extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->hasMany('cid', 'QUIZUP\Models\User', 'cid', array('alias' => 'User'));
-        $this->hasMany('cid', 'QUIZUP\Models\User', 'cid', NULL);
     }
 
     /**

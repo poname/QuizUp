@@ -5,7 +5,7 @@
         <tr>
             <th>{{ t('CATEGORY_NAME') }}</th>
             <th>Edit</th>
- -           <th>Delete</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -13,13 +13,13 @@
             <tr>
                 <td id="{{ 'C' ~ item.cid }}">{{ item.name }}</td>
                  <td class="selectable positive"  onclick="editAction({{ item.cid }})">
- -                    <!-- <a href="./edit?id={{ item.cid }}">{{ t('EDIT') }}</a> -->
- -                    <a>{{ t('EDIT') }}</a>
- -                </td>
- -                <td class="selectable negative" onclick="deleteAction({{ item.cid }})">
- -                   <!-- <a href="./delete?id={{ item.cid }}">{{ t('DELETE') }}</a> -->
- -                    <a>{{ t('DELETE') }}</a>
- -                </td>
+                     <!-- <a href="./edit?id={{ item.cid }}">{{ t('EDIT') }}</a> -->
+                     <a href="javascript:void(0)">{{ t('EDIT') }}</a>
+                 </td>
+                 <td class="selectable negative" onclick="deleteAction({{ item.cid }})">
+                    <!-- <a href="./delete?id={{ item.cid }}">{{ t('DELETE') }}</a> -->
+                     <a href="javascript:void(0)">{{ t('DELETE') }}</a>
+                 </td>
             </tr>
         {% endfor %}
         </tbody>
