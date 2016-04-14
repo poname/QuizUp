@@ -1,119 +1,114 @@
 <div class="ui stripe community vertical segment">
-	<div class="ui two column center aligned divided very relaxed stackable grid container">
-      <div class="row">
-         <div class="column">
-         	<div class="ui piled segment">
-            	<h2 class="ui icon header">
-               		<p>{{ t('WHAT_IS_QUIZUP') }}</p>
-            	</h2>
-            	<p>{{ t('ABOUT_QUIZUP') }}</p>
-            	<p>:))))</p>
-            	<a class="ui red large basic button button" href="{{ url('login') }}"><p>{{ t('ENTER_GAME') }}</p></a>
+    <div class="ui two column center aligned divided very relaxed stackable grid container">
+        <div class="row">
+            <div class="column">
+                <div class="ui piled segment">
+                    <h2 class="ui icon header">
+                        <p>{{ t('WHAT_IS_QUIZUP') }}</p>
+                    </h2>
+                    <p>{{ t('ABOUT_QUIZUP') }}</p>
+                    <p>:))))</p>
+                    <a class="ui red large basic button button" href="{{ url('login') }}"><p>{{ t('ENTER_GAME') }}</p></a>
+                </div>
+                <div class="ui piled segment">
+                    <h2 class="ui icon header">
+                        <p>{{ t('MANAGE_CATEGORY') }}</p>
+                    </h2>
+                    <p></p>
+                    <a class="ui violet large basic button button" href="{{ url('category/create') }}"><p>{{ t('CREATE_CATEGORY') }}</p></a>
+                    <a class="ui green large basic button button" href="{{ url('category/list') }}"><p>{{ t('CATEGORIES') }}</p></a>
+                </div>
+                <div class="ui piled segment">
+                    <h2 class="ui icon header">
+                        <p>{{ t('MANAGE_QUESTIONS') }}</p>
+                    </h2>
+                    <p></p>
+                    <a class="ui pink large basic button button" href="{{ url('question/create') }}"><p>{{ t('CREATE_QUESTION') }}</p></a>
+                    <a class="ui brown large basic button button" href="{{ url('question/list') }}"><p>{{ t('QUESTIONS') }}</p></a>
+                </div>
             </div>
-             <div class="ui piled segment">
-                 <h2 class="ui icon header">
-                     <p>{{ t('MANAGE_CATEGORY') }}</p>
-                 </h2>
-                 <p></p>
-                 <a class="ui violet large basic button button" href="{{ url('category/create') }}"><p>{{ t('CREATE_CATEGORY') }}</p></a>
-                 <a class="ui green large basic button button" href="{{ url('category/list') }}"><p>{{ t('CATEGORIES') }}</p></a>
-             </div>
-             <div class="ui piled segment">
-                 <h2 class="ui icon header">
-                     <p>{{ t('MANAGE_QUESTIONS') }}</p>
-                 </h2>
-                 <p></p>
-                 <a class="ui pink large basic button button" href="{{ url('question/create') }}"><p>{{ t('CREATE_QUESTION') }}</p></a>
-                 <a class="ui brown large basic button button" href="{{ url('question/list') }}"><p>{{ t('QUESTIONS') }}</p></a>
-             </div>
-         </div>
-         <div class="column">
-            <div class="ui middle aligned center aligned grid">
-               <div class="column">
-                  <h2 class="ui red image header">
-                     <img src="{{ url('img/logo.png') }}" class="image">
-                     <div class="content">
-                        {{ t('SIGNUP_AN_ACCOUNT') }}
-                     </div>
-                  </h2>
-                  <form class="ui large form" action="{{ url('signup/do') }}" method="POST">
-                     {{ flashSession.output() }}
-                     <div class="ui stacked segment">
-                        <div class="field">
-                           <div class="ui left icon input">
-                              <i class="user icon"></i>
-                              <input type="text" name="name" placeholder="{{ t('NAME') }}">
-                           </div>
-                        </div>
-                        <div class="field">
-                           <div class="ui left icon input">
-                              <i class="user icon"></i>
-                              <input type="text" name="family" placeholder="{{ t('FAMILY_NAME') }}">
-                           </div>
-                        </div>
-                        <div class="field">
-                           <div class="ui left icon input">
-                              <i class="user icon"></i>
-                              <input type="text" name="email" placeholder="{{ t('EMAIL') }}">
-                           </div>
-                        </div>
-                        <div class="field">
-                           <div class="ui left icon input">
-                              <i class="lock icon"></i>
-                              <input type="password" name="password" placeholder="{{ t('PASSWORD') }}">
-                           </div>
-                        </div>
-                        <div class="field">
-                           <div class="ui left icon input">
-                              <i class="lock icon"></i>
-                              <input type="password" name="password_repeat" placeholder="{{ t('REPEAT_PASSWORD') }}">
-                           </div>
-                        </div>
-                        <div class="field">
-                            <label>
-                                {{ t('COUNTRY') }}
-                            </label>
-                           <div class="ui left icon input">
-                              <i class="lock icon"></i>
-                              <select style="padding-top: 2px" name="cid" class="ui fluid dropdown">
-                                 {% for country in countries %}
-                                 <option value="{{ country.cid }}">{{ t(country.name) }}</option>
-                                 {% endfor %}
-                              </select>
-                           </div>
-                        </div>
-                        <div class="field">
-                            <label>
-                                {{ t('GENDER') }}
-                            </label>
-                           <div class="ui left icon input">
-                              <i class="lock icon"></i>
-                              <select style="padding-top: 2px" name="gender" class="ui fluid dropdown">
-                                 <option value="MALE">{{ t('MALE') }}</option>
-                                 <option value="FEMALE">{{ t('FEMALE') }}</option>
-                              </select>
-                           </div>
-                        </div>
-                        <div class="ui fluid large red submit button"><p>{{ t('SIGNUP') }}</p></div>
-                     </div>
-                     <div class="ui error message"></div>
-                  </form>
-               </div>
+            <div class="column">
+                <div class="ui middle aligned center aligned grid">
+                    <div class="column">
+                        <h2 class="ui red image header">
+                            <img src="{{ url('img/logo.png') }}" class="image">
+                            <div class="content">
+                                {{ t('SIGNUP_AN_ACCOUNT') }}
+                            </div>
+                        </h2>
+                        <form class="ui large form" action="{{ url('signup/do') }}" method="POST">
+                            {{ flashSession.output() }}
+                            <div class="ui stacked segment">
+                                <div class="field">
+                                    <div class="ui left icon input">
+                                        <i class="user icon"></i>
+                                        <input type="text" name="name" placeholder="{{ t('NAME') }}">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui left icon input">
+                                        <i class="user icon"></i>
+                                        <input type="text" name="family" placeholder="{{ t('FAMILY_NAME') }}">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui left icon input">
+                                        <i class="user icon"></i>
+                                        <input type="text" name="email" placeholder="{{ t('EMAIL') }}">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui left icon input">
+                                        <i class="lock icon"></i>
+                                        <input type="password" name="password" placeholder="{{ t('PASSWORD') }}">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui left icon input">
+                                        <i class="lock icon"></i>
+                                        <input type="password" name="password_repeat" placeholder="{{ t('REPEAT_PASSWORD') }}">
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label>
+                                        {{ t('COUNTRY') }}
+                                    </label>
+                                    <div class="ui left icon input">
+                                        <i class="lock icon"></i>
+                                        <select style="padding-top: 2px" name="cid" class="ui fluid dropdown">
+                                            {% for country in countries %}
+                                                <option value="{{ country.cid }}">{{ t(country.name) }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label>
+                                        {{ t('GENDER') }}
+                                    </label>
+                                    <div class="ui left icon input">
+                                        <i class="lock icon"></i>
+                                        <select style="padding-top: 2px" name="gender" class="ui fluid dropdown">
+                                            <option value="MALE">{{ t('MALE') }}</option>
+                                            <option value="FEMALE">{{ t('FEMALE') }}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="ui fluid large red submit button"><p>{{ t('SIGNUP') }}</p></div>
+                            </div>
+                            <div class="ui error message"></div>
+                        </form>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="row">
-      		<div class="ui vertical footer segment">
-      			<div class="ui horizontal small divided link list">
-        			<a class="item" href="#">{{ t('CONTACT_US') }}</a>
-        			<a class="item" href="#"><p>{{ t('ABOUT_US') }}</p></a>
-        			<a class="item" href="#"><p>{{ t('CONDITIONS') }}</p></a>
-        			<a class="item" href="#"><p>{{ t('PRIVACY_POLICY') }}</p></a>
-      			</div>
-   			</div>
-   		</div>
-	</div>
-  
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    {% include "include/footer.volt" %}
+</div>
+
 <script>
     $(document)
             .ready(function () {

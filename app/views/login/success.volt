@@ -1,33 +1,8 @@
-<div class="ui red inverted menu" style="background-color: #FF5252">
-    <div class="item">
-        <img src="/img/logo.png">
-        کوییز آپ
-    </div>
-
-    <div class="item">
-
-        <a class="ui icon button" href="/main/index"><i class="home icon"></i>خانه</a>
-    </div>
-
-    <div class="right item">
-        <div class="right ui simple dropdown item">
-            <i class="user icon"></i>
-            {#<span class="text">{{ full_name }}</span>#}
-            <i class="dropdown icon"></i>
-            <div class="menu">
-                <a class="item" href="{{ url('category/list') }}">{{ t('CATEGORIES') }}</a>
-                <a class="item" href="{{ url('question/list') }}">{{ t('QUESTIONS') }}</a>
-                <a class="item" href="{{ url('category/create') }}">{{ t('CREATE_CATEGORY') }}</a>
-                <a class="item" href="{{ url('question/create  ') }}">{{ t('CREATE_QUESTION') }}</a>
-                <a class="item" href="{{ url('login/logout') }}"><i class="sign out icon"></i>{{ t('LOGOUT') }}</a>
-            </div>
-        </div>
-    </div>
+<div id="header">
+    {% include "include/header.volt" %}
 </div>
 
-
-<div class="ui stripe community vertical segment"><a class="item">
-</a>
+<div class="ui stripe community vertical segment"><a class="item"></a>
     <div class="ui red two column center aligned divided very relaxed stackable grid container">
         <div class="row">
             <div class="column"><a class="item">
@@ -58,17 +33,9 @@
             </div>
 
         </div>
-        <div class="row">
-            <div class="ui vertical footer segment">
-                <div class="ui horizontal small divided link list">
-                    <a class="item" href="#">ارتباط با ما</a>
-                    <a class="item" href="#"><p>درباره ما</p></a>
-                    <a class="item" href="#"><p>قوانین استفاده</p></a>
-                    <a class="item" href="#"><p>سیاست حفظ اطلاعات</p></a>
-                </div>
-            </div>
-        </div>
     </div>
+</div>
 
-
+<div id="footer">
+    {% include "include/footer.volt" %}
 </div>
