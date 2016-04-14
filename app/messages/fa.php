@@ -99,6 +99,8 @@ $messages = array(
     'READY_TO_START?' => 'برای شروع آماده اید؟',
     'START_A_QUIZ_NOW' => 'همین الان با حریفان خود در زمینه ی مورد نظرتان مسابقه را شروع کنید و آنها را شکست دهید !',
     'START'=>'شروع',
+    'SELECT_ONE_OF_CATEGORIES_BELOW_TO_START' => 'برای شروع بازی ، لطفا یکی از دسته های زیر را انتخاب کنید',
+    'SELECT_CATEGORY_AND_START_THE_GAME' => 'انتخاب دسته و شروع مسابقه!',
     'dummy' => '',
     'DUMMY' => ''
 );

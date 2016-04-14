@@ -38,7 +38,8 @@ class SecurityPlugin extends Plugin
         // Private area resources (backend)
         $privateResources = array(
             'category' => array('index', 'list', 'delete', 'edit', 'create'),
-            'question'     => array('index', 'create', 'list', 'edit', 'delete')
+            'question'     => array('index', 'create', 'list', 'edit', 'delete'),
+            'quiz' => array('selectCategory')
         );
         foreach ($privateResources as $resource => $actions) {
             $acl->addResource(new Resource($resource), $actions);

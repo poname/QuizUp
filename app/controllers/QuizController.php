@@ -27,7 +27,14 @@ class QuizController extends ControllerBase
         //view for pick selected category
     }
 
+    public function selectCategoryAction(){
+        if($this->request->isPost()){
+            die();
+        }else{
+            $categories = QuestionCategory::find();
+            $this->view->setVar('categories', $categories);
+        }
+    }
     public function startAction($cid){
-
     }
 }
