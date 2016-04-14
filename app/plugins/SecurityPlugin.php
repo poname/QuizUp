@@ -39,7 +39,7 @@ class SecurityPlugin extends Plugin
         $privateResources = array(
             'category' => array('index', 'list', 'delete', 'edit', 'create'),
             'question'     => array('index', 'create', 'list', 'edit', 'delete'),
-            'quiz' => array('selectCategory')
+            'quiz' => array('selectCategory','do')
         );
         foreach ($privateResources as $resource => $actions) {
             $acl->addResource(new Resource($resource), $actions);

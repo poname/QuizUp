@@ -1,0 +1,1 @@
+phalcon all-models --namespace=QUIZUP\Models --get-set --mapcolumn

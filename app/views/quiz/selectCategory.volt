@@ -1,7 +1,9 @@
 <div class="ui middle aligned center aligned grid">
     <div class="column">
+        {{ flashSession.output() }}
         <div class="ui segment">
-            <form class="ui large form" action="{{ url('quiz/start') }}" method="post">
+            {#empty form action means here(quiz/selectCategory)#}
+            <form class="ui large form" action="" method="post">
                 <div class="grouped fields">
                     <label>{{ t('SELECT_ONE_OF_CATEGORIES_BELOW_TO_START') }}</label>
                     {% for category in categories %}

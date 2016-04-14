@@ -101,6 +101,8 @@ $messages = array(
     'START'=>'شروع',
     'SELECT_ONE_OF_CATEGORIES_BELOW_TO_START' => 'برای شروع بازی ، لطفا یکی از دسته های زیر را انتخاب کنید',
     'SELECT_CATEGORY_AND_START_THE_GAME' => 'انتخاب دسته و شروع مسابقه!',
+    'SELECTED_CATEGORY_HAS_NOT_ENOUGH_QUESTIONS_SELECT_DIFFERENT_ONE' => 'دسته ی انتخاب شده سوال کافی ندارد. لطفا دسته ی دیگری را انتخاب کنید',
+    'NO_USER_IS_AVAILABLE_RIGHT_NOW' => 'در حال حاضر کاربری در دسترس نیست',
     'dummy' => '',
     'DUMMY' => ''
 );

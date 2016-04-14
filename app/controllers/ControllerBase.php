@@ -7,6 +7,13 @@ use QUIZUP\Libraries\JsonPost;
 use QUIZUP\Models\AppLog;
 use Phalcon\Mvc\Controller;
 
+
+/**
+ * @property \Phalcon\Translate\Adapter\NativeArray translator
+ * @property \Phalcon\Logger\Adapter\File logger
+ * @property \Phalcon\Config config
+*/
+
 class ControllerBase extends Controller
 {
     protected $_jsonPost = null;
@@ -31,7 +38,7 @@ class ControllerBase extends Controller
     }
 
     protected function jsonPost(){
-        if(is_null($this->_jsonPost)){
+        if(null === $this->_jsonPost){
             $this->_jsonPost = new JsonPost(file_get_contents("php://input"));
         }
         return $this->_jsonPost;
@@ -45,6 +52,10 @@ class ControllerBase extends Controller
         $app_log->setType($type);
         $app_log->setData(json_encode($data));
         $app_log->save();
+    }
+
+    protected function _redirectBack(){
+        return $this->response->redirect($_SERVER['HTTP_REFERER']);
     }
 
     public static function isPrivate()
