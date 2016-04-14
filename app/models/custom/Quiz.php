@@ -21,6 +21,23 @@ class Quiz extends \QUIZUP\Models\Quiz
     public function setSideUser($user_id){
         $this->_side_user_index = $this->getUserIndex($user_id);
         $this->_side_user_id = $user_id;
+
+   }
+
+    public function getUserId(){
+        return $this->_side_user_id;
+    }
+
+    public function getUserState(){
+        if($this->_side_user_index == 1) return $this->getUser1State();
+        if($this->_side_user_index == 2) return $this->getUser2State();
+        throw new Exception('cannot get user state:'.$this->_side_user_index);
+    }
+
+    public function setUserState($new_state){
+        if($this->_side_user_index == 1) return $this->setUser1State($new_state);
+        if($this->_side_user_index == 2) return $this->setUser1State($new_state);
+        throw new Exception('cannot get user state:'.$this->_side_user_index);
     }
 
     public function getUserIndex($user_id){
@@ -29,19 +46,16 @@ class Quiz extends \QUIZUP\Models\Quiz
         throw new Exception('user not found in either sides of the quiz');
     }
 
-    public function getCurrentStateStep(){
-        $ret = null;
-        $flipped = array_flip(self::$state_number_mappings);
-        if($this->_side_user_index == 1 && array_key_exists($this->getUser1State(),$flipped)){
-            return $flipped[$this->getUser1State()];
-        }if($this->_side_user_index == 2 && array_key_exists($this->getUser2State(),$flipped)){
-            return $flipped[$this->getUser1State()];
-        }
+    public function getUserStateLastUpdate(){
+        if($this->_side_user_index == 1) return $this->getUser1StepLastUpdate();
+        if($this->_side_user_index == 2) return $this->getUser2StepLastUpdate();
+        throw new Exception('cannot get user state:'.$this->_side_user_index);
 
-        if($ret===null){
-            throw new Exception("invalid user_index passed:({$this->_side_user_index})");
-        }
-        return $ret;
+    }
+
+    public function getCurrentStateStep(){
+        $flipped = array_flip(self::$state_number_mappings);
+        return $flipped[$this->getUserState()];
     }
 
     public function setCurrentStateStep($new_step){
@@ -50,10 +64,35 @@ class Quiz extends \QUIZUP\Models\Quiz
         }
         if($this->_side_user_index == 1){
             $this->setUser1State(self::$state_number_mappings[$new_step]);
+            $this->setUser1StepLastUpdate(date('Y-m-d H:i:s', time()));
         }
 
         if($this->_side_user_index == 2){
-            $this->setUser1State(self::$state_number_mappings[$new_step]);
+            $this->setUser2State(self::$state_number_mappings[$new_step]);
+            $this->setUser2StepLastUpdate(date('Y-m-d H:i:s', time()));
         }
+    }
+
+    public function getStatus(){
+        $current_step = $this->getCurrentStateStep();
+        $last_update = strtotime($this->getUserStateLastUpdate());
+        $to_move = (int)((time() - $last_update)/$this->getDI()->get('config')->quizup->question_time);
+        if(self::$state_number_mappings[$current_step]!='CREATED' && self::$state_number_mappings[$current_step]!='FINISHED'){
+            $next_step =
+                $current_step + $to_move >= count(self::$state_number_mappings)
+                    ? count(self::$state_number_mappings)-1
+                    : $current_step + $to_move;
+
+
+            $this->setCurrentStateStep($next_step);
+            if(!$this->save()){
+                throw new Exception(var_export($this->getMessages(), true));
+            }
+        }
+        return array(
+            'state' => $this->getUser1State(),
+            'step' => $this->getCurrentStateStep(),
+            'remaining_seconds' => time() - strtotime($this->getUser1StepLastUpdate())
+        );
     }
 }

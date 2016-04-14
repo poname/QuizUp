@@ -142,6 +142,13 @@ class QuizController extends ControllerBase
 
         $quiz->setSide($user['id']);
         // set the real state in setSide function and just return the state and the remaining time
-        die('doing the quiz #' . $qid);
+        $this->view->setVar($quiz->getStatus());
     }
+
+    public function answer()
+    {
+        $this->view->disable();// this is a ajax call
+        // we should first desing the ui so we can program for here
+    }
+
 }
