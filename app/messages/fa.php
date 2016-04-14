@@ -104,5 +104,6 @@ $messages = array(
     'SELECTED_CATEGORY_HAS_NOT_ENOUGH_QUESTIONS_SELECT_DIFFERENT_ONE' => 'دسته ی انتخاب شده سوال کافی ندارد. لطفا دسته ی دیگری را انتخاب کنید',
     'NO_USER_IS_AVAILABLE_RIGHT_NOW' => 'در حال حاضر کاربری در دسترس نیست',
     'dummy' => '',
-    'DUMMY' => ''
+    'DUMMY' => '',
+    'YOUR_SCORE' => 'امتیاز شما'
 );

@@ -9,6 +9,10 @@
         <a class="ui icon button" href="/main/index"><i class="home icon"></i>خانه</a>
     </div>
 
+    <div class="item">
+        <a>{{ t('YOUR_SCORE') }} : {{ score }}</a>
+    </div>
+
     <div class="right item">
         <div class="right ui simple dropdown item">
             <i class="user icon"></i>

@@ -50,6 +50,7 @@ class LoginController extends ControllerBase
                 )
             );
     	}
+        $this->view->setVar('score', $this->session->get('user')->getPoints());
     }
 
     public function doAction(){
@@ -85,6 +86,9 @@ class LoginController extends ControllerBase
     	// Set a session variable
         //$this->session->set("login", "true");
         //$this->session->set("user_id", $user[0]->getUserId());
+
+        $this->session->set('user', $user[0]);
+
         if($this->session->has('nextPage'))
             return $this->response->redirect($this->session->get('nextPage'));
         else
