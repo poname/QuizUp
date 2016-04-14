@@ -13,12 +13,6 @@ class Quiz extends \Phalcon\Mvc\Model
 
     /**
      *
-     * @var string
-     */
-    protected $state;
-
-    /**
-     *
      * @var integer
      */
     protected $cid;
@@ -57,13 +51,37 @@ class Quiz extends \Phalcon\Mvc\Model
      *
      * @var integer
      */
-    protected $user_id1;
+    protected $user1_id;
 
     /**
      *
      * @var integer
      */
-    protected $user_id2;
+    protected $user2_id;
+
+    /**
+     *
+     * @var string
+     */
+    protected $user1_state;
+
+    /**
+     *
+     * @var string
+     */
+    protected $user2_state;
+
+    /**
+     *
+     * @var string
+     */
+    protected $user1_step_last_update;
+
+    /**
+     *
+     * @var string
+     */
+    protected $user2_step_last_update;
 
     /**
      * Method to set the value of field qid
@@ -74,19 +92,6 @@ class Quiz extends \Phalcon\Mvc\Model
     public function setQid($qid)
     {
         $this->qid = $qid;
-
-        return $this;
-    }
-
-    /**
-     * Method to set the value of field state
-     *
-     * @param string $state
-     * @return $this
-     */
-    public function setState($state)
-    {
-        $this->state = $state;
 
         return $this;
     }
@@ -170,27 +175,79 @@ class Quiz extends \Phalcon\Mvc\Model
     }
 
     /**
-     * Method to set the value of field user_id1
+     * Method to set the value of field user1_id
      *
-     * @param integer $user_id1
+     * @param integer $user1_id
      * @return $this
      */
-    public function setUserId1($user_id1)
+    public function setUser1Id($user1_id)
     {
-        $this->user_id1 = $user_id1;
+        $this->user1_id = $user1_id;
 
         return $this;
     }
 
     /**
-     * Method to set the value of field user_id2
+     * Method to set the value of field user2_id
      *
-     * @param integer $user_id2
+     * @param integer $user2_id
      * @return $this
      */
-    public function setUserId2($user_id2)
+    public function setUser2Id($user2_id)
     {
-        $this->user_id2 = $user_id2;
+        $this->user2_id = $user2_id;
+
+        return $this;
+    }
+
+    /**
+     * Method to set the value of field user1_state
+     *
+     * @param string $user1_state
+     * @return $this
+     */
+    public function setUser1State($user1_state)
+    {
+        $this->user1_state = $user1_state;
+
+        return $this;
+    }
+
+    /**
+     * Method to set the value of field user2_state
+     *
+     * @param string $user2_state
+     * @return $this
+     */
+    public function setUser2State($user2_state)
+    {
+        $this->user2_state = $user2_state;
+
+        return $this;
+    }
+
+    /**
+     * Method to set the value of field user1_step_last_update
+     *
+     * @param string $user1_step_last_update
+     * @return $this
+     */
+    public function setUser1StepLastUpdate($user1_step_last_update)
+    {
+        $this->user1_step_last_update = $user1_step_last_update;
+
+        return $this;
+    }
+
+    /**
+     * Method to set the value of field user2_step_last_update
+     *
+     * @param string $user2_step_last_update
+     * @return $this
+     */
+    public function setUser2StepLastUpdate($user2_step_last_update)
+    {
+        $this->user2_step_last_update = $user2_step_last_update;
 
         return $this;
     }
@@ -203,16 +260,6 @@ class Quiz extends \Phalcon\Mvc\Model
     public function getQid()
     {
         return $this->qid;
-    }
-
-    /**
-     * Returns the value of field state
-     *
-     * @return string
-     */
-    public function getState()
-    {
-        return $this->state;
     }
 
     /**
@@ -276,23 +323,63 @@ class Quiz extends \Phalcon\Mvc\Model
     }
 
     /**
-     * Returns the value of field user_id1
+     * Returns the value of field user1_id
      *
      * @return integer
      */
-    public function getUserId1()
+    public function getUser1Id()
     {
-        return $this->user_id1;
+        return $this->user1_id;
     }
 
     /**
-     * Returns the value of field user_id2
+     * Returns the value of field user2_id
      *
      * @return integer
      */
-    public function getUserId2()
+    public function getUser2Id()
     {
-        return $this->user_id2;
+        return $this->user2_id;
+    }
+
+    /**
+     * Returns the value of field user1_state
+     *
+     * @return string
+     */
+    public function getUser1State()
+    {
+        return $this->user1_state;
+    }
+
+    /**
+     * Returns the value of field user2_state
+     *
+     * @return string
+     */
+    public function getUser2State()
+    {
+        return $this->user2_state;
+    }
+
+    /**
+     * Returns the value of field user1_step_last_update
+     *
+     * @return string
+     */
+    public function getUser1StepLastUpdate()
+    {
+        return $this->user1_step_last_update;
+    }
+
+    /**
+     * Returns the value of field user2_step_last_update
+     *
+     * @return string
+     */
+    public function getUser2StepLastUpdate()
+    {
+        return $this->user2_step_last_update;
     }
 
     /**
@@ -302,11 +389,11 @@ class Quiz extends \Phalcon\Mvc\Model
     {
         $this->belongsTo('question5', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question'));
         $this->belongsTo('question4', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question'));
+        $this->belongsTo('user1_id', 'QUIZUP\Models\User', 'user_id', array('alias' => 'User'));
+        $this->belongsTo('user2_id', 'QUIZUP\Models\User', 'user_id', array('alias' => 'User'));
         $this->belongsTo('cid', 'QUIZUP\Models\QuestionCategory', 'cid', array('alias' => 'QuestionCategory'));
         $this->belongsTo('question1', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question'));
-        $this->belongsTo('user_id1', 'QUIZUP\Models\User', 'user_id', array('alias' => 'User'));
         $this->belongsTo('question2', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question'));
-        $this->belongsTo('user_id2', 'QUIZUP\Models\User', 'user_id', array('alias' => 'User'));
         $this->belongsTo('question3', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question'));
     }
 
@@ -340,28 +427,6 @@ class Quiz extends \Phalcon\Mvc\Model
     public static function findFirst($parameters = null)
     {
         return parent::findFirst($parameters);
-    }
-
-    /**
-     * Independent Column Mapping.
-     * Keys are the real names in the table and the values their names in the application
-     *
-     * @return array
-     */
-    public function columnMap()
-    {
-        return array(
-            'qid' => 'qid',
-            'state' => 'state',
-            'cid' => 'cid',
-            'question1' => 'question1',
-            'question2' => 'question2',
-            'question3' => 'question3',
-            'question4' => 'question4',
-            'question5' => 'question5',
-            'user_id1' => 'user_id1',
-            'user_id2' => 'user_id2'
-        );
     }
 
 }

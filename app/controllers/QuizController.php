@@ -86,9 +86,12 @@ class QuizController extends ControllerBase
                 ->setQuestion3($question_ids[2])
                 ->setQuestion4($question_ids[3])
                 ->setQuestion5($question_ids[4])
-                ->setState(new Db\RawValue('default'))
-                ->setUserId1($user['id'])
-                ->setUserId2($competitor->getUserId());
+                ->setUser1Id($user['id'])
+                ->setUser1State(new Db\RawValue('default'))
+                ->setUser2Id($competitor->getUserId())
+                ->setUser2State(new Db\RawValue('default'))
+                ->setUser1StepLastUpdate(new Db\RawValue('default'))
+                ->setUser2StepLastUpdate(new Db\RawValue('default'));
 
             if (!$quiz->save()) {
                 $this->logger->error(var_export($quiz->getMessages(),true));
