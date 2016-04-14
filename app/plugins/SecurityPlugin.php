@@ -100,6 +100,7 @@ class SecurityPlugin extends Plugin
 
             // If he doesn't have access forward him to the index controller
             //$this->flash->error("You don't have access to this module 2");
+            $this->session->set("nextPage", $dispatcher->getControllerName() . '/' . $dispatcher->getActionName());
             $this->flashSession->error($this->translator->_('LOGIN_FIRST'));
             $dispatcher->forward(
                 array(
