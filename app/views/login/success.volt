@@ -1,4 +1,4 @@
-<div class="ui red inverted menu">
+<div class="ui red inverted menu" style="background-color: #FF5252">
     <div class="item">
         <img src="/img/logo.png">
         کوییز آپ
