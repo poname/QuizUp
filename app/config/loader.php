@@ -15,6 +15,7 @@ $loader->registerNamespaces(array(
 
 
     'QUIZUP\Models' =>$config->application->modelsDir,
+    'QUIZUP\Models\Custom' =>$config->application->modelsDir.'custom/',
     'QUIZUP\Libraries' =>$config->application->librariesDir,
     'QUIZUP\Plugins' =>$config->application->pluginsDir,
 

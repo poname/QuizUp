@@ -11,9 +11,12 @@ namespace QUIZUP\Controllers;
 
 use Phalcon\Db;
 use Phalcon\Tag;
+use QUIZUP\Libraries\Exceptions\Exception;
+use QUIZUP\Libraries\Exceptions\InvalidRequestException;
 use QUIZUP\Models\Question;
 use QUIZUP\Models\QuestionCategory;
 use QUIZUP\Models\Quiz;
+use QUIZUP\Models\Custom\Quiz as CustomQuiz;
 use QUIZUP\Models\User;
 
 class QuizController extends ControllerBase
@@ -130,6 +133,15 @@ class QuizController extends ControllerBase
         }
     }
     public function doAction($qid){
+        $qid = $this->filter->sanitize($qid, 'int');
+        if(!$qid) throw new InvalidRequestException('invalid quiz id');
+        
+        $user = $this->session->get('auth');
+        $quiz = CustomQuiz::findFirst('qid = ' . $qid);
+        if(!$quiz) throw new InvalidRequestException('invalid quiz instance');
+
+        $quiz->setSide($user['id']);
+        // set the real state in setSide function and just return the state and the remaining time
         die('doing the quiz #' . $qid);
     }
 }
