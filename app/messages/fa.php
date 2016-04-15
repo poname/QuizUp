@@ -7,6 +7,19 @@
  */
 
 $messages = array(
+    'MINUTE' => 'دقیقه',
+    'SECOND' => 'ثانیه',
+    'HOUR' => 'ساعت',
+    'DAY' => 'روز',
+    'MONTH' => 'ماه',
+    'YEAR' => 'سال',
+    'AGO' => 'قبل',
+    'LEFT' => 'مانده',
+    'AND' => 'و',
+    'DEVICE'=>'دستگاه',
+    'COUNT'=>'تعداد',
+    'HOME'=>'خانه',
+
     'SITE_MAIN_TITLE' => 'کوییزآپ',
     'SIGNUP_AN_ACCOUNT' => 'ایجاد حساب کاربری جدید',
     'SIGNUP' => 'ثبت نام',
@@ -106,5 +119,7 @@ $messages = array(
     'ANSWER' => 'پاسخ',
     'dummy' => '',
     'DUMMY' => '',
-    'YOUR_SCORE' => 'امتیاز شما'
+    'MORE' =>'مشاهده بیشتر ...',
+    'SEE_BEST_RANKINGS'=>'مشاهده ی بهترین ها',
+    'RANKINGS'=>'رتبه بندی ها'
 );
