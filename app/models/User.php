@@ -350,6 +350,7 @@ class User extends \Phalcon\Mvc\Model
      */
     public static function find($parameters = null)
     {
+
         return parent::find($parameters);
     }
 

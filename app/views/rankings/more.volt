@@ -37,12 +37,8 @@
       <td>{{ user.family }}</td>
       <td>{{ user.points }}</td>
     </tr>
-
-	<tr>
-	<button class="fluid ui red button" id='hide' href="{{ url('rankings/more') }}>{{t('MORE')}}</button>
-	</tr>
   </tbody>
- 
-  
+
+
   </div>
 </table>
