@@ -41,21 +41,29 @@
                 </div>
                 <div class="ui segment">
                     <h2 class="ui icon header">
-                        <p>مدیریت دسته بندی ها</p>
+                        <p>{{ t('MANAGE_CATEGORY') }}</p>
                     </h2>
                     <p></p>
-                    <a class="ui violet large basic button button" href="/category/create"><p>ایجاد دسته بندی جدید</p>
+                    <a class="ui violet large basic button button" href="/category/create"><p>{{ t('CREATE_CATEGORY') }}</p>
                     </a>
-                    <a class="ui green large basic button button" href="/category/list"><p>دسته بندی ها</p></a>
+                    <a class="ui green large basic button button" href="/category/list"><p>{{ t('CATEGORIES') }}</p></a>
                 </div>
                 <div class="ui segment">
                     <h2 class="ui icon header">
-                        <p>مدیریت سوالات</p>
+                        <p>{{ t('MANAGE_QUESTIONS') }}</p>
                     </h2>
                     <p></p>
-                    <a class="ui pink large basic button button" href="/question/create"><p>ایجاد سوال جدید</p></a>
-                    <a class="ui brown large basic button button" href="/question/list"><p>سوالات</p></a>
+                    <a class="ui pink large basic button button" href="/question/create"><p>{{ t('CREATE_QUESTION') }}</p></a>
+                    <a class="ui brown large basic button button" href="/question/list"><p>{{ t('QUESTIONS') }}</p></a>
                 </div>
+                <div class="ui segment">
+                    <h2 class="ui icon header">
+                        <p>{{ t('RANKINGS') }}</p>
+                    </h2>
+                    <p></p>
+                    <a class="ui blue large basic button button" href="/question/create"><p>{{ t('SEE_BEST_RANKINGS') }}</p></a>
+
+                 </div>
             </div>
 
         </div>

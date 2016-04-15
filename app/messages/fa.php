@@ -102,5 +102,7 @@ $messages = array(
     'START'=>'شروع',
     'dummy' => '',
     'DUMMY' => '',
-    'MORE' =>'مشاهده بیشتر ...'
+    'MORE' =>'مشاهده بیشتر ...',
+    'SEE_BEST_RANKINGS'=>'مشاهده ی بهترین ها',
+    'RANKINGS'=>'رتبه بندی ها'
 );
