@@ -81,6 +81,7 @@ class QuizController extends ControllerBase
             }
 
             // generate quiz instance
+            $time = date('Y-m-d H:i:s');
             $quiz = new Quiz();
             $quiz
                 ->setCid($category_id)
@@ -93,8 +94,8 @@ class QuizController extends ControllerBase
                 ->setUser1State(new Db\RawValue('default'))
                 ->setUser2Id($competitor->getUserId())
                 ->setUser2State(new Db\RawValue('default'))
-                ->setUser1StepLastUpdate(new Db\RawValue('default'))
-                ->setUser2StepLastUpdate(new Db\RawValue('default'));
+                ->setUser1StepLastUpdate($time)
+                ->setUser2StepLastUpdate($time);
 
             if (!$quiz->save()) {
                 $this->logger->error(var_export($quiz->getMessages(),true));

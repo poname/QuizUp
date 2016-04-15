@@ -37,7 +37,7 @@
                     <h2 class="ui icon header fa">{{ t('READY_TO_START?') }}</h2>
                     <p>{{ t('START_A_QUIZ_NOW') }}</p>
                     <div class="ui divider"></div>
-                    <a class="ui red button fa" href="{{ url('quiz/start') }}">{{ t('START') }}</a>
+                    <a class="ui red button fa" href="{{ url('quiz/selectCategory') }}">{{ t('START') }}</a>
                 </div>
                 <div class="ui segment">
                     <h2 class="ui icon header">
