@@ -3,6 +3,7 @@
 namespace QUIZUP\Models;
 
 use Phalcon\Mvc\Model\Validator\Email as Email;
+use Phalcon\Validation;
 
 class User extends \Phalcon\Mvc\Model
 {
@@ -304,19 +305,19 @@ class User extends \Phalcon\Mvc\Model
      */
     public function validation()
     {
-        $this->validate(
-            new Email(
-                array(
-                    'field'    => 'email',
-                    'required' => true,
-                )
-            )
-        );
-
-        if ($this->validationHasFailed() == true) {
-            return false;
-        }
-
+//        $this->validate(
+//            new Email(
+//                array(
+//                    'field'    => 'email',
+//                    'required' => true,
+//                )
+//            )
+//        );
+//
+//        if ($this->validationHasFailed() == true) {
+//            return false;
+//        }
+//
         return true;
     }
 

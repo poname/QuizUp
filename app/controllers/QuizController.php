@@ -117,12 +117,12 @@ class QuizController extends ControllerBase
                 'link'=> $quiz_link
             )));
             $mail->AltBody = $quiz_link;
-            if (!$mail->send()) {
-                $quiz->delete();
-                $this->logger->error('could not send email to opponent: '.$mail->ErrorInfo);
-                $this->flashSession->error($this->translator->_('INTERNAL_ERROR'));
-                return $this->_redirectBack();
-            }
+//            if (!$mail->send()) {
+//                $quiz->delete();
+//                $this->logger->error('could not send email to opponent: '.$mail->ErrorInfo);
+//                $this->flashSession->error($this->translator->_('INTERNAL_ERROR'));
+//                return $this->_redirectBack();
+//            }
 
             // all set ! let's start the quiz , shall we? :)
             return $this->response->redirect('quiz/do/' . $quiz->getQid());
@@ -140,14 +140,73 @@ class QuizController extends ControllerBase
         $quiz = CustomQuiz::findFirst('qid = ' . $qid);
         if(!$quiz) throw new InvalidRequestException('invalid quiz instance');
 
-        $quiz->setSide($user['id']);
-        // set the real state in setSide function and just return the state and the remaining time
-        $this->view->setVar($quiz->getStatus());
+        $quiz->setSideUser($user['id']);
+        $status = $quiz->getStatus();
+
+
+        $current_question = null;
+        if($status['step']!= 0 && $status['step']!=6){
+            $property = "Question{$status['step']}";
+            $current_question = $quiz->$property;
+        }
+        $this->view->setVar('quiz_id', $qid);
+        $this->view->setVar('current_question', $current_question);
+        $this->view->setVars($quiz->getStatus(),true);
     }
 
-    public function answer()
+    public function answerAction()
     {
-        $this->view->disable();// this is a ajax call
+        $this->request->isPost() or die('invalid request');
+
+        $quiz_id = $this->request->getPost('quiz_id', 'int');
+        $step = $this->request->getPost('step', 'int');
+        $answer = $this->request->getPost('answer', 'int');
+        
+        //validation
+        if (!$quiz_id || !is_numeric($quiz_id)) {
+            $this->logger->error('invalid quiz_id passed to /quiz/answer ' . $quiz_id);
+            return $this->jsonResponse(false, array('message' => $this->translator->_('INVALID_REQUEST')));
+        }
+        $quiz = CustomQuiz::findFirst('qid=' . $quiz_id);
+        if(!$quiz){
+            $this->logger->error('quiz model not found in  /quiz/answer ' . $quiz_id);
+            return $this->jsonResponse(false, array('message' => $this->translator->_('INVALID_REQUEST')));
+        }
+        
+        if(!is_numeric($step) || ((int)$step)<0 || ((int)$step)>6 ){
+            $this->logger->error('invalid step passed to /quiz/answer ' . $step);
+            return $this->jsonResponse(false, array('message' => $this->translator->_('INVALID_REQUEST')));
+        }
+        
+        if(!$answer || !is_numeric($answer) || ((int)$answer)<0 || ((int)$answer)>6 ){
+            $this->logger->error('invalid answer passed to /quiz/answer ' . $answer);
+            return $this->jsonResponse(false, array('message' => $this->translator->_('INVALID_REQUEST')));
+        }
+        
+        $user = $this->session->get('auth');
+        $quiz->setSideUser($user['id']);
+        $ret = null;
+        try {
+            $ret = $quiz->handleAnswer($answer);
+        }catch (Exception $e){
+            $ret = array(false, 'INTERNAL_ERROR');
+        }
+        
+        if($quiz->isFinished()){
+            return $this->jsonResponse(true);
+        }
+
+        $new_question = $quiz->getCurrentQuestion();
+        if ($new_question) {
+            $new_question = $new_question->toArray();
+            unset($new_question['correct']);
+        }
+
+        return $this->jsonResponse($ret[0], array(
+            'message'=> $ret[0] == false ? $ret[1] : '',
+            'new_question' => $new_question
+        ));
+
         // we should first desing the ui so we can program for here
     }
 

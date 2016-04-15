@@ -28,5 +28,9 @@ return new \Phalcon\Config(array(
             'dir'  => 'rtl'
         ),
         'webpageURL' => 'http://ccweb.ir/' // in a production site , it probably should change to /
+    ),
+    'quizup' => array(
+        'question_time' => 10 , //in seconds
+        'correct_answer_points' => 1 ,
     )
 ));

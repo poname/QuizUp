@@ -14,3 +14,6 @@ html, body {
     direction:ltr;
     text-align: left;
 }
+.invisible.no-take-place {
+    display: none;
+}

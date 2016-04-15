@@ -387,14 +387,14 @@ class Quiz extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->belongsTo('question5', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question'));
-        $this->belongsTo('question4', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question'));
-        $this->belongsTo('user1_id', 'QUIZUP\Models\User', 'user_id', array('alias' => 'User'));
-        $this->belongsTo('user2_id', 'QUIZUP\Models\User', 'user_id', array('alias' => 'User'));
+        $this->belongsTo('question5', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question5'));
+        $this->belongsTo('question4', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question4'));
+        $this->belongsTo('user1_id', 'QUIZUP\Models\User', 'user_id', array('alias' => 'User1'));
+        $this->belongsTo('user2_id', 'QUIZUP\Models\User', 'user_id', array('alias' => 'User2'));
         $this->belongsTo('cid', 'QUIZUP\Models\QuestionCategory', 'cid', array('alias' => 'QuestionCategory'));
-        $this->belongsTo('question1', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question'));
-        $this->belongsTo('question2', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question'));
-        $this->belongsTo('question3', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question'));
+        $this->belongsTo('question1', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question1'));
+        $this->belongsTo('question2', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question2'));
+        $this->belongsTo('question3', 'QUIZUP\Models\Question', 'qid', array('alias' => 'Question3'));
     }
 
     /**

@@ -7,18 +7,6 @@
  */
 
 $messages = array(
-    'MINUTE' => 'دقیقه',
-    'SECOND' => 'ثانیه',
-    'HOUR' => 'ساعت',
-    'DAY' => 'روز',
-    'MONTH' => 'ماه',
-    'YEAR' => 'سال',
-    'AGO' => 'قبل',
-    'LEFT' => 'مانده',
-    'AND' => 'و',
-    'DEVICE'=>'دستگاه',
-    'COUNT'=>'تعداد',
-
     'SITE_MAIN_TITLE' => 'کوییزآپ',
     'SIGNUP_AN_ACCOUNT' => 'ایجاد حساب کاربری جدید',
     'SIGNUP' => 'ثبت نام',
@@ -103,6 +91,19 @@ $messages = array(
     'SELECT_CATEGORY_AND_START_THE_GAME' => 'انتخاب دسته و شروع مسابقه!',
     'SELECTED_CATEGORY_HAS_NOT_ENOUGH_QUESTIONS_SELECT_DIFFERENT_ONE' => 'دسته ی انتخاب شده سوال کافی ندارد. لطفا دسته ی دیگری را انتخاب کنید',
     'NO_USER_IS_AVAILABLE_RIGHT_NOW' => 'در حال حاضر کاربری در دسترس نیست',
+    'PREPARE_YOUR_SELF!' => 'خود را آماده کنید',
+    'FIRST' => 'اولین',
+    'SECOND' => 'دومین',
+    'THIRD' => 'سومین',
+    'FOURTH' => 'چهارمین',
+    'FIFTH' => 'پنجمین',
+    'FINISH' => 'پایان',
+    'THE_FINAL_RESULT' => 'نتیجه ی نهایی',
+    'QUESTION' => 'سوال',
+    'LOADING' => 'در حال بارگزاری',
+    'QUIZ_OPENING_TEXT' => 'برای شروع آماده اید؟',
+    'LETS_GO'=>'بزن بریم!',
+    'ANSWER' => 'پاسخ',
     'dummy' => '',
     'DUMMY' => '',
     'YOUR_SCORE' => 'امتیاز شما'

@@ -90,9 +90,51 @@ class Quiz extends \QUIZUP\Models\Quiz
             }
         }
         return array(
-            'state' => $this->getUser1State(),
+            'state' => $this->getUserState(),
             'step' => $this->getCurrentStateStep(),
-            'remaining_seconds' => time() - strtotime($this->getUser1StepLastUpdate())
+            'remaining_seconds' => time() - strtotime($this->getUserStateLastUpdate())
         );
+    }
+
+    public function handleAnswer($answer_index)
+    {
+        $ret = array(true, '');
+        if ($this->isFinished()) {
+            $ret = array(false, 'ALREADY_FINISHED');
+            return $ret;
+        }
+        $current_state = $this->getCurrentStateStep();
+        if ($current_state > 0) {
+            $remaining = time() - $this->getDI()->get('config')->quizup->question_time - strtotime($this->getUserStateLastUpdate());
+            if ($remaining < 0) {
+                $property = "User{$this->_side_user_index}";
+                $this->$property->setPoints($this->$property->getPoints() + $this->getDI()->get('config')->quizup->correct_answer_points * (-1) * $remaining);
+                $ret = array(true);
+            } else {
+                $ret = array(false, 'TIME_IS_OVER');
+            }
+        }
+        $this->setCurrentStateStep($current_state+1);
+        if(!$this->save()){
+            throw new Exception($this->getMessages());
+        }
+        return $ret;
+    }
+
+    public function isNotStarted(){
+        return $this->getCurrentStateStep()==0;
+    }
+    public function isFinished(){
+        return $this->getCurrentStateStep() >= count(self::$state_number_mappings) - 1;
+    }
+
+    public function getCurrentQuestion(){
+        if(!$this->isNotStarted() && !$this->isFinished()){
+            $step = $this->getCurrentStateStep();
+            $property = "Question{$step}";
+            $current_question = $this->$property;
+            return $current_question;
+        }
+        return null;
     }
 }
