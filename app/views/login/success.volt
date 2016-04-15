@@ -61,7 +61,7 @@
                         <p>{{ t('RANKINGS') }}</p>
                     </h2>
                     <p></p>
-                    <a class="ui blue large basic button button" href="/question/create"><p>{{ t('SEE_BEST_RANKINGS') }}</p></a>
+                    <a class="ui blue large basic button button" href="/rankings/index"><p>{{ t('SEE_BEST_RANKINGS') }}</p></a>
 
                  </div>
             </div>
