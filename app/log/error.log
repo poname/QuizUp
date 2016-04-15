@@ -1,0 +1,22 @@
+[Fri, 15 Apr 16 12:24:00 +0200][ERROR] 'exception \'PDOException\' with message \'SQLSTATE[HY000] [1045] Access denied for user \'quizup\'@\'localhost\' (using password: YES)\' in C:\\Users\\Peyman Zeynali\\QuizUp\\app\\config\\services.php:70
+Stack trace:
+#0 [internal function]: PDO->__construct(\'mysql:host=loca...\', \'quizup\', \'f0GVMn30KNsfnHz...\', Array)
+#1 [internal function]: Phalcon\\Db\\Adapter\\Pdo->connect(Array)
+#2 C:\\Users\\Peyman Zeynali\\QuizUp\\app\\config\\services.php(70): Phalcon\\Db\\Adapter\\Pdo->__construct(Array)
+#3 [internal function]: Closure->{closure}()
+#4 [internal function]: Phalcon\\Di\\Service->resolve(NULL, Object(Phalcon\\Di\\FactoryDefault))
+#5 [internal function]: Phalcon\\Di->get(\'db\', NULL)
+#6 [internal function]: Phalcon\\Di->getShared(\'db\')
+#7 [internal function]: Phalcon\\Mvc\\Model\\Manager->_getConnection(Object(QUIZUP\\Models\\Country), NULL)
+#8 [internal function]: Phalcon\\Mvc\\Model\\Manager->getReadConnection(Object(QUIZUP\\Models\\Country))
+#9 [internal function]: Phalcon\\Mvc\\Model->getReadConnection()
+#10 [internal function]: Phalcon\\Mvc\\Model\\Query->_executeSelect(Array, NULL, NULL)
+#11 [internal function]: Phalcon\\Mvc\\Model\\Query->execute()
+#12 C:\\Users\\Peyman Zeynali\\QuizUp\\app\\models\\Country.php(92): Phalcon\\Mvc\\Model::find(NULL)
+#13 C:\\Users\\Peyman Zeynali\\QuizUp\\app\\controllers\\MainController.php(31): QUIZUP\\Models\\Country::find()
+#14 [internal function]: QUIZUP\\Controllers\\MainController->indexAction()
+#15 [internal function]: Phalcon\\Dispatcher->callActionMethod(Object(QUIZUP\\Controllers\\MainController), \'indexAction\', Array)
+#16 [internal function]: Phalcon\\Dispatcher->_dispatch()
+#17 [internal function]: Phalcon\\Dispatcher->dispatch()
+#18 C:\\Users\\Peyman Zeynali\\QuizUp\\public\\index.php(32): Phalcon\\Mvc\\Application->handle()
+#19 {main}'
