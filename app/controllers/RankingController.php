@@ -8,7 +8,7 @@
 
 namespace QUIZUP\Controllers;
 
-
+use QUIZUP\Models\User;
 class RankingController  extends ControllerBase
 {
     public function initialize(){
