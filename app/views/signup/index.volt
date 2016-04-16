@@ -70,6 +70,11 @@
         </form>
     </div>
 </div>
+
+<div id="footer">
+    {% include "include/footer.volt" %}
+</div>
+
 <script>
     $(document)
             .ready(function () {

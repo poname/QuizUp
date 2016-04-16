@@ -1,29 +1,7 @@
-<div class="ui red inverted menu">
-    <div class="item">
-        <img src="/img/logo.png">
-{{t('SITE_MAIN_TITLE')}}
-    </div>
-	 <div class="item">
-
-        <a class="ui icon button" href="/main/index"><i class="home icon"></i>{{t('HOME')}}</a>
-    </div>
-
-    <div class="right item">
-        <div class="right ui simple dropdown item">
-            <i class="user icon"></i>
-            {#<span class="text">{{ full_name }}</span>#}
-            <i class="dropdown icon"></i>
-            <div class="menu">
-             <a class="item" href="{{ url('quiz/selectCategory') }}">{{ t('START') }}</a>
-                <a class="item" href="/question/list">{{ t('QUESTIONS') }}</a>
-                <a class="item" href="/category/create">{{ t('CREATE_CATEGORY') }}</a>
-                <a class="item" href="/question/create">{{ t('CREATE_QUESTION') }}</a>
-
-                <a class="item" href="{{ url('login/logout') }}"><i class="sign out icon"></i>{{ t('LOGOUT') }}</a>
-            </div>
-        </div>
-    </div>
+<div id="header">
+    {% include "include/header.volt" %}
 </div>
+
 <div class="ui middle aligned center">
     {{ flashSession.output() }}
     <table class="ui celled table">
@@ -50,6 +28,9 @@
         {% endfor %}
         </tbody>
     </table>
+    <div id="footer">
+        {% include "include/footer.volt" %}
+    </div>
 </div>
 
 <div id="deleteModal" class="ui modal">
@@ -96,68 +77,4 @@
     </div>
 </div>
 
-<script>
-    var cursor = 0;
-    function deleteAction(categoryId){
-        $('#deleteModal').modal('show', categoryId);
-        cursor = categoryId;
-    }
-    function deleteConfirm(){
-        //window.location.replace("delete?id=" + cursor);
-
-        var formData = {
-            cid:cursor
-        }; //Array
-
-        $.ajax({
-            url : "delete",
-            type: "POST",
-            data : formData,
-            success: function(data, textStatus, jqXHR)
-            {
-                window.location.replace("list");
-                //data - response from server
-                //alert(data);
-            },
-            error: function (jqXHR, textStatus, errorThrown)
-            {
-                //window.location.replace("list");
-                //alert('error')
-            }
-        });
-    }
-
-    function editAction(categoryId){
-        //alert($('#Q' + id + 'C').text());
-        $('#editModal').modal('show');
-        cursor = categoryId;
-
-        $("#subject").val($('#C' + categoryId).text());
-    }
-
-    function editConfirm(){
-        //window.location.replace("delete?id=" + cursor);
-
-        var formData = {
-            cid:cursor,
-            newName:$('#subject').val()
-        }; //Array
-
-        $.ajax({
-            url : "edit",
-            type: "POST",
-            data : formData,
-            success: function(data, textStatus, jqXHR)
-            {
-                window.location.replace("list");
-                //data - response from server
-                //alert(data);
-            },
-            error: function (jqXHR, textStatus, errorThrown)
-            {
-                //window.location.replace("list");
-                //alert('error')
-            }
-        });
-    }
-</script>
+<script src="{{ url('js/CategoryList.js') }}"></script>

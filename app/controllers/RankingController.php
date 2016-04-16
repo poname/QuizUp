@@ -16,10 +16,21 @@ class RankingController  extends ControllerBase
     }
     public function indexAction(){
 
-        $users = User::find() or array();
-        $rankings = array_reverse(usort($users, 'ranking_sort'));
-        $three_most_rankings = array_slice($rankings, 0, 3);
-        $this->view->setVar('rankings', $three_most_rankings);
+        //$users = User::find() or array();
+
+        $users_ranked = User::find(
+            array(
+                "order" => "points",
+                "limit" => 3
+            )
+        ) or array();
+
+        //$rankings = array_reverse(usort($users, 'ranking_sort'));
+        //$three_most_rankings = array_slice($rankings, 0, 3);
+        //$this->view->setVar('rankings', $three_most_rankings);
+        $this->view->setVar('rankings', $users_ranked);
+        echo 'err';
+        echo count($users_ranked);
     }
     function ranking_sort($a,$b)
     {

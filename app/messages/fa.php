@@ -121,5 +121,7 @@ $messages = array(
     'DUMMY' => '',
     'MORE' =>'مشاهده بیشتر ...',
     'SEE_BEST_RANKINGS'=>'مشاهده ی بهترین ها',
-    'RANKINGS'=>'رتبه بندی ها'
+    'RANKINGS'=>'رتبه بندی ها',
+    'YOUR_SCORE' => 'امتیاز شما',
+    'POINTS' => 'امتیاز'
 );
