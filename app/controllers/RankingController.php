@@ -21,27 +21,28 @@ class RankingController  extends ControllerBase
         $users_ranked = User::find(
             array(
                 "order" => "points",
-                "limit" => 3
+
             )
         ) or array();
 
         //$rankings = array_reverse(usort($users, 'ranking_sort'));
-        //$three_most_rankings = array_slice($rankings, 0, 3);
+      //  $three_most_rankings = array_slice( $users_ranked, 0, 3);
         //$this->view->setVar('rankings', $three_most_rankings);
         $this->view->setVar('rankings', $users_ranked);
         echo 'err';
         echo count($users_ranked);
     }
-    function ranking_sort($a,$b)
-    {
-        if ($a['points']==$b['points']) return 0;
-        return ($a['points']<$b['points'])?-1:1;
-    }
+
     public function moreAction(){
 
         $users = User::find() or array();
-  //      $rankings = array_reverse(usort($users, 'ranking_sort'));
+        $users_ranked = User::find(
+            array(
+                "order" => "points",
 
-        $this->view->setVar('rankings', $users);
+            )
+        ) or array();
+
+        $this->view->setVar('rankings', $users_ranked);
     }
 }
