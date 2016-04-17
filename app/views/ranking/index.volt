@@ -22,7 +22,7 @@
         </tbody>
 
     </table>
-    <button class="fluid ui red button" id='moreRanks' href="/ranking/more"><p>{{t('MORE')}}</p></button>
+    <a href="{{ url('ranking/more') }}"><p>{{t('MORE')}}</p></button>
 </div>
 
 <div id="footer">

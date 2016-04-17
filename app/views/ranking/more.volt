@@ -6,7 +6,7 @@
   <thead>
     <tr><th>{{t('NAME')}}</th>
     <th>{{t('FAMILY_NAME')}}</th>
-    <th>{{t('POINT')}}</th>
+    <th>{{t('POINTS')}}</th>
   </tr></thead><tbody>
  {% for user in rankings %}
     <tr>

@@ -21,7 +21,7 @@ class RankingController  extends ControllerBase
         $users_ranked = User::find(
             array(
                 "order" => "points",
-
+                "limit" => 3
             )
         ) or array();
 
@@ -38,7 +38,7 @@ class RankingController  extends ControllerBase
         $users = User::find() or array();
         $users_ranked = User::find(
             array(
-                "order" => "points"
+                "order" => "points DESC"
             )
         ) or array();
 
