@@ -6,7 +6,7 @@
 
     <div class="item">
 
-        <a class="ui icon button" href="/main/index"><i class="home icon"></i>{{t('HOME')}}</a>
+        <a class="ui icon button" href="{{ url('login/success') }}"><i class="home icon"></i>{{t('HOME')}}</a>
     </div>
 
     <div class="item">
