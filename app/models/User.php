@@ -295,7 +295,7 @@ class User extends \Phalcon\Mvc\Model
      */
     public function getPoints()
     {
-        return $this->points;
+        return (int)$this->points;
     }
 
     /**

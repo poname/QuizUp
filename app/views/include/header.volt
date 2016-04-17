@@ -1,6 +1,6 @@
 <div class="ui red inverted menu" style="background-color: #FF5252">
     <div class="item">
-        <img src="/img/logo.png">
+        <img src="{{ url('img/logo.png') }}">
         {{t('SITE_MAIN_TITLE')}}
     </div>
 

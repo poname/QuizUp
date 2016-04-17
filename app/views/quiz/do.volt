@@ -51,7 +51,7 @@
     </div>
 
     {#TOP PROGRESS BAR#}
-    <div class="ui top attached progress">
+    <div class="ui top attached progress" id="timer" data-value="{{ (10-remaining_seconds)*10 }}" data-total="100">
         <div class="bar"></div>
     </div>
 
@@ -92,21 +92,23 @@
         </form>
     </div>
     <div class="step6 content invisible no-take-place">
-        <p>Quiz is finished</p>
+        <p>{{ t('QUIZ_IS_FINISHED') }}</p>
+        <a class="ui red button fa" href="{{ url('login/success') }}">{{ t('GO_TO_USER_PANEL') }}</a>
     </div>
 </div>
 <script>
+    var step = {{ step }};
+    var quiz_id = {{ quiz_id }};
+    var passed_mmseconds = (10-{{ remaining_seconds }}) * 10;
+
     function get_step_content_selector(stepIndex){
         if(stepIndex!=0 && stepIndex != 6) return '.step1-5';
         return '.step'+stepIndex
     }
-    function active_step_indicator(stepIndex){
+    function active_step_indicator(stepIndex,prevIcons){
         $(".step:nth-child(" + (stepIndex + 1) + ")").removeClass('disabled').addClass('active');
     }
     $(document).ready(function () {
-        var step = {{ step }};
-        var quiz_id = {{ quiz_id }};
-        var remaining_seconds = {{ remaining_seconds }};
         for(var sIterator =0 ; sIterator<=step ; sIterator++){
             active_step_indicator(sIterator);
         }
@@ -115,35 +117,46 @@
 
         $('.button.submit').click(function(e){
             e.preventDefault();
-            var answer = 1; //@TODO get the answer!!
-            $('.segment').dimmer('show');
-            $.post(
-                '{{ url('quiz/answer') }}',
-                {
-                    step:step,
-                    quiz_id:quiz_id,
-                    answer:answer
-                },
-                function( data ) {
-                    if(!data.success){
-                        alert(data.data.message);
-                    }else {
-                        if (data.data.new_question) {
-                            $('#question-text').html(data.data.new_question.description)
-                            $('#answer-1 label').html(data.data.new_question.ans1)
-                            $('#answer-2 label').html(data.data.new_question.ans2)
-                            $('#answer-3 label').html(data.data.new_question.ans3)
-                            $('#answer-4 label').html(data.data.new_question.ans4)
-                            $('.form').trigger("reset");
+            var answer = null; //@TODO get the answer!!
+            var selected = $("input[type='radio']:checked");
+            if (selected.length > 0 || step==0) {
+                answer = selected.val();
+                $('.segment').dimmer('show');
+                $.post(
+                        '{{ url('quiz/answer') }}',
+                        {
+                            step:step,
+                            quiz_id:quiz_id,
+                            answer:answer
+                        },
+                        function( data ) {
+                            if(!data.success){
+                                alert(data.data.message);
+                                $
+                            }else{
+
+                            }
+                            if (data.data.new_question) {
+                                $('#question-text').html(data.data.new_question.description)
+                                $('#answer-1 label').html(data.data.new_question.ans1)
+                                $('#answer-2 label').html(data.data.new_question.ans2)
+                                $('#answer-3 label').html(data.data.new_question.ans3)
+                                $('#answer-4 label').html(data.data.new_question.ans4)
+                                $('.form').trigger("reset");
+                            }
+                            $('.segment').dimmer('hide');
+                            $(get_step_content_selector(step)).hide();
+                            step++;
+                            $(".step:nth-child("+(step+1)+")").removeClass('disabled').addClass('active')
+                            if(step){
+                                $(".step:nth-child(" + (step) + ") i").removeClass('help').removeClass('circle').addClass(data.success?'check circle' : 'remove circle');
+                            }
+                            $(get_step_content_selector(step)).show();
                         }
-                    }
-                    $('.segment').dimmer('hide');
-                    $(get_step_content_selector(step)).hide();
-                    step++;
-                    $(".step:nth-child("+(step+1)+")").removeClass('disabled').addClass('active')
-                    $(get_step_content_selector(step)).show();
-                }
-            );
+                );
+            }else{
+                alert('SELECT_ONE_ANSWER');
+            }
         })
     });
 </script>

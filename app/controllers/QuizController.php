@@ -179,11 +179,6 @@ class QuizController extends ControllerBase
             return $this->jsonResponse(false, array('message' => $this->translator->_('INVALID_REQUEST')));
         }
         
-        if(!$answer || !is_numeric($answer) || ((int)$answer)<0 || ((int)$answer)>6 ){
-            $this->logger->error('invalid answer passed to /quiz/answer ' . $answer);
-            return $this->jsonResponse(false, array('message' => $this->translator->_('INVALID_REQUEST')));
-        }
-        
         $user = $this->session->get('auth');
         $quiz->setSideUser($user['id']);
         $ret = null;

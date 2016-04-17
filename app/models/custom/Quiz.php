@@ -92,7 +92,7 @@ class Quiz extends \QUIZUP\Models\Quiz
         return array(
             'state' => $this->getUserState(),
             'step' => $this->getCurrentStateStep(),
-            'remaining_seconds' => time() - strtotime($this->getUserStateLastUpdate())
+            'remaining_seconds' => ($this->isFinished() || $this->isNotStarted()) ? 0 : time() - strtotime($this->getUserStateLastUpdate())
         );
     }
 
@@ -107,9 +107,16 @@ class Quiz extends \QUIZUP\Models\Quiz
         if ($current_state > 0) {
             $remaining = time() - $this->getDI()->get('config')->quizup->question_time - strtotime($this->getUserStateLastUpdate());
             if ($remaining < 0) {
-                $property = "User{$this->_side_user_index}";
-                $this->$property->setPoints($this->$property->getPoints() + $this->getDI()->get('config')->quizup->correct_answer_points * (-1) * $remaining);
-                $ret = array(true);
+                if($this->getCurrentQuestion()->getCorrect() == $answer_index){
+                    $property = "User{$this->_side_user_index}";
+                    $new_points = $this->$property->getPoints() +
+                        $this->getDI()->get('config')->quizup->correct_answer_points * (-1) * $remaining;
+
+                    $this->$property = $this->$property->setPoints($new_points);
+                    $ret = array(true);
+                }else{
+                    $ret = array(false, 'INCORRECT_ANSWER');
+                }
             } else {
                 $ret = array(false, 'TIME_IS_OVER');
             }
