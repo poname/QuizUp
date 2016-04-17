@@ -40,8 +40,8 @@ class RankingController  extends ControllerBase
     public function moreAction(){
 
         $users = User::find() or array();
-        $rankings = array_reverse(usort($users, 'ranking_sort'));
+  //      $rankings = array_reverse(usort($users, 'ranking_sort'));
 
-        $this->view->setVar('rankings', $rankings);
+        $this->view->setVar('rankings', $users);
     }
 }
