@@ -32,5 +32,6 @@ return new \Phalcon\Config(array(
     'quizup' => array(
         'question_time' => 10 , //in seconds
         'correct_answer_points' => 1 // point for every question is {{correct_answer_points}} * remaining_seconds,
+        
     )
 ));
