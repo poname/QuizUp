@@ -364,6 +364,9 @@ class User extends \Phalcon\Mvc\Model
     }
 
     public function afterUpdate(){
-        $this->getDI()->get('session')->set('user', $this);
+        $user_auth = $this->getDI()->get('session')->get('auth');
+        if ($user_auth['id'] == $this->getId()) {
+            $this->getDI()->get('session')->set('user', $this);
+        }
     }
 }
