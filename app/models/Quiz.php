@@ -73,6 +73,30 @@ class Quiz extends \Phalcon\Mvc\Model
 
     /**
      *
+     * @var integer
+     */
+    protected $user1_correct_answers_count;
+
+    /**
+     *
+     * @var integer
+     */
+    protected $user2_correct_answers_count;
+
+    /**
+     *
+     * @var integer
+     */
+    protected $user1_earned_points;
+
+    /**
+     *
+     * @var integer
+     */
+    protected $user2_earned_points;
+
+    /**
+     *
      * @var string
      */
     protected $user1_step_last_update;
@@ -227,6 +251,58 @@ class Quiz extends \Phalcon\Mvc\Model
     }
 
     /**
+     * Method to set the value of field user1_correct_answers_count
+     *
+     * @param integer $user1_correct_answers_count
+     * @return $this
+     */
+    public function setUser1CorrectAnswersCount($user1_correct_answers_count)
+    {
+        $this->user1_correct_answers_count = $user1_correct_answers_count;
+
+        return $this;
+    }
+
+    /**
+     * Method to set the value of field user2_correct_answers_count
+     *
+     * @param integer $user2_correct_answers_count
+     * @return $this
+     */
+    public function setUser2CorrectAnswersCount($user2_correct_answers_count)
+    {
+        $this->user2_correct_answers_count = $user2_correct_answers_count;
+
+        return $this;
+    }
+
+    /**
+     * Method to set the value of field user1_earned_points
+     *
+     * @param integer $user1_earned_points
+     * @return $this
+     */
+    public function setUser1EarnedPoints($user1_earned_points)
+    {
+        $this->user1_earned_points = $user1_earned_points;
+
+        return $this;
+    }
+
+    /**
+     * Method to set the value of field user2_earned_points
+     *
+     * @param integer $user2_earned_points
+     * @return $this
+     */
+    public function setUser2EarnedPoints($user2_earned_points)
+    {
+        $this->user2_earned_points = $user2_earned_points;
+
+        return $this;
+    }
+
+    /**
      * Method to set the value of field user1_step_last_update
      *
      * @param string $user1_step_last_update
@@ -360,6 +436,46 @@ class Quiz extends \Phalcon\Mvc\Model
     public function getUser2State()
     {
         return $this->user2_state;
+    }
+
+    /**
+     * Returns the value of field user1_correct_answers_count
+     *
+     * @return integer
+     */
+    public function getUser1CorrectAnswersCount()
+    {
+        return $this->user1_correct_answers_count;
+    }
+
+    /**
+     * Returns the value of field user2_correct_answers_count
+     *
+     * @return integer
+     */
+    public function getUser2CorrectAnswersCount()
+    {
+        return $this->user2_correct_answers_count;
+    }
+
+    /**
+     * Returns the value of field user1_earned_points
+     *
+     * @return integer
+     */
+    public function getUser1EarnedPoints()
+    {
+        return $this->user1_earned_points;
+    }
+
+    /**
+     * Returns the value of field user2_earned_points
+     *
+     * @return integer
+     */
+    public function getUser2EarnedPoints()
+    {
+        return $this->user2_earned_points;
     }
 
     /**

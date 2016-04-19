@@ -3,7 +3,6 @@
 namespace QUIZUP\Models;
 
 use Phalcon\Mvc\Model\Validator\Email as Email;
-use Phalcon\Validation;
 
 class User extends \Phalcon\Mvc\Model
 {
@@ -350,7 +349,6 @@ class User extends \Phalcon\Mvc\Model
      */
     public static function find($parameters = null)
     {
-
         return parent::find($parameters);
     }
 
@@ -365,4 +363,7 @@ class User extends \Phalcon\Mvc\Model
         return parent::findFirst($parameters);
     }
 
+    public function afterUpdate(){
+        $this->getDI()->get('session')->set('user', $this);
+    }
 }

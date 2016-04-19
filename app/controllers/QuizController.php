@@ -91,11 +91,15 @@ class QuizController extends ControllerBase
                 ->setQuestion4($question_ids[3])
                 ->setQuestion5($question_ids[4])
                 ->setUser1Id($user['id'])
-                ->setUser1State(new Db\RawValue('default'))
                 ->setUser2Id($competitor->getUserId())
+                ->setUser1State(new Db\RawValue('default'))
                 ->setUser2State(new Db\RawValue('default'))
                 ->setUser1StepLastUpdate($time)
-                ->setUser2StepLastUpdate($time);
+                ->setUser2StepLastUpdate($time)
+                ->setUser1EarnedPoints(new Db\RawValue('default'))
+                ->setUser2EarnedPoints(new Db\RawValue('default'))
+                ->setUser1CorrectAnswersCount(new Db\RawValue('default'))
+                ->setUser2CorrectAnswersCount(new Db\RawValue('default'));
 
             if (!$quiz->save()) {
                 $this->logger->error(var_export($quiz->getMessages(),true));
@@ -105,6 +109,7 @@ class QuizController extends ControllerBase
 
             //send email to other opponent
             $quiz_link = $this->config->application->webpageURL . "quiz/do/{$quiz->getQid()}";
+            
             $mail = new \PHPMailer();
             // Set PHPMailer to use the sendmail transport
             $mail->isSendmail();
@@ -118,12 +123,12 @@ class QuizController extends ControllerBase
                 'link'=> $quiz_link
             )));
             $mail->AltBody = $quiz_link;
-//            if (!$mail->send()) {
-//                $quiz->delete();
-//                $this->logger->error('could not send email to opponent: '.$mail->ErrorInfo);
-//                $this->flashSession->error($this->translator->_('INTERNAL_ERROR'));
-//                return $this->_redirectBack();
-//            }
+            if (!$mail->send()) {
+                $quiz->delete();
+                $this->logger->error('could not send email to opponent: '.$mail->ErrorInfo);
+                $this->flashSession->error($this->translator->_('INTERNAL_ERROR'));
+                return $this->_redirectBack();
+            }
 
             // all set ! let's start the quiz , shall we? :)
             return $this->response->redirect('quiz/do/' . $quiz->getQid());
@@ -187,21 +192,16 @@ class QuizController extends ControllerBase
         }catch (Exception $e){
             $ret = array(false, 'INTERNAL_ERROR');
         }
-        
-        if($quiz->isFinished()){
-            return $this->jsonResponse(true);
-        }
 
-        $new_question = $quiz->getCurrentQuestion();
-        if ($new_question) {
-            $new_question = $new_question->toArray();
-            unset($new_question['correct']);
-        }
-
-        return $this->jsonResponse($ret[0], array(
-            'message'=> $ret[0] == false ? $ret[1] : '',
-            'new_question' => $new_question
-        ));
+        return $this->jsonResponse(
+            $ret[0],
+            array_merge(
+                array(
+                    'message'=> $ret[0] == false ? $this->translator->_($ret[1]) : '',
+                ),
+                $quiz->getStatus(false) // dont persist , just give me the status , changes are already persisted in handleAnswer
+            )
+        );
 
         // we should first desing the ui so we can program for here
     }

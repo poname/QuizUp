@@ -93,7 +93,11 @@
     </div>
     <div class="step6 content invisible no-take-place">
         <p>{{ t('QUIZ_IS_FINISHED') }}</p>
+        <p>{{ t('NUMBER_OF_CORRECT_ANSWERS') }}: <span id="correct_answers_count">{{ correct_answers_count }}</span></p>
+        <p>{{ t('EARNED_POINTS') }}: <span id="earned_points">{{ earned_points }}</span></p>
         <a class="ui red button fa" href="{{ url('login/success') }}">{{ t('GO_TO_USER_PANEL') }}</a>
+        <a class="ui red button fa" href="{{ url('ranking') }}">{{ t('GO_TO_RANKING_PAGE') }}</a>
+        <a class="ui red button fa" href="{{ url('quiz/selectCategory') }}">{{ t('TAKE_ANOTHER_QUIZ') }}</a>
     </div>
 </div>
 <script>
@@ -132,26 +136,31 @@
                         function( data ) {
                             if(!data.success){
                                 alert(data.data.message);
-                                $
-                            }else{
-
                             }
-                            if (data.data.new_question) {
-                                $('#question-text').html(data.data.new_question.description)
-                                $('#answer-1 label').html(data.data.new_question.ans1)
-                                $('#answer-2 label').html(data.data.new_question.ans2)
-                                $('#answer-3 label').html(data.data.new_question.ans3)
-                                $('#answer-4 label').html(data.data.new_question.ans4)
+                            if (data.data.current_question) {
+                                $('#question-text').html(data.data.current_question.description)
+                                $('#answer-1 label').html(data.data.current_question.ans1)
+                                $('#answer-2 label').html(data.data.current_question.ans2)
+                                $('#answer-3 label').html(data.data.current_question.ans3)
+                                $('#answer-4 label').html(data.data.current_question.ans4)
                                 $('.form').trigger("reset");
+                            }
+                            if(data.data.correct_answers_count){
+                                $("#correct_answers_count").html(data.data.correct_answers_count);
+                            }
+                            if(data.data.earned_points){
+                                $("#earned_points").html(data.data.earned_points);
                             }
                             $('.segment').dimmer('hide');
                             $(get_step_content_selector(step)).hide();
                             step++;
+
                             $(".step:nth-child("+(step+1)+")").removeClass('disabled').addClass('active')
                             if(step){
-                                $(".step:nth-child(" + (step) + ") i").removeClass('help').removeClass('circle').addClass(data.success?'check circle' : 'remove circle');
+                                $(".step:nth-child(" + (step) + ") i").removeClass('help').removeClass('circle').addClass(data.success?'check circle green' : 'remove circle red');
                             }
                             $(get_step_content_selector(step)).show();
+
                         }
                 );
             }else{
