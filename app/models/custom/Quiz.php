@@ -34,6 +34,12 @@ class Quiz extends \QUIZUP\Models\Quiz
         throw new Exception('cannot get user state:'.$this->_side_user_index);
     }
 
+    public function getOtherUserState(){
+        if($this->_side_user_index == 1) return $this->getUser2State();
+        if($this->_side_user_index == 2) return $this->getUser1State();
+        throw new Exception('cannot get user state:'.$this->_side_user_index);
+    }
+
     public function setUserState($new_state){
         if($this->_side_user_index == 1) return $this->setUser1State($new_state);
         if($this->_side_user_index == 2) return $this->setUser1State($new_state);
@@ -58,6 +64,11 @@ class Quiz extends \QUIZUP\Models\Quiz
         return $flipped[$this->getUserState()];
     }
 
+    public function getOtherUserStateStep(){
+        $flipped = array_flip(self::$state_number_mappings);
+        return $flipped[$this->getOtherUserState()];
+    }
+
     public function setCurrentStateStep($new_step){
         if(!array_key_exists($new_step,self::$state_number_mappings)){
             throw new Exception("attempting to set illegal step:({$new_step})");
@@ -73,7 +84,7 @@ class Quiz extends \QUIZUP\Models\Quiz
         }
     }
 
-    public function getStatus(){
+    public function getStatus($persist = true){
         $current_step = $this->getCurrentStateStep();
         $last_update = strtotime($this->getUserStateLastUpdate());
         $to_move = (int)((time() - $last_update)/$this->getDI()->get('config')->quizup->question_time);
@@ -85,13 +96,24 @@ class Quiz extends \QUIZUP\Models\Quiz
 
 
             $this->setCurrentStateStep($next_step);
-            if(!$this->save()){
-                throw new Exception(var_export($this->getMessages(), true));
+            if(!$persist){
+                if(!$this->save()){
+                    throw new Exception(var_export($this->getMessages(), true));
+                }
             }
+        }
+        $current_question = null;
+        if(!$this->isNotStarted() && !$this->isFinished()){
+            $property = "Question{$this->getCurrentStateStep()}";
+            $current_question = $this->$property->toArray();
+            unset($current_question['correct']); // we don't want to send correct answer to client, do we? :)
         }
         return array(
             'state' => $this->getUserState(),
             'step' => $this->getCurrentStateStep(),
+            'earned_points' => $this->getCurrentEarnedPoints(),
+            'current_question' => $current_question,
+            'correct_answers_count' => $this->getUserCorrectAnswersCount(),
             'remaining_seconds' => ($this->isFinished() || $this->isNotStarted()) ? 0 : time() - strtotime($this->getUserStateLastUpdate())
         );
     }
@@ -105,14 +127,14 @@ class Quiz extends \QUIZUP\Models\Quiz
         }
         $current_state = $this->getCurrentStateStep();
         if ($current_state > 0) {
-            $remaining = time() - $this->getDI()->get('config')->quizup->question_time - strtotime($this->getUserStateLastUpdate());
-            if ($remaining < 0) {
+            $remaining = $this->getDI()->get('config')->quizup->question_time + strtotime($this->getUserStateLastUpdate()) - time();
+            if ($remaining > 0) {
                 if($this->getCurrentQuestion()->getCorrect() == $answer_index){
-                    $property = "User{$this->_side_user_index}";
-                    $new_points = $this->$property->getPoints() +
-                        $this->getDI()->get('config')->quizup->correct_answer_points * (-1) * $remaining;
-
-                    $this->$property = $this->$property->setPoints($new_points);
+                    $this->setCurrentEarnedPoints(
+                        $this->getCurrentEarnedPoints() +
+                        $this->getDI()->get('config')->quizup->correct_answer_points * $remaining
+                    );
+                    $this->incrementCorrectAnswers();
                     $ret = array(true);
                 }else{
                     $ret = array(false, 'INCORRECT_ANSWER');
@@ -122,6 +144,31 @@ class Quiz extends \QUIZUP\Models\Quiz
             }
         }
         $this->setCurrentStateStep($current_state+1);
+
+        //if we're in the last step , update the user points
+        if($this->isFinished()){
+            $property = "User{$this->_side_user_index}";
+            $new_points = $this->$property->getPoints() + $this->getCurrentEarnedPoints();
+            $this->$property = $this->$property->setPoints($new_points);
+            if($this->isOtherUserFinished()){
+                $result = $this->getResult();
+//                $this->getDI()->get('logger')->error('mailing to ' . $result['winner']->getEmail() . $this->getDI()->get('view')->getRender('emails', 'quiz-invitation', array(
+//                        'full_name' => $result['winner']->getName(),
+//                        'opponent_name' => $result['looser']->getName(),
+//                    )));
+                $mail = new \PHPMailer();
+                // Set PHPMailer to use the sendmail transport
+                $mail->isSendmail();
+                $mail->setFrom('noreplay@ccweb.ir', 'QuizUP');
+                $mail->addAddress($result['winner']->getEmail(), "{$result['winner']->getName()} {$result['winner']->getFamily()}");
+                $mail->Subject = 'Quiz Invitation';
+                $mail->msgHTML($this->getDI()->get('view')->getRender('emails','quiz-winner',array(
+                    'full_name'=>$result['winner']->getName(),
+                    'opponent_name' => $result['looser']->getName(),
+                )));
+                $mail->send();
+            }
+        }
         if(!$this->save()){
             throw new Exception($this->getMessages());
         }
@@ -134,6 +181,9 @@ class Quiz extends \QUIZUP\Models\Quiz
     public function isFinished(){
         return $this->getCurrentStateStep() >= count(self::$state_number_mappings) - 1;
     }
+    public function isOtherUserFinished(){
+        return $this->getOtherUserStateStep() >= count(self::$state_number_mappings) - 1;
+    }
 
     public function getCurrentQuestion(){
         if(!$this->isNotStarted() && !$this->isFinished()){
@@ -143,5 +193,48 @@ class Quiz extends \QUIZUP\Models\Quiz
             return $current_question;
         }
         return null;
+    }
+
+    public function getCurrentEarnedPoints(){
+        if($this->_side_user_index == 1 ) return $this->getUser1EarnedPoints();
+        if($this->_side_user_index == 2 ) return $this->getUser2EarnedPoints();
+        throw new Exception('invalid side user index' . var_export($this->_side_user_index, true));
+    }
+
+    public function setCurrentEarnedPoints($points){
+        if($this->_side_user_index == 1 ) return $this->setUser1EarnedPoints($points);
+        if($this->_side_user_index == 2 ) return $this->setUser2EarnedPoints($points);
+        throw new Exception('invalid side user index' . var_export($this->_side_user_index, true));
+    }
+
+    public function incrementCorrectAnswers(){
+        if($this->_side_user_index == 1 ) return $this->setUser1CorrectAnswersCount($this->getUser1CorrectAnswersCount()+1);
+        if($this->_side_user_index == 2 ) return $this->setUser2CorrectAnswersCount($this->getUser2CorrectAnswersCount()+1);
+        throw new Exception('invalid side user index' . var_export($this->_side_user_index, true));
+    }
+
+    public function getUserCorrectAnswersCount(){
+        if($this->_side_user_index == 1 ) return $this->getUser1CorrectAnswersCount();
+        if($this->_side_user_index == 2 ) return $this->getUser2CorrectAnswersCount();
+        throw new Exception('invalid side user index' . var_export($this->_side_user_index, true));
+
+    }
+
+    public function getResult(){
+        if(!$this->isFinished() || !$this->isOtherUserFinished())
+            throw new Exception('tried to call get result when the quiz is not over!!');
+
+        $winnerIndex = 1;
+        $looserIndex = 2;
+        if($this->getUser2EarnedPoints()>$this->getUser1EarnedPoints()){
+            $winnerIndex =2 ;
+            $looserIndex = 1;
+        }
+        $winnerUserProperty = "User$winnerIndex";
+        $looserUserProperty = "User$looserIndex";
+        return array(
+            'winner' => $this->$winnerUserProperty,
+            'looser' => $this->$looserUserProperty
+        );
     }
 }
