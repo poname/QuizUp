@@ -42,7 +42,7 @@ class Quiz extends \QUIZUP\Models\Quiz
 
     public function setUserState($new_state){
         if($this->_side_user_index == 1) return $this->setUser1State($new_state);
-        if($this->_side_user_index == 2) return $this->setUser1State($new_state);
+        if($this->_side_user_index == 2) return $this->setUser2State($new_state);
         throw new Exception('cannot get user state:'.$this->_side_user_index);
     }
 
@@ -161,7 +161,7 @@ class Quiz extends \QUIZUP\Models\Quiz
                 $mail->isSendmail();
                 $mail->setFrom('noreplay@ccweb.ir', 'QuizUP');
                 $mail->addAddress($result['winner']->getEmail(), "{$result['winner']->getName()} {$result['winner']->getFamily()}");
-                $mail->Subject = 'Quiz Invitation';
+                $mail->Subject = 'You won a quiz!';
                 $mail->msgHTML($this->getDI()->get('view')->getRender('emails','quiz-winner',array(
                     'full_name'=>$result['winner']->getName(),
                     'opponent_name' => $result['looser']->getName(),
@@ -238,5 +238,5 @@ class Quiz extends \QUIZUP\Models\Quiz
         );
     }
 
-    
+
 }
