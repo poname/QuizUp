@@ -445,7 +445,7 @@ class Quiz extends \Phalcon\Mvc\Model
      */
     public function getUser1CorrectAnswersCount()
     {
-        return $this->user1_correct_answers_count;
+        return (int)$this->user1_correct_answers_count;
     }
 
     /**
@@ -455,7 +455,7 @@ class Quiz extends \Phalcon\Mvc\Model
      */
     public function getUser2CorrectAnswersCount()
     {
-        return $this->user2_correct_answers_count;
+        return (int)$this->user2_correct_answers_count;
     }
 
     /**
@@ -465,7 +465,7 @@ class Quiz extends \Phalcon\Mvc\Model
      */
     public function getUser1EarnedPoints()
     {
-        return $this->user1_earned_points;
+        return (int)$this->user1_earned_points;
     }
 
     /**
@@ -475,7 +475,7 @@ class Quiz extends \Phalcon\Mvc\Model
      */
     public function getUser2EarnedPoints()
     {
-        return $this->user2_earned_points;
+        return (int)$this->user2_earned_points;
     }
 
     /**
