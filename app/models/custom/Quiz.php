@@ -237,4 +237,6 @@ class Quiz extends \QUIZUP\Models\Quiz
             'looser' => $this->$looserUserProperty
         );
     }
+
+    
 }
