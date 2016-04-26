@@ -1,0 +1,25 @@
+1-First, I had to grab the node.js itself.
+    in linux , it can be done using :
+        apt-get install nodejs
+    in windows, i had to grab the msi installation file from the offical site:
+        https://cdn.socket.io/socket.io-1.2.0.js
+
+2-i had to figure out how can i write a hello world! I went to their website and found a chat application demo.
+so i created a folder in the application root called 'api' and cloned the git repository of chat application into it!
+
+3-i looked briefly into the example , and as my point of view , it has two major parts , server and client.
+the server uses the node.js languages and library , but the client was using the javascript library in pure javascript.
+
+so i decided to put the javascript library into bower package manager(bower.json), and put the node.js required things into
+ the api folder into node package manager(npm)
+
+ finally , i ran two commands for checking out what i've got:
+    bower --save install socket.io-clint // to get javascript required libraries
+    cd api; npm install // to get node libraries required by chat demp app
+
+ i ran into a problem when running the "npm install" command and it turns out PYTHON SHOULD BE INSTALLED ON SYSTEM
+
+4. i changed javascript loading lines in api/index.html from http://cdn.... to http://localhost/quizup/lib/socket.io.js that i've gotten
+from bower.
+
+

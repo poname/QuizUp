@@ -1,0 +1,12 @@
+{
+  "name": "QuizUp",
+  "homepage": "https://github.com/pzey2011/QuizUp",
+  "authors": [
+    "HatsOn <mohammad.nazari92@gmail.com>"
+  ],
+  "description": "Web based Q&A game , 2player basically",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
+}
