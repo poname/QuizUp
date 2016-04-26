@@ -22,4 +22,14 @@ so i decided to put the javascript library into bower package manager(bower.json
 4. i changed javascript loading lines in api/index.html from http://cdn.... to http://localhost/quizup/lib/socket.io.js that i've gotten
 from bower.
 
+5. i ran node index.js and BANG!! :)
+
+
+------------ Getting started to use
+
+2.1 grab node.js executable( explained in section 1 above)
+2.2 from cmd , change working directory to api folder,
+2.3 run command "node index.js"
+2.4 navigate to localhost:4101
+
 
