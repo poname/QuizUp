@@ -29,7 +29,8 @@ from bower.
 
 2.1 grab node.js executable( explained in section 1 above)
 2.2 from cmd , change working directory to api folder,
-2.3 run command "node index.js"
-2.4 navigate to localhost:4101
+2.3 run npm install to grab required packages (socket.io library and etc. )
+2.4 run command "node index.js"
+2.5 navigate to localhost:4101
 
 
