@@ -27,8 +27,8 @@ foreach($commands AS $command){
 }
 // Make it pretty for manual user access (and why not?)
 
-$message=shell_exec('cd '.__DIR__.'/../api/;./kill-node.sh');
-$message=shell_exec('cd '.__DIR__.'/../api/;./start-node.sh');
+$message1 =shell_exec('cd '.__DIR__.'/../api/;./kill-node.sh');
+$message2 =shell_exec('cd '.__DIR__.'/../api/;./start-node.sh');
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
@@ -45,6 +45,8 @@ $message=shell_exec('cd '.__DIR__.'/../api/;./start-node.sh');
               |____________________________|
 
     <?php echo $output; ?>
+    <?php var_dump($message1) ?>
+    <?php var_dump($message2) ?>
 </pre>
 </body>
 </html>
