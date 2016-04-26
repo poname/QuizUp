@@ -18,6 +18,8 @@
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
+    <script src="/lib/socket.io.js"></script>
+    <script src="/lib/jquery/jquery.min.js"></script>
     <script>
       var socket = io();
       $('form').submit(function(){
