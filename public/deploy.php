@@ -26,6 +26,9 @@ foreach($commands AS $command){
     $output .= htmlentities(trim($tmp)) . "\n";
 }
 // Make it pretty for manual user access (and why not?)
+
+$message=shell_exec('cd '.__DIR__.'/../api/;./kill-node.sh');
+$message=shell_exec('cd '.__DIR__.'/../api/;./start-node.sh');
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
