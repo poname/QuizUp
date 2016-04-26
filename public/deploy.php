@@ -26,9 +26,42 @@ foreach($commands AS $command){
     $output .= htmlentities(trim($tmp)) . "\n";
 }
 // Make it pretty for manual user access (and why not?)
+$run_command = function($command, &$result, &$error, $stream = ""){
+    $pipes = array();
+    $descriptorspec = array(
+        0 => array("pipe", "r"), // stdin
+        1 => array("pipe", "w"), // stdout
+        2 => array("pipe", "w"), // stderr
+    );
 
-$message1 =shell_exec('cd '.__DIR__.'/../api/;./kill-node.sh');
-$message2 =shell_exec('cd '.__DIR__.'/../api/;./start-node.sh');
+    $process = proc_open($command, $descriptorspec, $pipes);
+    if(is_resource($process)){
+
+        fwrite($pipes[0], $stream);
+        fclose($pipes[0]);
+
+        $result = stream_get_contents($pipes[1]);
+        fclose($pipes[1]);
+        $error = stream_get_contents($pipes[2]);
+        fclose($pipes[2]);
+        $ret = proc_close($process);
+    }
+
+    if($result){
+        $c = substr_count($result, "\n");
+        if($c == 1){
+            $result = str_replace("\n", "", $result);
+        }
+    }
+    return $ret;
+};
+$out1 = '';
+$error1 = '';
+$out2 = '';
+$error2 = '';
+
+$run_command('cd ' . __DIR__ . '/../api/;./kill-node.sh', $out1, $error1);
+$run_command('cd ' . __DIR__ . '/../api/;./start-node.sh', $out2, $error2);
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
@@ -45,8 +78,8 @@ $message2 =shell_exec('cd '.__DIR__.'/../api/;./start-node.sh');
               |____________________________|
 
     <?php echo $output; ?>
-    <?php var_dump($message1) ?>
-    <?php var_dump($message2) ?>
+    <?php var_dump(array($out1,$error1)) ?>
+    <?php var_dump(array($out2,$error2)) ?>
 </pre>
 </body>
 </html>
