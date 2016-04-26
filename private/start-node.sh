@@ -1,3 +1,3 @@
 #!/bin/bash
 cd ../api;
-node index.js
+node index.js&
