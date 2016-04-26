@@ -61,7 +61,7 @@ $out2 = '';
 $error2 = '';
 
 $run_command('cd '.__DIR__.'./kill-node.sh', $out1, $error1);
-$run_command('cd '.__DIR__.'./start-node.sh', $out2, $error2);
+$run_command('cd '.__DIR__.'./start-node.sh &', $out2, $error2);
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
