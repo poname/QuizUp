@@ -24,7 +24,7 @@ class MainController extends ControllerBase
 
     public function indexAction(){
 
-        if ($this->session->has("login")) {
+        if ($this->session->has('auth')) {
             return $this->response->redirect('login/success');
         }
         
