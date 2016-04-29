@@ -51,6 +51,15 @@ class LoginController extends ControllerBase
             );
     	}
         $this->view->setVar('score', $this->session->get('user')->getPoints());
+		$users_ranked = User::find(
+            array(
+                "order" => "points DESC",
+                "limit" => 3
+            )
+        ) or array();
+		  $this->view->setVar('rankings', $users_ranked);
+        echo 'err';
+        echo count($users_ranked);
     }
 
     public function doAction(){
