@@ -58,14 +58,6 @@
                     <a class="ui pink large basic button button" href="{{ url('question/create') }}"><p>{{ t('CREATE_QUESTION') }}</p></a>
                     <a class="ui brown large basic button button" href="{{ url('question/list') }}"><p>{{ t('QUESTIONS') }}</p></a>
                 </div>
-                <div class="ui segment">
-                    <h2 class="ui icon header">
-                        <p>{{ t('RANKINGS') }}</p>
-                    </h2>
-                    <p></p>
-                    <a class="ui blue large basic button button" href="{{ url('ranking/index') }}"><p>{{ t('SEE_BEST_RANKINGS') }}</p></a>
-
-                </div>
             </div>
 			
         </div>
