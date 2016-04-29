@@ -16,7 +16,7 @@
     <div class="right item">
         <div class="right ui simple dropdown item">
             <i class="user icon"></i>
-            {#<span class="text">session.get('user').getName()</span>#}
+            <span class="text">{{session.get('user').getName() }}</span>
             <i class="dropdown icon"></i>
             <div class="menu">
                 <a class="item" href="{{ url('quiz/selectCategory') }}">{{ t('START') }}</a>
