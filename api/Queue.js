@@ -19,7 +19,7 @@ var queueModule = (function() {
                     if(list[i].category == cat){
                         var opponent = list[i];
                         opponentFound = true;
-                        newQuiz(user, opponent.username, cat, socket, user.socket);
+                        newQuiz(user, opponent.username, cat, sock, opponent.socket);
                         list.splice(i, 1);
                     }
                 }

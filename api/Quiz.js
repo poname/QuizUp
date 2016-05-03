@@ -18,9 +18,8 @@ var quizModule = (function() {
         }else{
             quiz.currentQuestion = quiz.currentQuestion + 1;
             var qInstance = quiz.questions[quiz.currentQuestion];
-            delete qInstance.correct;
-            sendQuestion(qInstance);
-
+            // delete qInstance.correct;
+            sendQuestion(quiz.socket1,quiz.socket2,qInstance);
         }
     }
 
@@ -41,7 +40,7 @@ var quizModule = (function() {
     return { //exposed to public
         init: function(sendFn_callback, finishFn_callback){
             sendQuestion = sendFn_callback;
-            finishQuiz = finishFn_callback;
+            sendFinished = finishFn_callback;
         },
         newQuiz: function(user1, user2, cat, socket1, socket2) {
             var quiz = adapter.getQuiz(user1, user2, cat, socket1, socket2);

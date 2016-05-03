@@ -48,7 +48,7 @@ var gatewayModule = (function() {
         socket1.emit('question', questionInfo);
         socket2.emit('question', questionInfo);
     }
-    //quiz.init(sendQuestion, finishGame);
+    quiz.init(sendQuestion, finishGame);
 
     var waiting = function(sock){
         sock.emit('wait', '');
