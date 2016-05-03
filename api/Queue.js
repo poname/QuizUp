@@ -20,6 +20,7 @@ var queueModule = (function() {
                         var opponent = list[i];
                         opponentFound = true;
                         newQuiz(user, opponent.username, cat, sock, opponent.socket);
+
                         list.splice(i, 1);
                     }
                 }
@@ -27,6 +28,9 @@ var queueModule = (function() {
                 if(!opponentFound){
                     list.push(request);
                     waiting(sock);
+                }
+                else{
+                     waiting(sock); //second user starts waiting for start delay
                 }
             }
         },

@@ -8,9 +8,21 @@
 </head>
 
 <body>
+ 	<form>
+  		User Name:<br>
+  		<input id="user" type="text" name="firstname"><br>
+  		Category:<br>
+  		<input id="cat" type="text" name="lastname">
+	</form> 
 	<ul class="pages">
 		<button class="do">hi</button>
 		<button class="request">play!</button>
+
+		<div id="spin" class="loader"></div>
+		 <div id="alert" class="alert">
+  			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  			This is an alert box.
+		</div>
 	
 		<p class="note">
 			for starting game click play!

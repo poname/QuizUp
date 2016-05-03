@@ -48,7 +48,12 @@ var gatewayModule = (function() {
         socket1.emit('question', questionInfo);
         socket2.emit('question', questionInfo);
     }
-    quiz.init(sendQuestion, finishGame);
+
+    var news = function(sock, data){
+        sock.emit('news', data);
+    }
+
+    quiz.init(sendQuestion, finishGame, news);
 
     var waiting = function(sock){
         sock.emit('wait', '');
@@ -57,7 +62,6 @@ var gatewayModule = (function() {
 
     io.on('connection', function (socket) {
         console.log('somone connected');
-        socket.emit('news', { hello: 'salam' });
         
         socket.on('hi', function (data) {
             console.log(data);
@@ -70,15 +74,17 @@ var gatewayModule = (function() {
             //    choices: { 1:'ziad', 2:'kam', 3:'b to che' }
             //});
             //var q = quiz.newQuiz(1, 2, 'bad', socket, socket, sendQuestion);
+            //socket.username = username;
             queue.addRequest(data.username, data.category, socket);
         });
 
         socket.on('answer', function (ansInfo) {
             console.log(ansInfo);
-            if(ansInfo.choosed === '3')
-                socket.emit('result', 'Yeeeesss');
-            else
-                socket.emit('result', 'ridii :)');
+            //if(ansInfo.choosed === '3')
+            //    socket.emit('result', 'Yeeeesss');
+            //else
+            //    socket.emit('result', 'ridii :)');
+            quiz.pushAnswer(socket, ansInfo);
         });
     });
 

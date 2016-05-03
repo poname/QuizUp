@@ -15,8 +15,16 @@ $(function() {
 
 	var $result = $('.result');
 
+	var $spin = $('#spin');
+		$spin.hide();
+
+	var $alert = $('#alert');
+		$alert.hide();
+
 	// Prompt for setting a username;
 	var socket = io();
+
+	var qid = -1 ;
 	
 
 	$doButton.click(function(){
@@ -24,18 +32,27 @@ $(function() {
 	});
 
 	socket.on('news', function(data) {
-		alert(data.hello);
+		//alert(data.hello);
+		$alert.text("You VS " + data) ;
+		$alert.show();
 	});
 
 	$requestButton.click(function(){
+		$requestButton.hide();
 		//user click play button, send a request to server
 		$result.text("");
-		socket.emit('request', {username:'akbar', category:'posture'});
+		var $user = $('#user').val().trim() ;
+		var $cat = $('#cat').val().trim();
+		//alert($user, $cat);
+		socket.emit('request', {username:$user, category:$cat});
 	});
 
 	socket.on('question', function(questionInfo) {
+		$spin.hide();
+		$alert.hide();
+		//alert(questionInfo);
 		//when server sends question to you
-		$note.text(questionInfo.question);
+		$note.text(questionInfo.body);
 		var txt = "" ;
 		var id = 1;
 		for(var i in questionInfo.choices){
@@ -47,17 +64,24 @@ $(function() {
 		//$choices.text(txt);
 
 		$answerButton.show();
+
+		$qid = questionInfo.quizId ;
+
+		$answerButton.prop('disabled', false);
 	});
 
 	$answerButton.click(function(){
 		//when user clicked the choice button
-		socket.emit('answer', {choosed: $(this).attr('value')});
-		$answerButton.hide();
+		socket.emit('answer', { quizId:$qid, choosed: $(this).attr('value') });
+		//$answerButton.hide();
+		$answerButton.prop('disabled', true);
 	});
 
 	socket.on('result', function(data) {
 		//show the result of match, data is a string
+		$note.hide();
 		$result.text(data);
+		$answerButton.hide();
 	});
 
 	socket.on('disconnect', function(data) {
@@ -68,9 +92,10 @@ $(function() {
 		alert('error occured');
 	});
 
-	socket.on('waiting', function(data) {
+	socket.on('wait', function(data) {
 		//wait until another user be ready for game
-		alert('please wait');
+		//alert('please wait');
+		$spin.show();
 	});
 
 });
