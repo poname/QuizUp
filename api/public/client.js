@@ -2,6 +2,20 @@ $(function() {
 
 	// Initialize variables
 
+	var countdown = $("#countdown").countdown360({
+    	radius: 60,
+    	seconds: 10,
+    	label: ['sec', 'secs'],
+    	fontColor: '#FFFFFF',
+    	autostart: false,
+    	onComplete: function () {
+      	//console.log('done');
+    	}
+	});
+
+	var timmer = $("#countdown") ;
+	timmer.hide();
+
 	var $doButton = $('.do');
 
 	var $requestButton = $('.request');
@@ -48,11 +62,16 @@ $(function() {
 	});
 
 	socket.on('question', function(questionInfo) {
+
+		timmer.show();
+		countdown.start();
+		//countdown.extendTimer(10);
+
 		$spin.hide();
 		$alert.hide();
 		//alert(questionInfo);
 		//when server sends question to you
-		$note.text(questionInfo.body);
+		$note.text(questionInfo.qNo + '- ' + questionInfo.body);
 		var txt = "" ;
 		var id = 1;
 		for(var i in questionInfo.choices){
@@ -82,10 +101,11 @@ $(function() {
 		$note.hide();
 		$result.text(data);
 		$answerButton.hide();
+		timmer.hide();
 	});
 
 	socket.on('disconnect', function(data) {
-		alert('server fucked');
+		alert('server F');
 	});
 
 	socket.on('error', function(data) {
