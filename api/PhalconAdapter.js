@@ -31,8 +31,9 @@ var adapterModule = (function() {
 
             return quizInfoGenerate(user1, user2, cat, socket1, socket2, q, 1000);
         },
-        saveResult: function(quizInfo){
+        saveResult: function(quizInfo,callback){
             console.log('game between', quizInfo.user1, quizInfo.user2, 'finished');
+            callback();
             //console.log(quizInfo);
             return true;
         }

@@ -59,8 +59,9 @@ var quizModule = (function() {
         }else{
             quiz.result = -1; // i think it'll never happen , but just for clarification
         }
-
-        sendFinished(quiz.socket1,quiz.socket2,quiz.result);
+        adapter.saveResult(quiz,function(){
+            sendFinished(quiz.socket1,quiz.socket2,quiz.result);
+        });
     }
 
     return { //exposed to public
