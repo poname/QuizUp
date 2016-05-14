@@ -57,7 +57,7 @@ class SecurityPlugin extends Plugin
             'login' => array('index'),
             'main' => array('index'),
             'signup' => array('index', 'do', 'confirm'),
-            'api' => array('generateNewQuiz', 'saveResult')
+            'api' => array('index','generateNewQuiz','saveResult')
         );
         foreach ($publicResources as $resource => $actions) {
             $acl->addResource(new Resource($resource), $actions);

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: mohammad
- * Date: 8/1/15
- * Time: 1:05 AM
- */
 
 namespace QUIZUP\Controllers;
 
@@ -18,7 +12,7 @@ class ApiController extends ControllerBase {
         parent::initialize();
     }
     public function indexAction(){
-        echo 'ji';
+
     }
 
     public function generateNewQuizAction(){
@@ -108,4 +102,6 @@ class ApiController extends ControllerBase {
     public function saveResultAction(){
 
     }
+
+
 }
