@@ -39,7 +39,7 @@ class SecurityPlugin extends Plugin
         $privateResources = array(
             'category' => array('index', 'list', 'delete', 'edit', 'create'),
             'question'     => array('index', 'create', 'list', 'edit', 'delete'),
-            'quiz' => array('selectCategory','do','answer'),
+            'quiz' => array('selectCategory','do','answer','doitnow'),
             'ranking' => array('index','more')
         );
         foreach ($privateResources as $resource => $actions) {

@@ -97,7 +97,7 @@
         <p>{{ t('EARNED_POINTS') }}: <span id="earned_points">{{ earned_points }}</span></p>
         <a class="ui red button fa" href="{{ url('login/success') }}">{{ t('GO_TO_USER_PANEL') }}</a>
         <a class="ui red button fa" href="{{ url('ranking') }}">{{ t('GO_TO_RANKING_PAGE') }}</a>
-        <a class="ui red button fa" href="{{ url('quiz/selectCategory') }}">{{ t('TAKE_ANOTHER_QUIZ') }}</a>
+        <a class="ui red button fa" href="{{ url('quiz/doitnow') }}">{{ t('TAKE_ANOTHER_QUIZ') }}</a>
     </div>
 </div>
 <script>

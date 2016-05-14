@@ -10,6 +10,7 @@ namespace QUIZUP\Controllers;
 
 
 use Phalcon\Db;
+use Phalcon\Mvc\View;
 use Phalcon\Tag;
 use QUIZUP\Libraries\Exceptions\Exception;
 use QUIZUP\Libraries\Exceptions\InvalidRequestException;
@@ -31,7 +32,23 @@ class QuizController extends ControllerBase
         //view for pick selected category
     }
 
+    public function doitnowAction(){
+
+        $this->assets
+            ->addCss('css/client.css')
+            ->addJs('js/client.js');
+
+        $user = $this->session->get('auth');
+        $categories = QuestionCategory::find();
+        $this->view->setVar('websocketURL', $this->config->application->quizWebSocketServiceURL);
+        $this->view->setVar('categories', $categories);
+        $this->view->setVar('user', $user);
+
+    }
     public function selectCategoryAction(){
+//        $this->view->setRenderLevel(View::LEVEL_ACTION_VIEW);
+    }
+    public function oldSelectCategoryAction(){
         if($this->request->isPost()){
             //getting the input
             $category_id = $this->request->getPost('category', 'int') or die('invalid request');
