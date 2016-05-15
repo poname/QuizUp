@@ -11,15 +11,25 @@ namespace QUIZUP\Controllers;
 
 use Phalcon\Db;
 use Phalcon\Tag;
+use QUIZUP\Models\Country;
+use QUIZUP\Models\Quiz;
 use QUIZUP\Models\User;
+use Phalcon\Events\Manager as EventsManager;
+//use QUIZUP\Plugins\;
+use Phalcon\Events\EventsAwareInterface;
+use QUIZUP\Plugins\AchievementListener;
 
-class LoginController extends ControllerBase
+class LoginController extends ControllerBase implements EventsAwareInterface
 {
+    protected $_eventsManager;
 
     public function initialize()
     {
     	//echo 'hi';
         parent::initialize();
+        $this->_eventsManager = new EventsManager();
+        // Attach the listener to the EventsManager
+        $this->_eventsManager->attach('login-success', new AchievementListener());
     }
 
     private function _registerSession($user)
@@ -58,8 +68,33 @@ class LoginController extends ControllerBase
             )
         ) or array();
 		  $this->view->setVar('rankings', $users_ranked);
-        echo 'err';
-        echo count($users_ranked);
+        //echo 'err';
+        //echo count($users_ranked);
+
+        //some achievements by listener :)
+        $ach = $this->_eventsManager->fire("login-success:afterSuccessAction", $this);
+        $this->view->setVar('achievements', $ach);
+
+        /////////////////////////////////////////////////////////////
+        ////////some other achievements by manual handling///////////
+        /////////////////////////////////////////////////////////////
+        $achives = array();
+        $uid =  $this->session->get('auth')['id'];
+
+        //cooperate in 10 quizes or more
+        $userQuizes =  Quiz::find("user1_id = '$uid' OR user2_id = '$uid'") or array();
+        if(count($userQuizes) >= 10)
+            array_push($achives, 'tenQuiz');
+
+        //iranian user
+        $user = User::find("user_id = '$uid'");
+        $cid = $user[0]->getCid() ;
+        $country = Country::find("cid = '$cid'");
+        if(strcasecmp($country[0]->getName(), 'iran') == 0)
+            array_push($achives, 'iranian');
+        //array_push($achives, $user[0]->getCid());
+
+        $this->view->setVar('achives', $achives);
     }
 
     public function doAction(){
