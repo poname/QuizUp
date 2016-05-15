@@ -90,7 +90,7 @@ class LoginController extends ControllerBase implements EventsAwareInterface
         $user = User::find("user_id = '$uid'");
         $cid = $user[0]->getCid() ;
         $country = Country::find("cid = '$cid'");
-        if($country[0]->getName() == 'iran')
+        if(strcasecmp($country[0]->getName(), 'iran') == 0)
             array_push($achives, 'iranian');
         //array_push($achives, $user[0]->getCid());
 
