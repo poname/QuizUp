@@ -32,6 +32,30 @@
 						<button class="fluid ui red button" id='moreRanks' onclick="location.href='{{ url('ranking/more') }}';"><p>{{t('MORE')}}</p></button>
 					</div>
 				</div>
+                <div class="ui green segment">
+                    <h2 class="ui icon header">
+                        <p>{{ t('HONORS_LIST') }}</p>
+                    </h2>
+                    <div class="ui relaxed divided list">
+                        {% for achiv in achives %}
+                            {% if(achiv == "tenQuiz") %}
+                                <div class="item">
+                                    <a class="ui teal tag label">{{ t('TEN_QUIZES') }}</a>
+                                </div>
+                            {% endif %}
+                            {% if(achiv == 'iranian') %}
+                                <div class="item">
+                                    <a class="ui green tag label">{{ t('IRANIAN') }}</a>
+                                </div>
+                        {#    {% else %}
+                                <div class="item">
+                                    <a class="ui red tag label">{{ achiv }}</a>
+                                </div>
+                        #}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
 			</div>
             <div class="column"><a class="item">
                 </a>
