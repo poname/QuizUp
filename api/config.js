@@ -1,8 +1,8 @@
 var config = {};
 
-config.backendHost = 'localhost';
+config.backendHost = 'ccweb.ir';
 config.backendPort = 80;
-config.baseUri = '/qp';
+config.baseUri = '';
 config.backendUri = 'http://'+config.backendHost+config.baseUri;
 
 config.apiPath = '/api';
