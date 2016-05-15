@@ -132,5 +132,8 @@ $messages = array(
     'SEE_BEST_RANKINGS'=>'مشاهده ی بهترین ها',
     'RANKINGS'=>'رتبه بندی ها',
     'YOUR_SCORE' => 'امتیاز شما',
-    'POINTS' => 'امتیاز'
+    'POINTS' => 'امتیاز',
+    'HONORS_LIST' => 'تالار افتخارات',
+    'TEN_QUIZES' => 'شرکت در 10 مسابقه',
+    'IRANIAN' => 'ایرانی'
 );
