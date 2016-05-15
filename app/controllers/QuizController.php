@@ -41,6 +41,7 @@ class QuizController extends ControllerBase
         $user = $this->session->get('auth');
         $categories = QuestionCategory::find();
         $this->view->setVar('websocketURL', $this->config->application->quizWebSocketServiceURL);
+        $this->view->setVar('waitInterval', $this->config->application->waitInterval);
         $this->view->setVar('categories', $categories);
         $this->view->setVar('user', $user);
 

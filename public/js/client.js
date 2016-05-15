@@ -9,10 +9,21 @@ $(function() {
 
 	var steps = [
 		{
-			id: "selectCategory"
+			id: "selectCategory",
+			onRequestButtonClicked:function(){
+				var $user = _USER_INFO.id;
+				var $cat = $('input[name=category]:checked', '#selectCategory form').val();
+				if($user && $cat){
+					_SOCKET.emit('request', {username:$user, category:$cat});
+					nextStep();
+				}else{
+					console.log($user, $cat, 'something is not right');
+				}
+
+			}
 		},
 		{
-			id: "wait",
+			id: "waiting",
 			init: function () {
 				showMask(true);
 			},
@@ -28,16 +39,25 @@ $(function() {
 		{
 			id: "game",
 			onQuestion:function(questionInfo){
+				$('#game .form').trigger("reset");
+
 				$('#question-text').text(questionInfo.body);
-				$('#answer-1 label').html(questionInfo.choices[0])
-				$('#answer-2 label').html(questionInfo.choices[1])
-				$('#answer-3 label').html(questionInfo.choices[2])
-				$('#answer-4 label').html(questionInfo.choices[3])
+				$('#answer-1 label').html(questionInfo.choices[1])
+				$('#answer-2 label').html(questionInfo.choices[2])
+				$('#answer-3 label').html(questionInfo.choices[3])
+				$('#answer-4 label').html(questionInfo.choices[4])
 				$answerButton.show();
 				quizId = questionInfo.quizId ;
 			},
+			onAnswerButtonClicked:function(){
+				var selected = $("#game input[type='radio']:checked");
+				if(selected) {
+					_SOCKET.emit('answer', {quizId: quizId, choosed: selected.val()});
+					$answerButton.hide();
+				}
+			},
 			onResult:function(data){
-				alert("result:" + data);
+				$('#result p.show-result').html(data);
 				// //show the result of match, data is a string
 				// $note.hide();
 				// $result.text(data);
@@ -67,18 +87,11 @@ $(function() {
 
 	$requestButton.click(function(e){
 		e.preventDefault();
-		var $user = _USER_INFO.id;
-		var $cat = $('input[name=category]:checked', '#selectCategory form').val();
-		if($user && $cat){
-			_SOCKET.emit('request', {username:$user, category:$cat});
-			nextStep();
-		}else{
-			console.log($user, $cat, 'something is not right');
-		}
+		steps[currentStep].onRequestButtonClicked();
 	});
 	$answerButton.click(function(e){
 		e.preventDefault();
-		_SOCKET.emit('answer', { quizId:quizId, choosed: $(this).attr('value') });
+		steps[currentStep].onAnswerButtonClicked();
 	});
 
 	_SOCKET.on('news', function(data) {
@@ -104,4 +117,10 @@ $(function() {
 	_SOCKET.on('error', function(data) {
 		alert('error occured');
 	});
+	// _SOCKET.on('wait', function(data) {
+	// 	//wait until another user be ready for game
+	// 	//alert('please wait');
+	// 	$spin.show();
+	// });
+
 });

@@ -100,7 +100,7 @@ class ApiController extends ControllerBase {
     }
 
     public function saveResultAction(){
-
+        return $this->jsonResponse(true);
     }
 
 

@@ -1,8 +1,9 @@
 var adapter = require('./PhalconAdapter.js');
+var config = require('./config');
 
 var quizModule = (function() {
 
-    var questionInterval = 10000;
+    var questionInterval = config.waitInterval;
     var quizes = []; //private
     var sendQuestion ;
     var sendFinished ;
@@ -20,7 +21,7 @@ var quizModule = (function() {
             quiz.currentQuestion = quiz.currentQuestion + 1;
 
             var qInstance = quiz.questions[quiz.currentQuestion];
-            // delete qInstance.correct;
+            // delete qInstance.correct; //@TODO we should do something here!
             sendQuestion(quiz.socket1,quiz.socket2,qInstance);
 
         }
@@ -71,17 +72,21 @@ var quizModule = (function() {
             news = news_callback;
         },
         newQuiz: function(user1, user2, cat, socket1, socket2) {
-            var quiz = adapter.getQuiz(user1, user2, cat, socket1, socket2);
-            quizes.push(quiz);
+            adapter.getQuiz(user1, user2, cat, socket1, socket2,function(state,quiz){
+                if(state == true){
+                    quizes.push(quiz);
 
-            quiz.timer = setInterval(function(){
-                generateNextQuestionInfo(quiz);
-            }, questionInterval); //every question interval milliseconds call generateNextQuestionInfo
+                    quiz.timer = setInterval(function(){
+                        generateNextQuestionInfo(quiz);
+                    }, questionInterval); //every question interval milliseconds call generateNextQuestionInfo
 
-            //say who is playing with who
-            news(socket1, user2);
-            news(socket2, user1);
-
+                    //say who is playing with who
+                    news(socket1, user2);
+                    news(socket2, user1);
+                }else{
+                    console.log('we should warn the user that quiz creation was failed');
+                }
+            });
             //questionInfo of all questions of this quiz will generate and send automatically
         },
         pushAnswer: function(sock, ansInfo){

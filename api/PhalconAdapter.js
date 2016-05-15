@@ -1,4 +1,5 @@
 var adapterModule = (function() {
+    var config = require('./config');
 
     function quizInfoGenerate(user1, user2, cat, sock1, sock2, questions, id){
         //gateway.sendQuestion(sock1, sock2, 'jhoon');
@@ -23,19 +24,18 @@ var adapterModule = (function() {
 
            return true; 
         },
-        getQuiz: function(user1, user2, cat, socket1, socket2) {
+        getQuiz: function(user1, user2, cat, socket1, socket2 , callback) {
             //fn();
             var http = require("http");
             var options = {
-                host: 'localhost',
-                port: 80,
-                path: '/api/generateNewQuiz',
+                host: config.backendHost,
+                port: config.backendPort,
+                path: config.backendUri+config.apiPath+'/generateNewQuiz?uid1='+user1+'&uid2='+user2+'&cat='+cat,
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
                 }
             };
-
             var req = http.request(options, function(res)
             {
                 var output = '';
@@ -48,35 +48,60 @@ var adapterModule = (function() {
 
                 res.on('end', function() {
                     var obj = JSON.parse(output);
-
-                    console.log(obj);
+                    if(callback){
+                         var q = [];
+                         for(var idx in obj.data.questions){
+                             q.push({
+                                 body: obj.data.questions[idx].body,
+                                 choices: obj.data.questions[idx].choices,
+                                 correct: obj.data.questions[idx].correct,
+                                 user1Choice:0, user2Choice:0, quizId:obj.data.quizId,
+                                 qNo:idx
+                             });
+                         }
+                        var newQuiz = quizInfoGenerate(user1,user2,cat,socket1,socket2,q,obj.data.quizId)
+                        console.log('new generated quiz : ',newQuiz.quizId);
+                        callback(true, newQuiz);
+                    }else{
+                        console.log('request successful but there\'s no callback! wierd!');
+                    }
                 });
             });
 
             req.on('error', function(err) {
-              
+                console.log('error occured in request ')
+                if(callback){
+                    callback(true,err)
+                }else{
+                    console.log('request was usuccessful but there\'s no callback!');
+                }
+
             });
 
             req.end();
-        //  var q = [];
-        //    q.push({body:'how are you?', choices:{1:'fine', 2:'bad', 3:'moody'}, correct:3, user1Choice:0, user2Choice:0, quizId:1000, qNo:1});
-          //  q.push({body:'sky color?  ', choices:{1:'blue', 2:'red', 3:'brown'}, correct:1, user1Choice:0, user2Choice:0, quizId:1000, qNo:2});
             console.log('ajax done!');
             return true;
         },
         saveResult: function(quizInfo,callback){
             var request = require("request");
-            request.post("http://localhost/api/saveResult", {json: true, body: "param=1"}, function(err, res, body) {
+            var extend = require('util')._extend;
+
+            //we don't need sockets to be posted
+            var quizInfoToPost = extend({},quizInfo);
+            delete quizInfoToPost.socket1;
+            delete quizInfoToPost.socket2;
+            delete quizInfoToPost.timer;
+            //-----------------------------------
+
+            request.post(config.backendUri+config.apiPath+'/saveResult', {json: true, body: "quizInfo="+JSON.stringify(quizInfoToPost)}, function(err, res, body) {
                 if (!err && res.statusCode === 200) {
-                    console.log("body: ",body);
+                    callback(true, body);
                 }
                 else{
                     console.log("error: " + err+" res: "+res+" body: "+body);
+                    callback(false, err);
                 }
-                callback();
             });
-     //       console.log('game between', quizInfo.user1, quizInfo.user2, 'finished');
-            //console.log(quizInfo);
             return true;
         }
     }
