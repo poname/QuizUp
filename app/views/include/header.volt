@@ -13,9 +13,9 @@
         <a>{{ t('YOUR_SCORE') }} : {{ session.get('user').getPoints() }}</a>
     </div>
 
-    <div class="item">
-        <a>achieved : {{ achievements }}</a>
-    </div>
+    {#<div class="item">#}
+        {#<a>achieved : {{ achievements }}</a>#}
+    {#</div>#}
 
     <div class="right item">
         <div class="right ui simple dropdown item">

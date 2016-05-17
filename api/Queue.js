@@ -6,20 +6,20 @@ var queueModule = (function() {
     var waiting;
     var newQuiz;
 
-    function makeRequest(user, cat, sock){
-        return { username:user, category:cat, socket:sock} ;
+    function makeRequest(user,userInfo, cat, sock){
+        return { username:user,userInfo:userInfo, category:cat, socket:sock} ;
     }
 
     return {
-        addRequest: function(user, cat, sock) {
-            var request = makeRequest(user, cat, sock);
+        addRequest: function(user,userInfo, cat, sock) {
+            var request = makeRequest(user,userInfo, cat, sock);
             if(adapter.validate(user,cat)){
                 var opponentFound = false;
                 for (var i = 0; i < list.length; i++) {
                     if(list[i].category == cat){
                         var opponent = list[i];
                         opponentFound = true;
-                        newQuiz(user, opponent.username, cat, sock, opponent.socket);
+                        newQuiz(user,userInfo,opponent.username,opponent.userInfo, cat, sock, opponent.socket);
 
                         list.splice(i, 1);
                     }

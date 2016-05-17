@@ -20,27 +20,26 @@ var gatewayModule = (function() {
         console.log('+++++++++++++ bip bip');
     }
 
-    function finishGame(socket1, socket2, result){
-        var looser = "you loose";
-        var winner = "you won";
-        var equal = 'mosav';
-        var err = 'error occured'; 
-        if(result == 1){
-            socket1.emit('result', winner);
-            socket2.emit('result', looser);  
+    function finishGame(quiz){
+        var sendObj1 = {
+            result: 0,
+            score: quiz.score1
+        };
+        var sendObj2 = {
+            result: 0,
+            score: quiz.score2
+        };
+
+        if(quiz.result == 1){
+            sendObj1.result = 1;
+            sendObj2.result = -1;
         }
-        else if(result === 2){
-            socket2.emit('result', winner);
-            socket1.emit('result', looser); 
+        else if(quiz.result === 2){
+            sendObj1.result = -1;
+            sendObj2.result = 1;
         }
-        else if(result === 0){
-            socket2.emit('result', equal);
-            socket1.emit('result', equal); 
-        }
-        else{
-            socket2.emit('result', err);
-            socket1.emit('result', err); 
-        }
+        quiz.socket1.emit('result', sendObj1);
+        quiz.socket2.emit('result', sendObj2);
     }
 
     var sendQuestion =  function(socket1, socket2, questionInfo){
@@ -49,8 +48,8 @@ var gatewayModule = (function() {
         socket2.emit('question', questionInfo);
     }
 
-    var news = function(sock, data){
-        sock.emit('news', data);
+    var news = function(sock, userInfo){
+        sock.emit('news', userInfo.name+" "+userInfo.family);
     }
 
     quiz.init(sendQuestion, finishGame, news);
@@ -75,7 +74,7 @@ var gatewayModule = (function() {
             //});
             //var q = quiz.newQuiz(1, 2, 'bad', socket, socket, sendQuestion);
             //socket.username = username;
-            queue.addRequest(data.username, data.category, socket);
+            queue.addRequest(data.username,data.userInfo, data.category, socket);
         });
 
         socket.on('answer', function (ansInfo) {
