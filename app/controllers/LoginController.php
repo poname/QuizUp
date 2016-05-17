@@ -92,7 +92,16 @@ class LoginController extends ControllerBase implements EventsAwareInterface
         $country = Country::find("cid = '$cid'");
         if(strcasecmp($country[0]->getName(), 'iran') == 0)
             array_push($achives, 'iranian');
-        //array_push($achives, $user[0]->getCid());
+
+        //first, second or third user in ranking
+        if(count($users_ranked)>0 && $users_ranked[0]->getUserId()==$uid)
+            array_push($achives, 'first');
+        else if(count($users_ranked)>1 && $users_ranked[1]->getUserId()==$uid)
+            array_push($achives, 'second');
+        else if(count($users_ranked)>2 && $users_ranked[2]->getUserId()==$uid)
+            array_push($achives, 'third');
+
+
 
         $this->view->setVar('achives', $achives);
     }

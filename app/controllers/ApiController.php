@@ -31,7 +31,7 @@ class ApiController extends ControllerBase {
         $ret = Question::find(
             // category_id constraints is not affected yet !!
             array(
-                "cid" => $category_id,
+                "conditions" => "cid = '$category_id'",
                 "order" => "RAND()",
                 "limit" => 5
             )

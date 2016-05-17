@@ -53,6 +53,21 @@
                                 </div>
                         #}
                             {% endif %}
+                            {% if(achiv == "first") %}
+                                <div class="item">
+                                    <a class="ui yellow tag label">{{ t('FIRST_PLACE') }}</a>
+                                </div>
+                            {% endif %}
+                            {% if(achiv == "second") %}
+                                <div class="item">
+                                    <a class="ui grey tag label">{{ t('SECOND_PLACE') }}</a>
+                                </div>
+                            {% endif %}
+                            {% if(achiv == "third") %}
+                                <div class="item">
+                                    <a class="ui brown tag label">{{ t('THIRD_PLACE') }}</a>
+                                </div>
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>

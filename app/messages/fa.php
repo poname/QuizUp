@@ -135,5 +135,8 @@ $messages = array(
     'POINTS' => 'امتیاز',
     'HONORS_LIST' => 'تالار افتخارات',
     'TEN_QUIZES' => 'شرکت در 10 مسابقه',
-    'IRANIAN' => 'ایرانی'
+    'IRANIAN' => 'ایرانی',
+    'FIRST_PLACE' => 'نفر اول رتبه بندی',
+    'SECOND_PLACE' => 'نفر دوم رتبه بندی',
+    'THIRD_PLACE' => 'نفر سوم رتبه بندی'
 );
