@@ -13,7 +13,7 @@ var adapterModule = (function() {
             questions:questions, 
             quizId:id,
             score1:0,
-            score2:0, 
+            score2:0,
             result:0, // 0::inprocess, 1::user1 win, 2::user2 win, -1::equal, -2::failed
             timer:null
         };
@@ -93,7 +93,11 @@ var adapterModule = (function() {
             delete quizInfoToPost.timer;
             //-----------------------------------
 
-            request.post(config.backendUri+config.apiPath+'/saveResult', {json: true, body: "quizInfo="+JSON.stringify(quizInfoToPost)}, function(err, res, body) {
+            request.post(
+                {
+                    url:config.backendUri+config.apiPath+'/saveResult',
+                    form:quizInfoToPost
+                }, function(err, res, body) {
                 if (!err && res.statusCode === 200) {
                     callback(true, body);
                 }

@@ -48,8 +48,11 @@ var quizModule = (function() {
         for (var i = 0; i < quiz.questions.length; i++) {
             var q = quiz.questions[i];
             if(q.correct == q.user1Choice) user1CorrectAnswers++;
-            if(q.correct == q.user2Choice) user1CorrectAnswers++;
+            if(q.correct == q.user2Choice) user2CorrectAnswers++;
         }
+
+        quiz.score1 = user1CorrectAnswers;
+        quiz.score2 = user2CorrectAnswers;
 
         if(user1CorrectAnswers==user2CorrectAnswers){
             quiz.result = 0;
