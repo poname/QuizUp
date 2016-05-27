@@ -1,9 +1,11 @@
+<body style="background: url('{{ url('img/back.jpg') }}') center 0 no-repeat;background-size: cover;background-attachment: fixed;">
+
 <div id="header">
     {% include "include/header.volt" %}
 </div>
 
 
-<div class="ui stripe community vertical segment"><a class="item">
+<div class="ui stripe community vertical segment" ><a class="item">
     </a>
     <div class="ui red two column center aligned divided very relaxed stackable grid container">
         <div class="row">
@@ -100,10 +102,12 @@
             </div>
 			
         </div>
-        <div id="footer">
+        <div id="footer" style="background:#f2f2f2">
             {% include "include/footer.volt" %}
         </div>
     </div>
 
 
 </div>
+
+</body>
