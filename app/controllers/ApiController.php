@@ -6,6 +6,7 @@ use Phalcon\Db;
 use Phalcon\Tag;
 use QUIZUP\Models\Question;
 use QUIZUP\Models\Quiz;
+use QUIZUP\Models\Custom\Quiz as CustomQuiz;
 
 class ApiController extends ControllerBase {
     public function initialize(){
@@ -100,6 +101,42 @@ class ApiController extends ControllerBase {
     }
 
     public function saveResultAction(){
+        $user_id1 = $this->request->getPost('user1','int') or -1;
+        $user_id2 = $this->request->getPost('user2','int') or -1;
+
+        $user_score1 = $this->request->getPost('score1','int') or 0;
+        $user_score2 = $this->request->getPost('score2','int') or 0;
+
+        $quizId = $this->request->getPost('quizId', 'int') or -1;
+        
+        if($user_id1<0 || $user_id2<0 || $quizId<0){
+            $this->logger->error('invalid some data provided in saveResult action:' . var_export(array($user_id1, $user_id2, $user_score1, $user_score2), true));
+            return $this->jsonResponse(false, array('message' => 'INTERNAL_ERROR'));
+        }
+
+        $quiz = CustomQuiz::findFirst('qid=' . $quizId) or null;
+        if(null === $quiz){
+            $this->logger->error('quiz not found:' . $quizId);
+            return $this->jsonResponse(false, array('message' => 'INTERNAL_ERROR'));
+        }
+
+        $quiz->setUser1CorrectAnswersCount($user_score1);
+        $quiz->setUser2CorrectAnswersCount($user_score2);
+
+        $quiz->setUser1EarnedPoints($user_score1);
+        $quiz->setUser2EarnedPoints($user_score2);
+
+        $quiz->setSideUser($user_id1);
+        $quiz->finishGame();
+        
+        $quiz->setSideUser($user_id2);
+        $quiz->finishGame();
+
+        if (!$quiz->save()) {
+            $this->logger->error('unable to save the quiz:' . $quiz->getMessages());
+            return $this->jsonResponse(false, array('message' => 'INTERNAL_ERROR'));
+        }
+        
         return $this->jsonResponse(true);
     }
 

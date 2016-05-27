@@ -2,9 +2,32 @@ $(function() {
 	
 	var $answerButton = $('.answer');
 	var $requestButton = $('.request');
-	var showMask = function(state){
+	var $timer = $('#timer');
+	var _timer_refrence = null;
+	var showMask = function (state) {
 		$('.segment').dimmer(state === true ? 'show' : 'hide');
-	}
+	};
+
+	$timer.progress();
+
+	var stopTimer = function () {
+		if (_timer_refrence) {
+			clearTimeout(_timer_refrence);
+		}
+	};
+	var startTimer = function () {
+		_timer_refrence = setTimeout(function () {
+			$timer.progress('decrement',1);
+			startTimer();
+		}, _WAIT_INTERVAL/100);
+	};
+	var restartTimer = function () {
+		stopTimer();
+		$timer.progress({
+			percent:100
+		})
+		startTimer();
+	};
 	var quizId = null;
 
 	var steps = [
@@ -14,7 +37,7 @@ $(function() {
 				var $user = _USER_INFO.id;
 				var $cat = $('input[name=category]:checked', '#selectCategory form').val();
 				if($user && $cat){
-					_SOCKET.emit('request', {username:$user, category:$cat});
+					_SOCKET.emit('request', {username:$user,userInfo:_USER_INFO, category:$cat});
 					nextStep();
 				}else{
 					console.log($user, $cat, 'something is not right');
@@ -30,6 +53,7 @@ $(function() {
 			onOtherPlaySpecified:function(opponent_name){
 				showMask(false);
 				$('#opponent_name').html(opponent_name);
+				restartTimer();
 			},
 			onQuestion:function(questionInfo){
 				steps[currentStep + 1].onQuestion(questionInfo);
@@ -39,6 +63,7 @@ $(function() {
 		{
 			id: "game",
 			onQuestion:function(questionInfo){
+				restartTimer();
 				$('#game .form').trigger("reset");
 
 				$('#question-text').text(questionInfo.body);
@@ -46,24 +71,30 @@ $(function() {
 				$('#answer-2 label').html(questionInfo.choices[2])
 				$('#answer-3 label').html(questionInfo.choices[3])
 				$('#answer-4 label').html(questionInfo.choices[4])
-				$answerButton.show();
+				$answerButton.removeClass('disabled');
 				quizId = questionInfo.quizId ;
 			},
 			onAnswerButtonClicked:function(){
 				var selected = $("#game input[type='radio']:checked");
 				if(selected) {
 					_SOCKET.emit('answer', {quizId: quizId, choosed: selected.val()});
-					$answerButton.hide();
+					$answerButton.addClass('disabled');
 				}
 			},
 			onResult:function(data){
-				$('#result p.show-result').html(data);
-				// //show the result of match, data is a string
-				// $note.hide();
-				// $result.text(data);
-				// $answerButton.hide();
+				stopTimer();
+				debugger;
+				if(data.result == 1){
+					$('#result .winner .earned_points').html(data.score);
+					$('#result .winner').show();
+				}else if(data.result == -1){
+					$('#result .looser .earned_points').html(data.score);
+					$('#result .looser').show();
+				}else if(data.result == 0){
+					$('#result .draw .earned_points').html(data.score);
+					$('#result .draw').show();
+				}
 				nextStep();
-
 			}
 		},
 		{

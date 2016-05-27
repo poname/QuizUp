@@ -1,11 +1,13 @@
 var adapterModule = (function() {
     var config = require('./config');
 
-    function quizInfoGenerate(user1, user2, cat, sock1, sock2, questions, id){
+    function quizInfoGenerate(user1,user1Info, user2,user2Info, cat, sock1, sock2, questions, id){
         //gateway.sendQuestion(sock1, sock2, 'jhoon');
         return { 
-            user1:user1, 
-            user2:user2, 
+            user1:user1,
+            user1Info:user1Info,
+            user2:user2,
+            user2Info:user2Info,
             category:cat,
             socket1:sock1,
             socket2:sock2,
@@ -13,7 +15,7 @@ var adapterModule = (function() {
             questions:questions, 
             quizId:id,
             score1:0,
-            score2:0, 
+            score2:0,
             result:0, // 0::inprocess, 1::user1 win, 2::user2 win, -1::equal, -2::failed
             timer:null
         };
@@ -24,7 +26,7 @@ var adapterModule = (function() {
 
            return true; 
         },
-        getQuiz: function(user1, user2, cat, socket1, socket2 , callback) {
+        getQuiz: function(user1,user1Info, user2,user2Info, cat, socket1, socket2 , callback) {
             //fn();
             var http = require("http");
             var options = {
@@ -59,7 +61,7 @@ var adapterModule = (function() {
                                  qNo:idx
                              });
                          }
-                        var newQuiz = quizInfoGenerate(user1,user2,cat,socket1,socket2,q,obj.data.quizId)
+                        var newQuiz = quizInfoGenerate(user1,user1Info,user2,user2Info,cat,socket1,socket2,q,obj.data.quizId)
                         console.log('new generated quiz : ',newQuiz.quizId);
                         callback(true, newQuiz);
                     }else{
@@ -93,7 +95,11 @@ var adapterModule = (function() {
             delete quizInfoToPost.timer;
             //-----------------------------------
 
-            request.post(config.backendUri+config.apiPath+'/saveResult', {json: true, body: "quizInfo="+JSON.stringify(quizInfoToPost)}, function(err, res, body) {
+            request.post(
+                {
+                    url:config.backendUri+config.apiPath+'/saveResult',
+                    form:quizInfoToPost
+                }, function(err, res, body) {
                 if (!err && res.statusCode === 200) {
                     callback(true, body);
                 }

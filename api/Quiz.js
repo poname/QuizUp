@@ -48,8 +48,11 @@ var quizModule = (function() {
         for (var i = 0; i < quiz.questions.length; i++) {
             var q = quiz.questions[i];
             if(q.correct == q.user1Choice) user1CorrectAnswers++;
-            if(q.correct == q.user2Choice) user1CorrectAnswers++;
+            if(q.correct == q.user2Choice) user2CorrectAnswers++;
         }
+
+        quiz.score1 = user1CorrectAnswers;
+        quiz.score2 = user2CorrectAnswers;
 
         if(user1CorrectAnswers==user2CorrectAnswers){
             quiz.result = 0;
@@ -61,7 +64,7 @@ var quizModule = (function() {
             quiz.result = -1; // i think it'll never happen , but just for clarification
         }
         adapter.saveResult(quiz,function(){
-            sendFinished(quiz.socket1,quiz.socket2,quiz.result);
+            sendFinished(quiz);
         });
     }
 
@@ -71,8 +74,8 @@ var quizModule = (function() {
             sendFinished = finishFn_callback;
             news = news_callback;
         },
-        newQuiz: function(user1, user2, cat, socket1, socket2) {
-            adapter.getQuiz(user1, user2, cat, socket1, socket2,function(state,quiz){
+        newQuiz: function(user1,user1Info, user2,user2Info, cat, socket1, socket2) {
+            adapter.getQuiz(user1,user1Info, user2,user2Info, cat, socket1, socket2,function(state,quiz){
                 if(state == true){
                     quizes.push(quiz);
 
@@ -81,8 +84,8 @@ var quizModule = (function() {
                     }, questionInterval); //every question interval milliseconds call generateNextQuestionInfo
 
                     //say who is playing with who
-                    news(socket1, user2);
-                    news(socket2, user1);
+                    news(socket1, user2Info);
+                    news(socket2, user1Info);
                 }else{
                     console.log('we should warn the user that quiz creation was failed');
                 }

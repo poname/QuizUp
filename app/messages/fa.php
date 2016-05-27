@@ -138,5 +138,12 @@ $messages = array(
     'IRANIAN' => 'ایرانی',
     'FIRST_PLACE' => 'نفر اول رتبه بندی',
     'SECOND_PLACE' => 'نفر دوم رتبه بندی',
-    'THIRD_PLACE' => 'نفر سوم رتبه بندی'
+    'THIRD_PLACE' => 'نفر سوم رتبه بندی',
+    'YOU' => 'شما',
+    'CONGRATULATIONS'=>'تبریک!',
+    'YOU_WON'=>'شما برنده مسابقه شدید',
+    'SORRY'=>'متاسفیم!',
+    'YOU_LOST' => 'شما بازی را باختید',
+    'WE_ARE_ALL_EVEN'=>'همه ی ما انسان ها برابریم!',
+    'SO_AS_YOU_AND_YOUR_OPPONENT' => 'مثل شما و رقیبتان :)'
 );

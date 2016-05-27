@@ -6,11 +6,11 @@ class AchievementListener
 {
     public function beforeSomeTask($event, $myComponent)
     {
-        echo "Here, beforeSomeTask\n";
+//        echo "Here, beforeSomeTask\n";
     }
 
     public function afterSuccessAction($event, $myComponent)
     {
-        return "Here, afterSuccessAction\n";
+//        return "Here, afterSuccessAction\n";
     }
 }
