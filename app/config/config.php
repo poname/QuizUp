@@ -4,8 +4,8 @@ return new \Phalcon\Config(array(
     'database' => array(
         'adapter'     => 'Mysql',
         'host'        => 'localhost',
-        'username'    => 'root',
-        'password'    => '',
+        'username'    => 'quizup',
+        'password'    => 'f0GVMn30KNsfnHz0hLlc',
         'dbname'      => 'quizup',
         'charset'     => 'utf8'
     ),
@@ -27,10 +27,12 @@ return new \Phalcon\Config(array(
             'type' => 'fa',
             'dir'  => 'rtl'
         ),
-        'webpageURL' => 'http://localhost/' // in a production site , it probably should change to /
+        'webpageURL' => 'http://ccweb.ir/', // in a production site , it probably should change to /
+        'quizWebSocketServiceURL' => 'http://ccweb.ir:3000',
+        'waitInterval' => 3000 // wait interval between questions!
     ),
     'quizup' => array(
-        'question_time' => 10 , //in seconds
+        'question_time' => 10 , //in seconds USELESS!! replaced by application->waitInterval config
         'correct_answer_points' => 1 // point for every question is {{correct_answer_points}} * remaining_seconds,
     )
 ));
