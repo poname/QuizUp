@@ -33,13 +33,13 @@
             <span class="text">{{session.get('user').getName() }}</span>
             <i class="dropdown icon"></i>
             <div class="menu" style="background-color: rgba(0,0,0,.87)">
-                <a class="item" href="{{ url('quiz/doitnow') }}"><a style="color: rgba(255,255,255,.9)">{{ t('START') }}</a></a>
+                <div class="item""><a href="{{ url('quiz/doitnow') }} style="color: rgba(255,255,255,.9)">{{ t('START') }}</a></a>
 
-                <a class="item" href="{{ url('question/list') }}"><a style="color: rgba(255,255,255,.9)">{{ t('QUESTIONS') }}</a></a>
-                <a class="item" href="{{ url('category/create') }}"><a style="color: rgba(255,255,255,.9)">{{ t('CREATE_CATEGORY') }}</a></a>
-                <a class="item" href="{{ url('question/create') }}"><a style="color: rgba(255,255,255,.9)">{{ t('CREATE_QUESTION') }}</a></a>
-                <a class="item" href="{{ url('ranking/index') }}"><a style="color: rgba(255,255,255,.9)">{{ t('SEE_BEST_RANKINGS') }}</a></a>
-                <a class="item" href="{{ url('login/logout') }}"><a style="color: rgba(255,255,255,.9)"><i class="sign out icon"></i>{{ t('LOGOUT') }}</a></a>
+                <div class="item" ><a href="{{ url('question/list') }}" style="color: rgba(255,255,255,.9)">{{ t('QUESTIONS') }}</a></div>
+                <div class="item" ><a href="{{ url('category/create') }}" style="color: rgba(255,255,255,.9)">{{ t('CREATE_CATEGORY') }}</a></a>
+                <div class="item"><a href="{{ url('question/create') }}" style="color: rgba(255,255,255,.9)">{{ t('CREATE_QUESTION') }}</a></a>
+                <div class="item"><a href="{{ url('ranking/index') }}" style="color: rgba(255,255,255,.9)">{{ t('SEE_BEST_RANKINGS') }}</a></a>
+                <div class="item" ><a href="{{ url('login/logout') }}" style="color: rgba(255,255,255,.9)"><i class="sign out icon"></i>{{ t('LOGOUT') }}</a></a>
             </div>
         </div>
 
