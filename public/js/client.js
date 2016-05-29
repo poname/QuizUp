@@ -92,9 +92,10 @@ $(function() {
 					selected=4;
 				}
 				if(selected) {
+					alert(correct + "++" + selected);
 					//selected_button.addClass('primary');
 					// say answer is correct or not immediately after answering
-					if(selected === correct){
+					if(selected == correct){
 						selected_button.addClass('green');
 					}
 					else{
