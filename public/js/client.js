@@ -100,6 +100,7 @@ $(function() {
 					}
 					else{
 						selected_button.addClass('red');
+						$('#answer-' + correct).addClass('green');
 					}
 
 					$answerButton.addClass('disabled');
