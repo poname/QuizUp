@@ -2,14 +2,18 @@
     <div class="ui two column center aligned divided very relaxed stackable grid container">
         <div class="row">
             <div class="column">
-                <div class="ui piled segment">
+                <div class="ui piled segment" style="margin-top: 70px">
                     <h2 class="ui icon header">
                         <p>{{ t('WHAT_IS_QUIZUP') }}</p>
                     </h2>
                     <p>{{ t('ABOUT_QUIZUP') }}</p>
                     <p>:))))</p>
-                    <a class="ui red large basic button button" href="{{ url('login') }}"><p>{{ t('ENTER_GAME') }}</p></a>
+                    <h3><p>{{ t('ABOUT_QUIZUP_2') }}</p></h3>
+                    <h3><p>{{ t('ABOUT_QUIZUP_3') }}</p></h3>
+                    <h3><p>{{ t('ABOUT_QUIZUP_4') }}</p></h3>
+                    <a class="ui red large basic button button" style="margin-top: 20px" href="{{ url('login') }}"><p>{{ t('ENTER_GAME') }}</p></a>
                 </div>
+                <!--
                 <div class="ui piled segment">
                     <h2 class="ui icon header">
                         <p>{{ t('MANAGE_CATEGORY') }}</p>
@@ -26,6 +30,7 @@
                     <a class="ui pink large basic button button" href="{{ url('question/create') }}"><p>{{ t('CREATE_QUESTION') }}</p></a>
                     <a class="ui brown large basic button button" href="{{ url('question/list') }}"><p>{{ t('QUESTIONS') }}</p></a>
                 </div>
+                -->
             </div>
             <div class="column">
                 <div class="ui middle aligned center aligned grid">
@@ -108,6 +113,12 @@
     </div>
 </div>
 
+
+
+
+    <script type="text/javascript">
+        $(".bg").interactive_bg();
+    </script>
 
 
 <script>

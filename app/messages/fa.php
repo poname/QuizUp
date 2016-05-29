@@ -146,5 +146,8 @@ $messages = array(
     'YOU_LOST' => 'شما بازی را باختید',
     'WE_ARE_ALL_EVEN'=>'همه ی ما انسان ها برابریم!',
     'SO_AS_YOU_AND_YOUR_OPPONENT' => 'مثل شما و رقیبتان :)',
-    'NOTIFICATIONS' =>'اچیومنت ها'
+    'NOTIFICATIONS' =>'اچیومنت ها',
+    'ABOUT_QUIZUP_2' => 'همین حالا وارد مسابقه بشید و معلومات خودتون رو بسنجید',
+    'ABOUT_QUIZUP_3' => 'توی کوییزآپ کلی موضوع جالب وجود داره!',
+    'ABOUT_QUIZUP_4' => 'اگه آماده اید شروع کنیم'
 );
