@@ -18,12 +18,14 @@
 
 
         <div class="right ui simple dropdown item"><i class="alarm icon"></i>
+             <span class="text">{{t('NOTIFICATIONS') }}</span>
+             <i class="dropdown icon"></i>
             <div class="menu">
-                <a class="item">achieved : {{ achievements }}</a>
+                <a class="item">{{ achievements }}</a>
             </div>
         </div>
 
-        <div class="item" href="{{ url('category/list') }}" style="background-color: #FF5252"> <a style="color: rgba(255,255,255,.9);
+        <div class="item" style="background-color: #FF5252"> <a href="{{ url('category/list') }}"; style="color: rgba(255,255,255,.9);
   line-height: 3.5"><i class="list icon"></i>
             {{ t('CATEGORIES') }}</a></a>
         </div>
