@@ -100,7 +100,7 @@ $(function() {
 					}
 					else{
 						$('#answer-' + correct).addClass('green');
-						alert('#answer-' + correct);
+						//alert('#answer-' + correct);
 						selected_button.addClass('red');
 
 					}
