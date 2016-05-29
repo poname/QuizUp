@@ -2,7 +2,7 @@
     {% include "include/header.volt" %}
 </div>
 <div class="myTop">
-    <table class="ui inverted blue table">
+    <table class="ui red celled striped table">
         <thead>
         <tr><th>{{t('NAME')}}</th>
             <th>{{t('FAMILY_NAME')}}</th>
@@ -17,6 +17,5 @@
         {% endfor %}
         </tbody>
 
-
+    </table>
 </div>
-</table>

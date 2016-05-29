@@ -36,7 +36,7 @@
             <div class="column">
                 <div class="ui middle aligned center aligned grid">
                     <div class="column">
-                        <table class="ui inverted blue table">
+                        <table class="ui red celled striped table">
                             <thead>
                             <tr>
                                 <th>{{t('NAME')}}</th>

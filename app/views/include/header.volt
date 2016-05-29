@@ -1,40 +1,40 @@
-<div class="ui inverted menu" style="background-color: #FF5252">
+<div class="ui stackable menu" style="background-color: #FF5252">
     <div class="ui container">
         <div class="item" style="margin-right:30%">
             <img src="{{ url('img/logo.png') }}">
-                 <a style="color: rgba(255,255,255,.9);line-height: 3.5">{{t('SITE_MAIN_TITLE')}}</a>
+            <a class="myMenu">{{t('SITE_MAIN_TITLE')}}</a>
         </div>
 
 
-         <div  class="item" style="background-color: #FF5252 "><i class="home icon"></i>
-            <a href="{{ url('login/success') }}" style="color: rgba(255,255,255,.9) ;line-height: 3.5">{{t('HOME')}}</a>
-         </div>
+        <div  class="item" style="background-color: #FF5252 "><i class="home icon"></i>
+            <a href="{{ url('login/success') }}" style="color:rgba(0,0,0,.87)">{{t('HOME')}}</a>
+        </div>
 
 
 
         <div class="item">
-            <a style="color: rgba(255,255,255,.9);line-height: 3.5">{{ t('YOUR_SCORE') }} : {{ session.get('user').getPoints() }}</a>
+            <a style="color: rgba(0,0,0,.87);line-height: 3.5">{{ t('YOUR_SCORE') }} : {{ session.get('user').getPoints() }}</a>
         </div>
 
 
         <div class="right ui simple dropdown item"><i class="alarm icon"></i>
-             <span class="text">{{t('NOTIFICATIONS') }}</span>
-             <i class="dropdown icon"></i>
-            <div class="menu" style="background-color: rgba(0,0,0,.87)">
-                <div class="item"><a href="#" style="color: rgba(255,255,255,.9)">{{ achievements }}</a></div>
+            <span class="text">{{t('NOTIFICATIONS') }}</span>
+            <i class="dropdown icon"></i>
+            <div class="menu myMenu">
+                <div class="item"><a href="#" style="color: rgba(0,0,0,.87)">{{ achievements }}</a></div>
             </div>
         </div>
 
-        <div class="item" style="background-color: #FF5252"> <a href="{{ url('category/list') }}"; style="color: rgba(255,255,255,.9);
+        <div class="item" style="background-color: #FF5252"> <a href="{{ url('category/list') }}" style="color: rgba(0,0,0,.87);
   line-height: 3.5"><i class="list icon"></i>
-            {{ t('CATEGORIES') }}</a></a>
+                {{ t('CATEGORIES') }}</a>
         </div>
 
         <div class="right ui simple dropdown item">
             <i class="user icon"></i>
             <span class="text">{{session.get('user').getName() }}</span>
             <i class="dropdown icon"></i>
-            <div class="menu" style="background-color: rgba(0,0,0,.87)">
+            <div class="menu" style="background-color: rgba(24, 24, 24, 0.87)">
                 <div class="item"><a href="{{ url('quiz/doitnow') }}" style="color: rgba(255,255,255,.9)">{{ t('START') }}</a></div>
 
                 <div class="item" ><a href="{{ url('question/list') }}" style="color: rgba(255,255,255,.9)">{{ t('QUESTIONS') }}</a></div>
