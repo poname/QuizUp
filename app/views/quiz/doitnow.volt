@@ -1,3 +1,7 @@
+<div id="header">
+    {% include "include/header.volt" %}
+</div>
+
 <div class="ui middle aligned center aligned grid">
     <div class="column">
         <div class="ui segment left aligned" style="min-height: 100px">

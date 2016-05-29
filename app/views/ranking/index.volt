@@ -2,7 +2,7 @@
     {% include "include/header.volt" %}
 </div>
 
-<div>
+<div class="myTop">
     <table class="ui inverted blue table">
         <thead>
         <tr>
