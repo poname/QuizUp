@@ -2,7 +2,7 @@
     <div class="ui container">
         <div class="item" style="margin-right:10%">
             <img src="{{ url('img/logo.png') }}">
-            <a class="myMenu">{{t('SITE_MAIN_TITLE')}}</a>
+            <a style="color:rgba(0,0,0,.87)">{{t('SITE_MAIN_TITLE')}}</a>
         </div>
 
 
