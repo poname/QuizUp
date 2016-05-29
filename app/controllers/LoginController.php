@@ -110,7 +110,7 @@ class LoginController extends ControllerBase implements EventsAwareInterface
     	$email = $this->request->getPost('email'); //phalcon email sanitizing
         $password = $this->request->getPost('password');
 
-    	$user = User::find("email = '$email' AND password = '$password'");
+    	$user = User::find("email = '$email' AND password = '$password' AND is_active = 1");
     	//$user = User::findFirst("email = '$email' AND password = '$password'") or die($this->translator->_('INVALID_REQUEST'));
     	//echo isset($user);
     	//echo count($user);
