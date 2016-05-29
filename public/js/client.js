@@ -64,26 +64,36 @@ $(function() {
 			id: "game",
 			onQuestion:function(questionInfo){
 				restartTimer();
-				$('#game .form').trigger("reset");
-
-				$('#question-text').text(questionInfo.body);
-				$('#answer-1 label').html(questionInfo.choices[1])
-				$('#answer-2 label').html(questionInfo.choices[2])
-				$('#answer-3 label').html(questionInfo.choices[3])
-				$('#answer-4 label').html(questionInfo.choices[4])
+				$answerButton.removeClass('primary');
 				$answerButton.removeClass('disabled');
+				$answerButton.removeClass('active');
+				$('#question-text').text(questionInfo.body);
+				$('#answer-1').html(questionInfo.choices[1])
+				$('#answer-2').html(questionInfo.choices[2])
+				$('#answer-3').html(questionInfo.choices[3])
+				$('#answer-4').html(questionInfo.choices[4])
+
 				quizId = questionInfo.quizId ;
 			},
-			onAnswerButtonClicked:function(){
-				var selected = $("#game input[type='radio']:checked");
+			onAnswerButtonClicked:function(selected_button){
+				var selected = false;
+				if(selected_button.is('#answer-1')){
+					selected=1;
+				}else if(selected_button.is('#answer-2')) {
+					selected=2;
+				}else if(selected_button.is('#answer-3')) {
+					selected=3;
+				}else if(selected_button.is('#answer-4')){
+					selected=4;
+				}
 				if(selected) {
-					_SOCKET.emit('answer', {quizId: quizId, choosed: selected.val()});
+					selected_button.addClass('primary');
 					$answerButton.addClass('disabled');
+					_SOCKET.emit('answer', {quizId: quizId, choosed: selected});
 				}
 			},
 			onResult:function(data){
 				stopTimer();
-				debugger;
 				if(data.result == 1){
 					$('#result .winner .earned_points').html(data.score);
 					$('#result .winner').show();
@@ -122,7 +132,7 @@ $(function() {
 	});
 	$answerButton.click(function(e){
 		e.preventDefault();
-		steps[currentStep].onAnswerButtonClicked();
+		steps[currentStep].onAnswerButtonClicked($(this));
 	});
 
 	_SOCKET.on('news', function(data) {

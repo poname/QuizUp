@@ -39,32 +39,11 @@
                 <form class="ui large form" action="" method="post">
                     <div class="grouped fields">
                         <label id="question-text">question texts</label>
-                        <div class="field" id="answer-1">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="answer" value="1">
-                                <label>Answ1</label>
-                            </div>
-                        </div>
-                        <div class="field" id="answer-2">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="answer" value="2">
-                                <label>Answ2</label>
-                            </div>
-                        </div>
-                        <div class="field" id="answer-3">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="answer" value="2">
-                                <label>Answ3</label>
-                            </div>
-                        </div>
-                        <div class="field" id="answer-4">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="answer" value="2">
-                                <label>Answ4</label>
-                            </div>
-                        </div>
+                        <div class="answer-container"><button class="ui fluid button answer fa" id="answer-1">Answ1</button></div>
+                        <div class="answer-container"><button class="ui fluid button answer fa" id="answer-2">Answ2</button></div>
+                        <div class="answer-container"><button class="ui fluid button answer fa" id="answer-3">Answ3</button></div>
+                        <div class="answer-container"><button class="ui fluid button answer fa" id="answer-4">Answ4</button></div>
                     </div>
-                    <div class="ui fluid large blue submit button fa answer">{{ t('ANSWER') }}</div>
                 </form>
             </div>
             <div id="result" class="invisible no-take-place">
