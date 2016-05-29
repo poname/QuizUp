@@ -6,8 +6,8 @@
         </div>
 
 
-         <div href="{{ url('login/success') }}" class="item" style="background-color: #FF5252 ;line-height: 3.5"><i class="home icon"></i>
-            <a style="color: rgba(255,255,255,.9)">{{t('HOME')}}</a>
+         <div href="{{ url('login/success') }}" class="item" style="background-color: #FF5252 "><i class="home icon"></i>
+            <a style="color: rgba(255,255,255,.9) ;line-height: 3.5">{{t('HOME')}}</a>
          </div>
 
 
@@ -33,7 +33,7 @@
             <span class="text">{{session.get('user').getName() }}</span>
             <i class="dropdown icon"></i>
             <div class="menu" style="background-color: rgba(0,0,0,.87)">
-                <div class="item"><a href="{{ url('quiz/doitnow') }} style="color: rgba(255,255,255,.9)">{{ t('START') }}</a></div>
+                <div class="item"><a href="{{ url('quiz/doitnow') }}" style="color: rgba(255,255,255,.9)">{{ t('START') }}</a></div>
 
                 <div class="item" ><a href="{{ url('question/list') }}" style="color: rgba(255,255,255,.9)">{{ t('QUESTIONS') }}</a></div>
                 <div class="item" ><a href="{{ url('category/create') }}" style="color: rgba(255,255,255,.9)">{{ t('CREATE_CATEGORY') }}</a></div>
