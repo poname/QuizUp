@@ -49,7 +49,8 @@ class QuizController extends ControllerBase
     public function selectCategoryAction(){
 //        $this->view->setRenderLevel(View::LEVEL_ACTION_VIEW);
     }
-    public function oldSelectCategoryAction(){
+
+    public function offlineSelectCategoryAction(){
         if($this->request->isPost()){
             //getting the input
             $category_id = $this->request->getPost('category', 'int') or die('invalid request');
@@ -175,6 +176,7 @@ class QuizController extends ControllerBase
         }
         $this->view->setVar('quiz_id', $qid);
         $this->view->setVar('current_question', $current_question);
+        $this->view->setVar('waitInterval', $this->config->application->waitInterval);
         $this->view->setVars($quiz->getStatus(),true);
     }
 

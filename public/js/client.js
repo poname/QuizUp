@@ -1,11 +1,13 @@
 $(function() {
-	
+
 	var $answerButton = $('.answer');
 	var $requestButton = $('.request');
+	var $offlineQuizLink = $("#take-offline-quiz-link");
+
 	var $timer = $('#timer');
 	var _timer_refrence = null;
 	var showMask = function (state) {
-		$('.segment').dimmer(state === true ? 'show' : 'hide');
+		$('#main-segment').dimmer(state === true ? 'show' : 'hide');
 	};
 
 	$timer.progress();
@@ -30,13 +32,15 @@ $(function() {
 	};
 	var quizId = null;
 	var correct = null;
+	var $cat = null;
+	var waiting_timer_refrence = null;
 
 	var steps = [
 		{
 			id: "selectCategory",
 			onRequestButtonClicked:function(){
 				var $user = _USER_INFO.id;
-				var $cat = $('input[name=category]:checked', '#selectCategory form').val();
+				$cat = $('input[name=category]:checked', '#selectCategory form').val();
 				if($user && $cat){
 					_SOCKET.emit('request', {username:$user,userInfo:_USER_INFO, category:$cat});
 					nextStep();
@@ -50,10 +54,18 @@ $(function() {
 			id: "waiting",
 			init: function () {
 				showMask(true);
+				waiting_timer_refrence = setTimeout(function () {
+					$("#too-long").fadeIn();
+				}, 10000);
 			},
 			onOtherPlaySpecified:function(opponent_name){
 				showMask(false);
 				$('#opponent_name').html(opponent_name);
+
+				clearTimeout(waiting_timer_refrence);
+				waiting_timer_refrence = null;
+				$("#too-long").hide();
+
 				restartTimer();
 			},
 			onQuestion:function(questionInfo){
@@ -151,6 +163,11 @@ $(function() {
 		e.preventDefault();
 		steps[currentStep].onAnswerButtonClicked($(this));
 	});
+	$offlineQuizLink.click(function (e) {
+		e.preventDefault();
+		$('<form action="'+_OFFLINE_QUIZ_LINK +'" method="POST"><input type="hidden" name="category" value="'+$cat+'"/></form>').appendTo('body').submit();
+	});
+
 
 	_SOCKET.on('news', function(data) {
 		if(steps[currentStep].onOtherPlaySpecified(data));

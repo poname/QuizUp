@@ -4,7 +4,7 @@
 
 <div class="ui middle aligned center aligned grid">
     <div class="column">
-        <div class="ui segment left aligned" style="min-height: 100px">
+        <div class="ui segment left aligned" id="main-segment" style="min-height: 100px">
             <div class="ui inverted dimmer" id="loading-wrapper">
                 <div class="ui text loader">{{ t('LOADING') }}</div>
             </div>
@@ -84,9 +84,17 @@
                 </div>
             </div>
         </div>
+        <div id="too-long" class="invisible no-take-place">
+            <div class="ui segment middle aligned center aligned grid">
+                <p>
+                    <a href="#" id="take-offline-quiz-link">{{ t('TAKING_TOO_LONG?YOU_CAN_TAKE THE QUIZ OFFLINE HERE') }}</a>
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 <script>
     var _SOCKET = io('{{ websocketURL }}');
     var _WAIT_INTERVAL = {{ waitInterval }};
+    var _OFFLINE_QUIZ_LINK = '{{ url('quiz/offlineSelectCategory') }}';
 </script>

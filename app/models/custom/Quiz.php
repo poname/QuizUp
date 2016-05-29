@@ -162,21 +162,21 @@ class Quiz extends \QUIZUP\Models\Quiz
         $new_points = $this->$property->getPoints() + $this->getCurrentEarnedPoints();
         $this->$property = $this->$property->setPoints($new_points);
         if($this->isOtherUserFinished()){
-//                $this->getDI()->get('logger')->error('mailing to ' . $result['winner']->getEmail() . $this->getDI()->get('view')->getRender('emails', 'quiz-winner', array(
-//                        'full_name' => $result['winner']->getName(),
-//                        'opponent_name' => $result['looser']->getName(),
-//                    )));
-//            $mail = new \PHPMailer();
-//            // Set PHPMailer to use the sendmail transport
-//            $mail->isSendmail();
-//            $mail->setFrom('noreplay@ccweb.ir', 'QuizUP');
-//            $mail->addAddress($result['winner']->getEmail(), "{$result['winner']->getName()} {$result['winner']->getFamily()}");
-//            $mail->Subject = 'You won a quiz!';
-//            $mail->msgHTML($this->getDI()->get('view')->getRender('emails','quiz-winner',array(
-//                'full_name'=>$result['winner']->getName(),
-//                'opponent_name' => $result['looser']->getName(),
-//            )));
-//            $mail->send();
+                $this->getDI()->get('logger')->error('mailing to ' . $result['winner']->getEmail() . $this->getDI()->get('view')->getRender('emails', 'quiz-winner', array(
+                        'full_name' => $result['winner']->getName(),
+                        'opponent_name' => $result['looser']->getName(),
+                    )));
+            $mail = new \PHPMailer();
+            // Set PHPMailer to use the sendmail transport
+            $mail->isSendmail();
+            $mail->setFrom('noreplay@ccweb.ir', 'QuizUP');
+            $mail->addAddress($result['winner']->getEmail(), "{$result['winner']->getName()} {$result['winner']->getFamily()}");
+            $mail->Subject = 'You won a quiz!';
+            $mail->msgHTML($this->getDI()->get('view')->getRender('emails','quiz-winner',array(
+                'full_name'=>$result['winner']->getName(),
+                'opponent_name' => $result['looser']->getName(),
+            )));
+            $mail->send();
         }
     }
 

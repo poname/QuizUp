@@ -70,7 +70,7 @@
             </div>
         </div>
 -->
-        <div class="ui simple dropdown item">
+        <div class="ui simple dropdown right item">
             <i class="user icon"></i>
             <span class="text">{{session.get('user').getName() }}</span>
             <i class="dropdown icon"></i>
