@@ -17,3 +17,8 @@ html, body {
 .invisible.no-take-place {
     display: none;
 }
+
+
+.myTop{
+    margin-top: 20px;
+}

@@ -1,5 +1,9 @@
+<div id="header">
+    {% include "include/header.volt" %}
+</div>
+
 <div class="ui fluid aligned center aligned grid">
-    <div class="column">
+    <div class="column myTop">
         <h2 class="ui red image header">
             <img src="{{ url('img/logo.png') }}" class="image">
             <div class="content">
