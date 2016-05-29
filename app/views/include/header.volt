@@ -21,7 +21,39 @@
              <span class="text">{{t('NOTIFICATIONS') }}</span>
              <i class="dropdown icon"></i>
             <div class="menu" style="background-color: rgba(0,0,0,.87)">
-                <div class="item"><a href="#" style="color: rgba(255,255,255,.9)">{{ achievements }}</a></div>
+
+                {% for achiv in achives %}
+                    {% if(achiv == "tenQuiz") %}
+                        <div class="item">
+                            <a href="#" style="color: rgba(255,255,255,.9)">{{ t('TEN_QUIZES') }}</a>
+                        </div>
+                    {% endif %}
+                    {% if(achiv == 'iranian') %}
+                        <div class="item">
+                            <a href="#" style="color: rgba(255,255,255,.9)">{{ t('IRANIAN') }}</a>
+                        </div>
+                {#    {% else %}
+                        <div class="item">
+                            <a href="#" style="color: rgba(255,255,255,.9)">{{ achiv }}</a>
+                        </div>
+                #}
+                    {% endif %}
+                    {% if(achiv == "first") %}
+                        <div class="item">
+                            <a href="#" style="color: rgba(255,255,255,.9)">{{ t('FIRST_PLACE') }}</a>
+                        </div>
+                    {% endif %}
+                    {% if(achiv == "second") %}
+                        <div class="item">
+                            <a href="#" style="color: rgba(255,255,255,.9)">{{ t('SECOND_PLACE') }}</a>
+                        </div>
+                    {% endif %}
+                    {% if(achiv == "third") %}
+                        <div class="item">
+                            <a href="#" style="color: rgba(255,255,255,.9)">{{ t('THIRD_PLACE') }}</a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
 
