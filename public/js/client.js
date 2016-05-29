@@ -99,8 +99,10 @@ $(function() {
 						selected_button.addClass('green');
 					}
 					else{
-						selected_button.addClass('red');
 						$('#answer-' + correct).addClass('green');
+						alert('#answer-' + correct);
+						selected_button.addClass('red');
+
 					}
 
 					$answerButton.addClass('disabled');
