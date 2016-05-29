@@ -46,21 +46,21 @@ var gatewayModule = (function() {
         console.log('-------------', 'Sending questions');
         socket1.emit('question', questionInfo);
         socket2.emit('question', questionInfo);
-    }
+    };
 
     var news = function(sock, userInfo){
         sock.emit('news', userInfo.name+" "+userInfo.family);
-    }
+    };
 
     quiz.init(sendQuestion, finishGame, news);
 
     var waiting = function(sock){
         sock.emit('wait', '');
-    }
+    };
     queue.init(waiting, quiz.newQuiz);
 
     io.on('connection', function (socket) {
-        console.log('somone connected');
+        console.log('someone connected');
         
         socket.on('hi', function (data) {
             console.log(data);

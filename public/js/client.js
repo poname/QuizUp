@@ -25,10 +25,11 @@ $(function() {
 		stopTimer();
 		$timer.progress({
 			percent:100
-		})
+		});
 		startTimer();
 	};
 	var quizId = null;
+	var correct = null;
 
 	var steps = [
 		{
@@ -68,12 +69,13 @@ $(function() {
 				$answerButton.removeClass('disabled');
 				$answerButton.removeClass('active');
 				$('#question-text').text(questionInfo.body);
-				$('#answer-1').html(questionInfo.choices[1])
-				$('#answer-2').html(questionInfo.choices[2])
-				$('#answer-3').html(questionInfo.choices[3])
-				$('#answer-4').html(questionInfo.choices[4])
+				$('#answer-1').html(questionInfo.choices[1]);
+				$('#answer-2').html(questionInfo.choices[2]);
+				$('#answer-3').html(questionInfo.choices[3]);
+				$('#answer-4').html(questionInfo.choices[4]);
 
 				quizId = questionInfo.quizId ;
+				correct = questionInfo.correct;
 			},
 			onAnswerButtonClicked:function(selected_button){
 				var selected = false;
@@ -87,7 +89,15 @@ $(function() {
 					selected=4;
 				}
 				if(selected) {
-					selected_button.addClass('primary');
+					//selected_button.addClass('primary');
+					// say answer is correct or not immediately after answering
+					if(selected === correct){
+						selected_button.addClass('success');
+					}
+					else{
+						selected_button.addClass('danger');
+					}
+
 					$answerButton.addClass('disabled');
 					_SOCKET.emit('answer', {quizId: quizId, choosed: selected});
 				}

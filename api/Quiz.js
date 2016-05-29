@@ -98,7 +98,7 @@ var quizModule = (function() {
             for (var i = 0; i < quizes.length; i++) {
                 if(quizes[i].quizId === ansInfo.quizId){
                     quizObj = quizes[i];
-                };
+                }
             }
             if(!quizObj){
                 console.log("quizId (" + ansInfo.quizId + ") not found in quizes list, STRANGE!!!");
