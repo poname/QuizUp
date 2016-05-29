@@ -145,5 +145,6 @@ $messages = array(
     'SORRY'=>'متاسفیم!',
     'YOU_LOST' => 'شما بازی را باختید',
     'WE_ARE_ALL_EVEN'=>'همه ی ما انسان ها برابریم!',
-    'SO_AS_YOU_AND_YOUR_OPPONENT' => 'مثل شما و رقیبتان :)'
+    'SO_AS_YOU_AND_YOUR_OPPONENT' => 'مثل شما و رقیبتان :)',
+    'NOTIFICATIONS' =>'اچیومنت ها'
 );

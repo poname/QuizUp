@@ -20,8 +20,8 @@
         <div class="right ui simple dropdown item"><i class="alarm icon"></i>
              <span class="text">{{t('NOTIFICATIONS') }}</span>
              <i class="dropdown icon"></i>
-            <div class="menu">
-                <a class="item">{{ achievements }}</a>
+            <div class="menu" style="background-color: rgba(0,0,0,.87)">
+                <div class="item"><a href="#" style="color: rgba(255,255,255,.9)">{{ achievements }}</a></div>
             </div>
         </div>
 
