@@ -156,7 +156,7 @@ class LoginController extends ControllerBase implements EventsAwareInterface
         $this->flashSession->success($this->translator->_('LOGOUT_COMPLETED'));
             return $this->dispatcher->forward(
                 array(
-                    'controller' => 'login',
+                    'controller' => 'main',
                     'action' => 'index'
                 )
             );
