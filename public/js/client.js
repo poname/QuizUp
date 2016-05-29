@@ -78,7 +78,7 @@ $(function() {
 
 				quizId = questionInfo.quizId ;
 				correct = questionInfo.correct;
-				alert(correct + "--" + questionInfo.correct);
+				//alert(correct + "--" + questionInfo.correct);
 			},
 			onAnswerButtonClicked:function(selected_button){
 				var selected = false;
@@ -92,7 +92,7 @@ $(function() {
 					selected=4;
 				}
 				if(selected) {
-					alert(correct + "++" + selected);
+					//alert(correct + "++" + selected);
 					//selected_button.addClass('primary');
 					// say answer is correct or not immediately after answering
 					if(selected == correct){
