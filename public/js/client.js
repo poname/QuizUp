@@ -66,6 +66,8 @@ $(function() {
 			onQuestion:function(questionInfo){
 				restartTimer();
 				$answerButton.removeClass('primary');
+				$answerButton.removeClass('green');
+				$answerButton.removeClass('red');
 				$answerButton.removeClass('disabled');
 				$answerButton.removeClass('active');
 				$('#question-text').text(questionInfo.body);
@@ -76,6 +78,7 @@ $(function() {
 
 				quizId = questionInfo.quizId ;
 				correct = questionInfo.correct;
+				alert(correct + "--" + questionInfo.correct);
 			},
 			onAnswerButtonClicked:function(selected_button){
 				var selected = false;
