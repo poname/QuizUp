@@ -21,7 +21,7 @@
                         <input type="password" name="password" placeholder="{{ t('PASSWORD') }}">
                     </div>
                 </div>
-                <div class="ui fluid large red submit button">{{ t('LOGIN') }}</div>
+                <div class="ui fluid large red submit button"><p>{{ t('LOGIN') }}</p></div>
             </div>
 
             <div class="ui error message"></div>
