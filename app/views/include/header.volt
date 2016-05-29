@@ -1,4 +1,4 @@
-<div class="ui stackable menu" style="background-color: #FF5252">
+<div class="ui main menu" style="background-color: #FF5252">
     <div class="ui container">
         <div class="item" style="margin-right:10%">
             <img src="{{ url('img/logo.png') }}" style="margin-left: 10px">
