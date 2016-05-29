@@ -5,12 +5,10 @@
 </div>
 
 
-<div class="ui stripe community vertical segment" ><a class="item">
-    </a>
+<div class="ui stripe community vertical segment" >
     <div class="ui red two column center aligned divided very relaxed stackable grid container">
         <div class="row">
-            <div class="column"><a class="item">
-                </a>
+            <div class="column">
                 <div class="ui red segment">
                     <h2 class="ui icon header fa">{{ t('READY_TO_START?') }}</h2>
                     <p>{{ t('START_A_QUIZ_NOW') }}</p>
@@ -98,14 +96,15 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-                </div>
-            </div>
-        </div>
+                </div><!-- ui green -->
+
+            </div><!--column -->
+        </div><!--row -->
         <div id="footer" style="background:#f2f2f2">
             {% include "include/footer.volt" %}
         </div>
-    </div>
+    </div><!--ui red two column center -->
 
 
-</div>
+</div><!--ui stripe community vertical segment-->
 
