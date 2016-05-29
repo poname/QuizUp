@@ -92,10 +92,10 @@ $(function() {
 					//selected_button.addClass('primary');
 					// say answer is correct or not immediately after answering
 					if(selected === correct){
-						selected_button.addClass('success');
+						selected_button.addClass('green');
 					}
 					else{
-						selected_button.addClass('danger');
+						selected_button.addClass('red');
 					}
 
 					$answerButton.addClass('disabled');
