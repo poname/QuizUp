@@ -6,8 +6,8 @@
         </div>
 
 
-         <div href="{{ url('login/success') }}" class="item" style="background-color: #FF5252 "><i class="home icon"></i>
-            <a style="color: rgba(255,255,255,.9) ;line-height: 3.5">{{t('HOME')}}</a>
+         <div  class="item" style="background-color: #FF5252 "><i class="home icon"></i>
+            <a href="{{ url('login/success') }}" style="color: rgba(255,255,255,.9) ;line-height: 3.5">{{t('HOME')}}</a>
          </div>
 
 
