@@ -187,10 +187,10 @@ $(function() {
 		}
 	});
 	_SOCKET.on('disconnect', function(data) {
-		alert('server fucked');
+		alert('Server disconnected... Retrying.');
 	});
 	_SOCKET.on('error', function(data) {
-		alert('error occured');
+		console.log('ekrror occured');
 	});
 	// _SOCKET.on('wait', function(data) {
 	// 	//wait until another user be ready for game
