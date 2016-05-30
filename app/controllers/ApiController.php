@@ -7,6 +7,7 @@ use Phalcon\Tag;
 use QUIZUP\Models\Question;
 use QUIZUP\Models\Quiz;
 use QUIZUP\Models\Custom\Quiz as CustomQuiz;
+use QUIZUP\Models\User;
 
 class ApiController extends ControllerBase {
     public function initialize(){
@@ -136,7 +137,14 @@ class ApiController extends ControllerBase {
             $this->logger->error('unable to save the quiz:' . $quiz->getMessages());
             return $this->jsonResponse(false, array('message' => 'INTERNAL_ERROR'));
         }
-        
+        $user1 = User::findFirst('user_id = ' . $user_id1);
+        $user1->setPoints((int)$user1->getPoints() + $user_score1);
+        $user1->save();
+
+        $user2 = User::findFirst('user_id = ' . $user_id2);
+        $user2->setPoints((int)$user2->getPoints() + $user_score2);
+        $user2->save();
+
         return $this->jsonResponse(true);
     }
 

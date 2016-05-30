@@ -160,12 +160,9 @@ class Quiz extends \QUIZUP\Models\Quiz
         $this->setCurrentStateStep(6); //finished @TODO this should be enum!
         $property = "User{$this->_side_user_index}";
         $new_points = $this->$property->getPoints() + $this->getCurrentEarnedPoints();
-        $this->$property = $this->$property->setPoints($new_points);
+        $this->$property->setPoints("$new_points");
         if($this->isOtherUserFinished()){
-                $this->getDI()->get('logger')->error('mailing to ' . $result['winner']->getEmail() . $this->getDI()->get('view')->getRender('emails', 'quiz-winner', array(
-                        'full_name' => $result['winner']->getName(),
-                        'opponent_name' => $result['looser']->getName(),
-                    )));
+            $result = $this->getResult();
             $mail = new \PHPMailer();
             // Set PHPMailer to use the sendmail transport
             $mail->isSendmail();
